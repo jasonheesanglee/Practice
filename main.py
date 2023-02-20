@@ -434,17 +434,20 @@ print(9999+8888 > 100*100)
 print( )
 
 def calculate_storage(filesize):
-    block_size = 4096
-    partial_block_remainder = filesize % block_size
-    if filesize < 4097:0
-        return 4096
-    elif partial_block_remainder > 0:
-        return 8192
-    return 8192
-#자 나는
+    block_size = 4096 #고정 블록 값
+    partial_block_remainder = filesize % block_size #나머지
+    number_of_block = filesize // block_size #몫
+    if partial_block_remainder == 0: #나머지가 0일 때
+        return filesize
+    elif partial_block_remainder > 0: #나머지가 0보다 클 때
+        return (number_of_block+1)*block_size
+
+
+#자 나는 어떠한 값을 넣어도 자동화돼서 수치가 들어가게 하고싶다.
 
 print(calculate_storage(1))
 print(calculate_storage(4096))
 print(calculate_storage(4097))
 print(calculate_storage(8192))
-print(calculate_storage(16384))
+print(calculate_storage(16397))
+print(calculate_storage(594156313))
