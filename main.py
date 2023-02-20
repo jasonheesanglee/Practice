@@ -432,6 +432,28 @@ print("A dog" > "A mouse")
 print(9999+8888 > 100*100)
 
 print( )
+print("진짜 질문에 대한 답만 구한 케이스")
+
+def calculate_storage(filesize):
+    block_size = 4096
+    partial_block_remainder = filesize % block_size
+    if filesize < 4097:
+        return 4096
+    elif partial_block_remainder > 0:
+        return 8192
+    return 8192
+
+print(calculate_storage(1))
+print(calculate_storage(4096))
+print(calculate_storage(4097))
+print(calculate_storage(8192))
+print(calculate_storage(16397))
+
+
+print ( )
+print("\"자 나는 어떠한 값을 넣어도 자동화돼서 수치가 들어가게 하고싶다\"라는 포부를 갖고 코드를 짜본 케이스")
+
+#자 나는 어떠한 값을 넣어도 자동화돼서 수치가 들어가게 하고싶다.
 
 def calculate_storage(filesize):
     block_size = 4096 #고정 블록 값
@@ -442,12 +464,12 @@ def calculate_storage(filesize):
     elif partial_block_remainder > 0: #나머지가 0보다 클 때
         return (number_of_block+1)*block_size
 
-
-#자 나는 어떠한 값을 넣어도 자동화돼서 수치가 들어가게 하고싶다.
-
 print(calculate_storage(1))
 print(calculate_storage(4096))
 print(calculate_storage(4097))
 print(calculate_storage(8192))
 print(calculate_storage(16397))
 print(calculate_storage(594156313))
+
+#이걸 내가 해내다니ㅋㅋㅋㅋㅋㅋㅋ
+
