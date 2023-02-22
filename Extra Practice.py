@@ -152,85 +152,404 @@ for practice_10 in [1,2,3,4]:
 print("오케이 다음으로 넘어가보자")
 
 
+print()
+print("11. 다음과 같이 판매가가 저장된 리스트가 있을 때 부가세가 포함된 가격을 화면에 출력하라. 단 부가세는 10원으로 가정한다.")
+for practice_11 in [100, 200, 300]:
+    print(practice_11+10)
+print("나는 이렇게 했는데 답은 아래처럼 하라고 하네...?")
+print()
+리스트 = [100, 200, 300]
+for 변수 in 리스트:
+  print(변수 + 10)
 
+print()
+print("12. 리스트에 저장된 값을 다음과 같이 출력하라.")
+for practice_12 in ["김밥", "라면", "튀김"]:
+    print("오늘의 메뉴: " + practice_12)
+print("좋아좋아")
 
+print()
+print("13. 리스트에 주식 종목이름이 저장돼 있다." + "저장된 문자열의 길이를 다음과 같이 출력하라.")
+for practice_13 in ["SK하이닉스", "삼성전자", "LG전자"]:
+    print(len(practice_13))
+print("잘하고 있군")
 
+print()
+print("14. 리스트에는 동물이름이 문자열로 저장돼 있다." + "동물 이름과 글자수를 다음과 같이 출력하라.")
+print()
+#for practice_14 in ['dog', 'cat', 'parrot']:
+#    print(practice_14 + len(practice_14))
+print("이거 왜 안돼냐...")
+print()
+for practice_14 in ['dog', 'cat', 'parrot']:
+    print(practice_14, len(practice_14))
+print("아... 오케...")
+print()
 
+print("15. 리스트에 동물 이름 저장돼 있다. for문을 사용해서 동물 이름의 첫 글자만 출력하라.")
+for practice_15 in ['dog', 'cat', 'parrot']:
+    print(practice_15[0])
+print("조금 헷갈렸지만, 리스트라는 특성 사용!")
 
+print()
+print("16. 리스트에는 세 개의 숫자가 바인딩 돼 있다. for문을 사용해서 다음과 같이 출력하라.")
+for practice_16 in [1, 2, 3]:
+    print("3 X", practice_16)
+print("나는 이렇게 했지만")
+print()
+for practice_16 in [1, 2, 3]:
+    print("3 X " + str(practice_16))
+print("이렇게도 할 수 있다고 하네!")
 
+print()
+print("17. 리스트에는 세 개의 숫자가 바인딩돼 있다. for문을 사용해서 다음과 같이 출력하라.")
+for practice_17 in [1, 2, 3]:
+    print("3 X", practice_17, "=", practice_17*3)
+print("어렵지 않군...!")
+print()
+for practice_17 in [1, 2, 3]:
+    print("3 X {} = {}".format(practice_17, practice_17*3))
+print("이렇게도 할 수 있다고 하네..!")
 
+print()
+print("18. 리스트에는 네 개의 문자열이 바인딩돼 있다. for문을 사용해서 다음과 같이 출력하라.")
+#for practice_18 in ["가", "나", "다", "라"]:
+#    print(str(practice_18 (1,3)))
+print("음... 잠시만...")
+practice_18 = ["가", "나", "다", "라"]
+practice_18_1 = practice_18[1:]
+for practice_18_2 in practice_18_1:
+    print(practice_18_2)
+print("아! 슬라이싱!")
+print()
+print("조금 더 간략화 해서 아래처럼 쓸 수도 있다!")
+practice_18 = ["가", "나", "다", "라"]
+for practice_18_3 in practice_18[1:]:
+    print(practice_18_3)
 
+print()
+print("19. 리스트에는 네 개의 문자열이 바인딩돼 있다. for문을 사용해서 다음과 같이 출력하라.")
+practice_19 = ["가", "나", "다", "라"]
+for practice_19_1 in practice_19[0]:
+    print(practice_19_1)
+for practice_19_2 in practice_19[2]:
+    print(practice_19_2)
+print("이렇게 말고 다른 방법이 있을거 같은데...")
+print()
+print("리스트 슬라이싱에서 `[시작:끝:증감폭] ` 세번째 값은 값을 가져오는 단위를 의미했습니다. 증감폭을 2로 설정해서 \"가\"와 \"다\" 값만 슬라이싱합니다.")
+practice_19 = ["가", "나", "다", "라"]
+for practice_19_3 in practice_19[::2]:
+    print(practice_19_3)
+print("역시...!")
 
+print()
+print("20. 리스트에는 네 개의 문자열이 바인딩돼 있다. for문을 사용해서 다음과 같이 출력하라.")
+practice_20 = ["가", "나", "다", "라"]
+print()
+#for practice_20_1 in practice_20[3:0]:
+#    print(practice_20_1)
+print("아 이게 안되네..")
+print("아!")
+print()
+print("증감폭을 음수로 설정하면 끝에서 앞방향으로 값을 슬라이싱합니다.")
+practice_20 = ["가", "나", "다", "라"]
+for practice_20_2 in practice_20[::-1]:
+    print(practice_20_2)
 
+print()
+print("21. 리스트에는 네 개의 정수가 저장돼 있다. for문을 사용해서 리스트의 음수를 출력하라.")
+print()
+#practice_21 = [3, -20, -3, 44]
+#for practice_21_1 in practice_21[0>:]:
+#    print(practice_21_1)
+print("아... 이거 아니구")
+print()
+practice_21 = [3, -20, -3, 44]
+for practice_21_1 in practice_21:
+    if practice_21_1 < 0:
+        print(practice_21_1)
+print("음 이거군!")
 
+print()
+print("22. for문을 사용해서 3의 배수만을 출력하라.")
+practice_22 = [3, 100, 23, 44]
+for practice_22_1 in practice_22:
+    if practice_22_1 % 3 == 0:
+        print (practice_22_1)
+print("1트만에 성공!")
+
+print()
+print("23. 리스트에서 20 보다 작은 3의 배수를 출력하라")
+practice_23 = [13, 21, 12, 14, 30, 18]
+for practice_23_1 in practice_23:
+    if practice_23_1 < 20:
+        if practice_23_1 % 3 == 0:
+            print(practice_23_1)
+print("출력값은 맞는데, and 로도 쓸수 있다!")
+print()
+practice_23 = [13, 21, 12, 14, 30, 18]
+for practice_23_1 in practice_23:
+    if practice_23_1 < 20 and practice_23_1 % 3 == 0:
+        print(practice_23_1)
+print("이렇게!")
+
+print()
+print("24. 리스트에서 세 글자 이상의 문자를 화면에 출력하라")
+practice_24 = ["I", "study", "python", "language", "!"]
+for practice_24_1 in practice_24:
+    if len(practice_24_1) >= 3:
+        print (practice_24_1)
+print("str을 붙여줘야 하나 했는데 이게 맞네?")
+print()
+practice_24 = ["I", "study", "python", "language", "!"]
+for practice_24_1 in practice_24:
+    if len(str(practice_24_1)) >= 3:
+        print (practice_24_1)
+print("str 붙여줘도 값은 동일하게 나오는구나!")
+
+print()
+print("25. 리스트에서 대문자만 화면에 출력하라.")
+print("난관이다.. 안배운건데...")
+print()
+print("(참고) isupper() 메서드는 대문자 여부를 판별합니다.")
+print("문제에서 알려줘서 다행ㅎㅎ")
+print()
+practice_25 = ["A", "b", "c", "D"]
+for practice_25_1 in practice_25:
+    if practice_25_1.isupper() == True:
+        print(practice_25)
+print("알려줘도 틀리네...")
+print()
+practice_25 = ["A", "b", "c", "D"]
+for practice_25_2 in practice_25:
+    if practice_25_2.isupper():
+        print(practice_25_2)
+print("아 뭐야... 틀렸던 답에서 변수 프린트 안하고 리스트를 프린트했잖아...? 여러분 코드 한줄 한줄 잘 봅시다...")
+print("이건 일단 정답지 답안")
+print()
+practice_25 = ["A", "b", "c", "D"]
+for practice_25_1 in practice_25:
+    if practice_25_1.isupper() == True:
+        print(practice_25_1)
+print("그래서 내가 쓴 코드로 다시 해봄...! 이거도 되네! 실수만 하지 맙시다...")
+
+print()
+print("26. 리스트에서 소문자만 화면에 출력하라.")
+practice_26 = ["A", "b", "c", "D"]
+for practice_26_1 in practice_26:
+    if practice_26_1.isupper() == False:
+        print(practice_26_1)
+print("25번문제 다시 해보길 잘했네")
+print("아래 방법들로도 할 수 있구나!")
+print()
+practice_26 = ["A", "b", "c", "D"]
+for practice_26_2 in practice_26:
+    if practice_26_2.isupper() != True:
+        print(practice_26_2)
+print()
+print("혹은")
+print()
+practice_26 = ["A", "b", "c", "D"]
+for practice_26_3 in practice_26:
+    if not practice_26_3.isupper():
+        print(practice_26_3)
+print()
+print("27. 이름의 첫 글자를 대문자로 변경해서 출력하라.")
+print("위 방법들을 잘 섞으면 되는건가...?")
+practice_27 = ['dog', 'cat', 'parrot']
+for practice_27_1 in practice_27:
+    if practice_27_1[0].isupper():
+        print(practice_27_1)
+print()
+print("아니네, isupper은 대문자 판별이구나... 대문자로 만드는게 아니라... 자 예문에서 준 .upper을 써보자")
+print("(참고) upper() 메서드는 문자열을 대문자로 변경합니다.")
+practice_27 = ['dog', 'cat', 'parrot']
+for practice_27_2 in practice_27:
+    if practice_27_2.upper():
+        print(practice_27_2)
+print("뭐지... .upper쓰면 된다매... 왜 안되는데... 리스트라 안되는건가")
+print("차근차근 해보자 일단 분리")
+practice_27 = ['dog', 'cat', 'parrot']
+for practice_27_3 in practice_27:
+    print(practice_27_3[0])
+print("일단 맨 글자 분리 성공")
+print()
+for practice_27_4 in practice_27:
+    print(practice_27_4[1:])
+print("쭉 뒤로 분리 성공, 자 이제 첫번째 꺼만 대문자로 바꿔서 뒷글자들이랑 합쳐보자")
+print()
+print(practice_27_3.upper()+practice_27_4)
+print("아 형 잠깐만... 다시 해볼게요")
+print()
+print(practice_27_3[0].upper(), practice_27_4[1:])
+print("뭔가 이상한데... 다시 해보자")
+print()
+print(practice_27_3[0].upper() + practice_27_4[1:])
+print("Parrot은 됐다... 근데 나머지는 어디갔는데... 하아..")
+print("처음부터 다시 해보자")
+print()
+practice_27 = ['dog', 'cat', 'parrot']
+for practice_27_5 in practice_27:
+    practice_27_5 = practice_27_5[0]
+    print(practice_27_5.upper())
+print("좋아... 일단 첫 글자들을 대문자로 만들기 성공... 대문자로 만든걸 또 변수로 만들자")
+print()
+practice_27_6 = (practice_27_5.upper())
+print(practice_27_6)
+print("아니 practice_27.5.upper()을 그대로 practice_27_6으로만 만든건데 왜 이게 프린트가 안되는데... 하아... 정답지를 한번 보자...")
+print()
+practice_27 = ['dog', 'cat', 'parrot']
+for practice_27_7 in practice_27:
+    practice_27_8 = practice_27_7[0]
+    practice_27_9 = practice_27_8.upper()
+    print(practice_27_9 + practice_27_7[1:])
+print("뭐야 왜 이게 돼, 내가 위에서 비슷하게 했구만")
+print()
+practice_27 = ['dog', 'cat', 'parrot']
+for practice_27_10 in practice_27:
+    practice_27_11 = practice_27_10[0]
+    print(practice_27_11.upper())
+    practice_27_12 = practice_27_11.upper()
+    print(practice_27_12 + practice_27_10[1:])
+print("위에꺼 그대로 가져오고 비슷하게 했는데 왜 중간에 저게 들어가는데... 설마 중간에 프린트한번 넣어서 그래...?")
+print()
+for practice_27_13 in practice_27:
+    practice_27_14 = practice_27_13[0]
+    practice_27_15 = practice_27_14.upper()
+    print(practice_27_15 + practice_27_13[1:])
+print("어휴... 중간에 프린트 넣으면 안되는군... 다음으로 넘어가 보자")
+
+print()
+print("28. 파일 이름이 저장된 리스트에서 확장자를 제거하고 파일 이름만 화면에 출력하라. (힌트: split() 메서드)")
+practice_28 = ['hello.py', 'ex01.py', 'intro.hwp']
+for practice_28_1 in practice_28:
+    practice_28_2 = practice_28_1.split(".")
+    print(practice_28_2)
+print("아니 .split을 이렇게 쓰는게 맞다고??ㅋㅋㅋㅋㅋ 갑자기 기분 좋아지네")
+print()
+practice_28 = ['hello.py', 'ex01.py', 'intro.hwp']
+for practice_28_3 in practice_28:
+    practice_28_4 = practice_28_3.split(".")
+    print(practice_28_4[0])
+print("위에서 당하고 왔더니 이건 쉽네")
+
+print()
+print("29. 파일 이름이 저장된 리스트에서 확장자가 .h인 파일 이름을 출력하라.")
+practice_29 = ['intra.h', 'intra.c', 'define.h', 'run.py']
+for practice_29_1 in practice_29:
+    practice_29_2 = practice_29_1.split(".")
+    if practice_29_2[1] == "h":
+        print(practice_29_2)
+print("아... 뭔가 아쉽게 틀렸는데... 잠시만...")
+print()
+practice_29 = ['intra.h', 'intra.c', 'define.h', 'run.py']
+for practice_29_3 in practice_29:
+    practice_29_4= practice_29_3.split(".")
+    if practice_29_4[1] == "h":
+        print(practice_29_3)
+print("위에랑... 다른게... 뭐지...")
+print("왜... 29_3을 프린트하지..?")
+
+print()
+print("30. 파일 이름이 저장된 리스트에서 확장자가 .h나 .c인 파일을 화면에 출력하라.")
+practice_30 = ['intra.h', 'intra.c', 'define.h', 'run.py']
+for practice_30_1 in practice_30:
+    practice_30_2 = practice_30_1.split(".")
+    if practice_30_2[1] != "py":
+        print(practice_30_1)
+print("이게 맞긴한데.. 난 이거 말고 다른 방법으로 해보고 싶은데... 이거는 py만 아니면 되는거라 h나 c가 아닌 확장자가 많아지면 무용지물임...")
+print()
+practice_30 = ['intra.h', 'intra.c', 'define.h', 'run.py']
+for practice_30_3 in practice_30:
+    practice_30_4 = practice_30_3.split(".")
+    if practice_30_4[1] == "h" or "c":
+        print(practice_30_3)
+print("아니 이건 왜 또 안되는데")
+print("아... or을 따로 넣어야 되는구나...")
+print()
+practice_30 = ['intra.h', 'intra.c', 'define.h', 'run.py']
+for practice_30_5 in practice_30:
+    practice_30_6 = practice_30_5.split(".")
+    if practice_30_6[1] == "h" or practice_30_6[1] == "c":
+        print(practice_30_5)
+print("됐다")
 
 
 print()
-print("41. for문과 range 구문을 사용해서 0~99까지 한 라인에 하나씩 순차적으로 출력하는 프로그램을 작성하라.")
-
-for practice_41 in range(100):
-    print(practice_41)
+print()
+print("사실 이 연습문제를 풀기 시작한게 31번 - 40번 풀어보려고 시작한거라...")
+print("가장 처음에 풀었던 31번부터 40번까지는 이런 주석 안달고 문제만 풀어서 재미 없을수도 있어요...!")
+print("감안하고 봐주세요! (근데 누가 본다는거지 이런걸...)")
 
 print()
-print("42. 월드컵은 4년에 한 번 개최된다. range()를 사용하여 2002~2050년까지 중 월드컵이 개최되는 연도를 출력하라.")
+print()
+print()
+print("31. for문과 range 구문을 사용해서 0~99까지 한 라인에 하나씩 순차적으로 출력하는 프로그램을 작성하라.")
 
-for practice_42 in range(2002,2051,4):
-    print(practice_42)
+for practice_31 in range(100):
+    print(practice_31)
 
 print()
-print("43. 1부터 30까지의 숫자 중 3의 배수를 출력하라.")
+print("32. 월드컵은 4년에 한 번 개최된다. range()를 사용하여 2002~2050년까지 중 월드컵이 개최되는 연도를 출력하라.")
 
-for practice_43 in range(3, 31, 3):
-    print(practice_43)
-
-print()
-print("44. 99부터 0까지 1씩 감소하는 숫자들을, 한 라인에 하나씩 출력하라.")
-
-for practice_44 in range(100):
-    print(99 - practice_44)
+for practice_32 in range(2002,2051,4):
+    print(practice_32)
 
 print()
-print("45. for문을 사용해서 아래와 같이 출력하라.")
+print("33. 1부터 30까지의 숫자 중 3의 배수를 출력하라.")
 
-for practice_45 in range(10):
-    print(practice_45/10)
-
-print()
-print("46. 구구단 3단을 출력하라.")
-
-for practice_46 in range(1,10):
-    print(3, " X ", practice_46, "=", 3 * practice_46)
+for practice_33 in range(3, 31, 3):
+    print(practice_33)
 
 print()
-print("47. 구구단 3단을 출력하라. 단 홀수 번째만 출력한다.")
+print("34. 99부터 0까지 1씩 감소하는 숫자들을, 한 라인에 하나씩 출력하라.")
 
-for practice_47 in range(1,10,2):
-    print(3, " X ", practice_47, "=", 3 * practice_47)
+for practice_34 in range(100):
+    print(99 - practice_34)
 
 print()
-print("48. 1~10까지의 숫자에 대해 모두 더한 값을 출력하는 프로그램을 for 문을 사용하여 작성하라.")
+print("35. for문을 사용해서 아래와 같이 출력하라.")
 
-sum = 0 #sum 위치 매우 중요
-for practice_48 in range(1, 11):
-    #여기에 sum들어가면 합 안나오고, 리스트로만 나옴
-    sum += practice_48
+for practice_35 in range(10):
+    print(practice_35/10)
+
+print()
+print("36. 구구단 3단을 출력하라.")
+
+for practice_36 in range(1,10):
+    print(3, " X ", practice_36, "=", 3 * practice_36)
+
+print()
+print("37. 구구단 3단을 출력하라. 단 홀수 번째만 출력한다.")
+
+for practice_37 in range(1,10,2):
+    print(3, " X ", practice_37, "=", 3 * practice_37)
+
+print()
+print("38. 1~10까지의 숫자에 대해 모두 더한 값을 출력하는 프로그램을 for 문을 사용하여 작성하라.")
+
+sum = 0
+print("sum 위치 매우 중요")
+for practice_38 in range(1, 11):
+#print("여기에 sum들어가면 합 안나오고, 리스트로만 나옴")
+    sum += practice_38
     print(sum)
 print("indent의 중요성")
 print(sum)
 
 
 print()
-print("49. 1~10까지의 숫자 중 모든 홀수의 합을 출력하는 프로그램을 for 문을 사용하여 작성하라.")
+print("39. 1~10까지의 숫자 중 모든 홀수의 합을 출력하는 프로그램을 for 문을 사용하여 작성하라.")
 
 sum = 0
-for practice_49 in range(1,11,2):
-    sum += practice_49
+for practice_39 in range(1,11,2):
+    sum += practice_39
 print(sum)
 
 print()
-print("50. 1~10까지의 숫자를 모두 곱한 값을 출력하는 프로그램을 for 문을 사용하여 작성하라.")
+print("40. 1~10까지의 숫자를 모두 곱한 값을 출력하는 프로그램을 for 문을 사용하여 작성하라.")
 
 multiplier = 1
-for practice_50 in range (1,11):
-    multiplier *= practice_50
+for practice_40 in range (1,11):
+    multiplier *= practice_40
 print(multiplier)
