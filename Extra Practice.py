@@ -654,7 +654,102 @@ practice_47 = ["가", "나", "다", "라"]
 for practice_47_2 in range(len(practice_47)-1):
     print(practice_47[len(practice_47) -1- practice_47_2], practice_47[len(practice_47)-2-practice_47_2])
 print("다시 변수 하나를 빼주면서 전체를 반전시킨건가...?")
+
 print()
+print("48. 리스트에는 네 개의 정수가 저장되어 있다. 각각의 데이터에 대해서 자신과 우측값과의 차분값을 화면에 출력하라.")
+print("예를들어 100을 기준으로 우측에 위치한 200과의 차분 값를 화면에 출력하고, 200을 기준으로 우측에 위치한 400과의 차분값을 화면에 출력한다. 이어서 400을 기준으로 우측에 위치한 800과의 차분값을 화면에 출력한다.")
+print()
+print("차분값이 뭔데... = 수열에서 연속하는 두 항의 차")
+print()
+practice_48 = [100, 200, 400, 800]
+for practice_48_1 in range(len(practice_48)-1):
+    print(practice_48[len(practice_48) - 1 -practice_48_1] - practice_48[len(practice_48)-1] - 2 - practice_48_1)
+print("자 이건 아무래도 아닌거 같다")
+print()
+print("한번 차근차근 해보자")
+practice_48 = [100, 200, 400, 800]
+print(practice_48[1] - practice_48[0])
+print(practice_48[2] - practice_48[1])
+print(practice_48[3] - practice_48[2])
 
+print("원래는 이렇게 나와야 한다")
+print()
+print("for을 한번 써보자, 너무 복잡하지 않은 걸로")
+practice_48 = [100, 200, 400, 800]
+for practice_48_2 in [0, 1, 2, 3]:
+    print(practice_48[practice_48_2] - practice_48[practice_48_2-1])
+print("잘... 나왔는데... -700은 왜...")
+print()
+print("다시 해보자")
+practice_48 = [100, 200, 400, 800]
+for practice_48_3 in [0, 1, 2, 3]:
+    print(practice_48[practice_48_3] - practice_48[practice_48_3-1])
+print("잘... 나왔는데... -700은 왜...")
+print("또.. 다시 해보자")
+practice_48 = [100, 200, 400, 800]
+for practice_48_4 in [0, 1, 2, 3]:
+    print(practice_48[practice_48_4] - practice_48[practice_48_4-1])
+    if (practice_48[practice_48_4] - practice_48[practice_48_4-1]) < 0:
+        print("")
+print("일단 값은.. 다 잘 나왔네..")
+print()
+print("이번엔 공백을 없애보자")
+practice_48 = [100, 200, 400, 800]
+for practice_48_5 in [0, 1, 2, 3]:
+    if practice_48_5 == 0:
+        break
+    else:
+        print(practice_48[practice_48_5] - practice_48[practice_48_5-1])
+print("안되는군..")
+print()
+print("먼저 다른 방식으로 다시 해보자")
+for practice_48_6 in range(3):
+    print(practice_48[practice_48_6] - practice_48[practice_48_6-1])
+print("오.. 뭔가 될꺼 같다... 잠시만")
+print()
+print("Range에 시작점을... 추가해주면...?")
+for practice_48_7 in range(1,4):
+    print(practice_48[practice_48_7] - practice_48[practice_48_7-1])
+print("오.. 됐다...!!!!!!!")
+print()
+print("답안지에선 아래와 같은 방법으로 한다")
+for practice_48_8 in range(len(practice_48)-1):
+    print(abs(practice_48[practice_48_8+1] - practice_48[practice_48_8]))
+print("abs (Absolute) 연산자를 쓰면... 굳이 나처럼 안해도 됐었군...!")
 
+print()
+print("49. 리스트에는 6일 간의 종가 데이터가 저장되어 있다. 종가 데이터의 3일 이동 평균을 계산하고 이를 화면에 출력하라.")
+print("일단 간단하게 먼저 해본다")
+practice_49 = [100, 200, 400, 800, 1000, 1300]
+print((practice_49[2] + practice_49[1] + practice_49[0])/3)
+print((practice_49[3] + practice_49[2] + practice_49[1])/3)
+print((practice_49[4] + practice_49[3] + practice_49[2])/3)
+print((practice_49[5] + practice_49[4] + practice_49[3])/3)
 
+print()
+print("이제 for을 써본다")
+practice_49 = [100, 200, 400, 800, 1000, 1300]
+for practice_49_1 in range(4):
+    print((practice_49[practice_49_1] + practice_49[practice_49_1+1] + practice_49[practice_49_1+2])/3)
+print("... 이게 왜 되는거지...???")
+
+print()
+print("50. 리스트에 5일간의 저가, 고가 정보가 저장돼 있다. 고가와 저가의 차를 변동폭이라고 정의할 때, low, high 두 개의 리스트를 사용해서 5일간의 변동폭을 volatility 리스트에 저장하라.")
+practice_50_low = [100, 200, 400, 800, 1000]
+practice_50_high = [150, 300, 430, 880, 1000]
+print ("먼저 for 안쓰기!")
+print(practice_50_high[0] - practice_50_low[0])
+print(practice_50_high[1] - practice_50_low[1])
+print(practice_50_high[2] - practice_50_low[2])
+print(practice_50_high[3] - practice_50_low[3])
+print(practice_50_high[4] - practice_50_low[4])
+
+print("예시 답안... 왜... 답이 안나오냐... 이건 당당히 패스하자 문제 자체가 이해가 안된다...!")
+practice_50_low = [100, 200, 400, 800, 1000]
+practice_50_high = [150, 300, 430, 880, 1000]
+
+volatility = []
+for i in range(len(practice_50_low)):
+    volatility.append(practice_50_high[i] - practice_50_low[i])
+
+print("일단 여기까지!")
