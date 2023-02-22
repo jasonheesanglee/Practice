@@ -753,4 +753,4 @@ for i in range(len(practice_50_low)):
     volatility.append(practice_50_high[i] - practice_50_low[i])
 
 print("일단 여기까지!")
-print("test")
+# test
