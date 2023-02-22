@@ -553,3 +553,108 @@ multiplier = 1
 for practice_40 in range (1,11):
     multiplier *= practice_40
 print(multiplier)
+
+print()
+print("41. 아래와 같이 리스트의 데이터를 출력하라. 단, for문과 range문을 사용하라.")
+practice_41 = [32100, 32150, 32000, 32500]
+for practice_41_1 in range(4):
+    print(practice_41[practice_41_1])
+print("음...")
+print()
+practice_41 = [32100, 32150, 32000, 32500]
+for practice_41_2 in range(len(practice_41)):
+    print(practice_41[practice_41_2])
+print("이렇게 해도 된다네...?")
+
+print()
+print("42. 아래와 같이 리스트의 데이터를 출력하라. 단, for문과 range문을 사용하라.")
+practice_42 = [32100, 32150, 32000, 32500]
+for practice_42_1 in range(4):
+    print(len(practice_42) + practice_42[practice_42_1])
+print("아 이게 아니잖아.. 다시")
+print()
+
+practice_42 = [32100, 32150, 32000, 32500]
+for practice_42_2 in range(4):
+    print(practice_42_2, practice_42[practice_42_2])
+print("와 이건... 답안지도 없길래 겨우 했네..")
+
+print()
+print("43. 아래와 같이 리스트의 데이터를 출력하라. 단, for문과 range문을 사용하라.")
+practice_43 = [32100, 32150, 32000, 32500]
+for practice_43_1 in range(-1):
+    print(practice_43_1, practice_43[practice_43_1])
+print("앗 이건 아니네")
+print()
+practice_43 = [32100, 32150, 32000, 32500]
+for practice_43_2 in range(len(practice_43)):
+    print(3-practice_43_2, practice_43[practice_43_2])
+print("음... 뭐지... 아 아래처럼 해보면 더 이해가 쉽다!")
+print()
+practice_43 = [32100, 32150, 32000, 32500]
+for practice_43_3 in range(len(practice_43)):
+    print((len(practice_43)-1) - practice_43_3, practice_43[practice_43_3])
+
+print()
+print("44. 아래와 같이 리스트의 데이터를 출력하라. 단, for문과 range문을 사용하라.")
+practice_44 = [32100, 32150, 32000, 32500]
+for practice_44_1 in range(1, len(practice_44)):
+    print(100+(practice_44_1-1)*10, practice_44[practice_44_1])
+print("음... 100을 더하는거 까진 알겠는데 (practice_44_1-1)*10 왜 이거지...")
+
+print()
+print("45. my_list를 아래와 같이 출력하라.")
+print("조금 헷갈려서 일단 for 안쓰고 해봄...!")
+practice_45 = ["가", "나", "다", "라"]
+print(practice_45[0], practice_45[1])
+print(practice_45[1], practice_45[2])
+print(practice_45[2], practice_45[3])
+print()
+print("이 방법은 for도 안썼고, 질문이 의도한 답은 당연히 아닌거 같으니 한번 답안지를 보자")
+for practice_45_1 in [0,1,2]:
+    print(practice_45[practice_45_1])
+print("이건 한 줄만 쓰는 법")
+print()
+print("한 행에 두 개의 데이터를 출력하고 싶기 때문에 이전 코드의 print 문에 출력하고 싶은 데이터를 추가합니다.")
+print("같은 행의 두 데이터는 인덱스 차이가 +1 이라는 것을 잊지마세요.")
+print("i가 0일 때는 0, 1 위치의 값이 출력됩니다.")
+print("i가 1일 때는 1, 2 위치의 값이 출력됩니다.")
+print("i가 2일 때는 2, 3 위치의 값이 출력됩니다.")
+
+print("라고 한다")
+print()
+for practice_45_2 in [0,1,2]:
+    print(practice_45[practice_45_2], practice_45[practice_45_2+1])
+print("이렇게 하는구만...")
+print()
+print("그런데 이렇게 아래처럼 쓸수도 있다고 함")
+for practice_45_3 in range(len(practice_45)-1):
+    print(practice_45[practice_45_3], practice_45[practice_45_3+1])
+print("혹은 아래처럼")
+for practice_45_4 in range(1, len(practice_45)):
+    print(practice_45[practice_45_4-1], practice_45[practice_45_4])
+print("어렵구만...")
+
+print()
+print("46. 리스트를 아래와 같이 출력하라.")
+print("자 45번의 저걸 활용해서 다시 한번 해보자")
+practice_46 = ["가", "나", "다", "라", "마"]
+for practice_46_1 in range(2, len(practice_46)):
+    print(practice_46[practice_46_1-2], practice_46[practice_46_1-1], practice_46[practice_46_1])
+print("잘 쓴거 같은데 왜 에러가 뜨나 고민했었는데 중간 practice_46[practice_46_1-1] 이거를 practice_46[practice_46-1] 이렇게 써서 안되는 거였다...")
+
+print()
+print("47. 반복문과 range 함수를 사용해서 my_list를 아래와 같이 출력하라.")
+practice_47 = ["가", "나", "다", "라"]
+for practice_47_1 in range(2, len(practice_47)+1):
+    print(practice_47[practice_47_1-3], practice_47[practice_47_1-4])
+print("흠... 왜 두번째가 \"가\"로 시작하지?")
+print()
+practice_47 = ["가", "나", "다", "라"]
+for practice_47_2 in range(len(practice_47)-1):
+    print(practice_47[len(practice_47) -1- practice_47_2], practice_47[len(practice_47)-2-practice_47_2])
+print("다시 변수 하나를 빼주면서 전체를 반전시킨건가...?")
+print()
+
+
+
