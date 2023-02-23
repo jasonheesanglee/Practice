@@ -753,8 +753,27 @@ for i in range(len(practice_50_low)):
     volatility.append(practice_50_high[i] - practice_50_low[i])
 
 print("일단 여기까지!")
-#되나 안되나 보자
+print("그리고 다음날...")
 
-#어...? 되네? 이거 올리는데 몇분이나 걸리나 보자 지금은 23년 2월 23일 오전 10시 30분
-#바로 되는듯? Shortcut으로도 되나 보자
-#push까지 바로 해줘야하는건가?
+print()
+print("51. 아래 표에서 하나의 행을 하나의 리스트로, 총 3개의 리스트를 갖는 이차원 리스트 apart를 정의하라.")
+for practice_51 in [('101호, 102호, 103호'),('201호, 202호, 203호')]:
+    print(practice_51)
+print("뭐지... 왜 답안지의 답은 틀렸지...")
+
+print()
+print("52. 아래 표에서 하나의 열을 하나의 리스트로, 총 2개의 리스트를 갖는 이차원 리스트 stock을 정의하라.")
+for practice_52 in [('시가, 종가'),('100, 80'),('200, 210'), ('300, 330')]:
+    print(practice_52)
+
+print()
+print("53. 아래 표를 stock 이름의 딕셔너리로 표현하라. * 시가를 key로 저장하고, 나머지 같은 열의 데이터를 리스트로 저장해서 value로 저장한다. * 종가를 key로 저장하고 나머지 같은 열의 데이터를 리스트로 저장해서 value로 저장한다.")
+practice_53 = {"시가":(100,200,300),"종가":(80,210,330)}
+for practice_53_1 in practice_53["시가", "종가"]:
+    print(practice_53_1)
+
+print()
+print("54. 아래 표를 stock 이름의 딕셔너리로 표현하라. * 날짜를 key로 저장하고, 나머지 같은 행의 데이터를 리스트로 저장해서 value로 저장한다. * 첫 열이 날짜이다.")
+practice_54 = {"10/10":[80, 110, 70, 90],"10/11":[210,230,190,200]}
+for practice_54_1 in practice_54[{"10/10"},{"10/11"}]:
+    print(practice_54_1)
