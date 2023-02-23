@@ -980,3 +980,47 @@ print(counter(1, 10)) # Should be "Counting up: 1,2,3,4,5,6,7,8,9,10"
 print(counter(2, 1)) # Should be "Counting down: 2,1"
 print(counter(5, 5)) # Should be "Counting up: 5"
 
+print()
+print("double_word 함수를 수정하여 동일한 단어를 두 번 반복하고 그 뒤에 새로 추가된 단어의 길이를 반환하도록 합니다. 예를 들어, double_word(\"hello\")는 hellohello10을 반환해야 합니다.")
+def double_word(word):
+    return word + word + str(len(word)*2)
+
+print(double_word("hello")) # Should return hellohello10
+print(double_word("abc"))   # Should return abcabc6
+print(double_word(""))      # Should return 0
+
+print()
+print("string indexing")
+name = "Jaylen"
+print(name[1])
+print(name[0])
+print(name[len(name)-1])
+print()
+text = "Random string with a lot of characters"
+print(name[len(name)-5])
+print(text[len(text)-13])
+
+print()
+print("string index question")
+def first_and_last(message):
+    if message:
+        if message == "" or message[0] == message[-1]:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+print(first_and_last("else"))
+print(first_and_last("tree"))
+print(first_and_last(""))
+print()
+print("simple way to do it")
+def first_and_last(message):
+    return message == "" or message[0] == message[-1]
+
+print(first_and_last("else"))
+print(first_and_last("tree"))
+print(first_and_last(""))
+print("is there one? I don't find this correct")
+print("oh nevermind, this was the correct one! :)")
