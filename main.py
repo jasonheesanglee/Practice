@@ -1064,6 +1064,51 @@ def replace_domain(email, old_domain, new_domain):
         index = email.index("@" + old_domain)
         new_email = email[:index] + "@" + new_domain
         return new_email
-print(replace_domain("heesang.lee@atheneum-partners.com","atheneum-partners.com","athneum.ai"))
+print(replace_domain("heesang.lee@atheneum-partners.com","atheneum-partners.com","atheneum.ai"))
 
 print()
+print("Mountains".upper())
+print("Mountains".lower())
+
+print()
+answer = 'YES'
+if answer.lower() == "yes":
+    print("User says yes")
+
+print()
+print(" yes ".strip())
+print(" yes ".lstrip())
+print(" yes ".rstrip())
+
+print()
+print("The number of times e occurs in this string is 4".count("e"))
+
+print()
+print("Forest".endswith("rest"))
+
+print()
+print("Forest".isnumeric())
+print("12345".isnumeric())
+
+print()
+print(int("12345")+int("54321"))
+
+print()
+print(" ".join(["This", "is", "a", "phrase", "joined", "by", "spaces"]))
+print("...".join(["This", "is", "a", "phrase", "joined", "by", "triple", "dots"]))
+print(("This is another example").split())
+print(("Thismismanothermexample").split("m"))
+
+
+print()
+print("sample question to take out first letter of each word then capitalize it")
+def initials(phrase):
+    words = phrase.split()
+    result = ""
+    for word in words:
+        result += word[0].upper()
+    return result
+
+print(initials("Universal Serial Bus")) # Should be: USB
+print(initials("local area network")) # Should be: LAN
+print(initials("Operating system")) # Should be: OS
