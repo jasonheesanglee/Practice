@@ -1024,3 +1024,46 @@ print(first_and_last("tree"))
 print(first_and_last(""))
 print("is there one? I don't find this correct")
 print("oh nevermind, this was the correct one! :)")
+
+
+print()
+color = "Orange"
+print(color[1:4])
+
+fruit = "pineapple"
+print(fruit[:4])
+print(fruit[4:])
+
+print()
+print("creating new string")
+print()
+
+message = "A kong string with a silly typo"
+print(message)
+#message[2] = "l"
+
+new_message = message[0:2] + "l" + message[3:]
+print(new_message)
+message = "this is a new message"
+print(message)
+
+print()
+pets = "Cats & Dogs"
+print(pets.index("&"))
+print(pets.index("C"))
+print(pets.index("Dog"))
+print(pets.index("s"))
+#print(pets.index("x"))
+print("Dragons" in pets)
+if "Cats" in pets:
+    print("Wohahaha")
+
+print()
+def replace_domain(email, old_domain, new_domain):
+    if"@" + old_domain in email:
+        index = email.index("@" + old_domain)
+        new_email = email[:index] + "@" + new_domain
+        return new_email
+print(replace_domain("heesang.lee@atheneum-partners.com","atheneum-partners.com","athneum.ai"))
+
+print()
