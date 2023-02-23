@@ -1287,3 +1287,40 @@ print ("are" in x)
 print (x[0])
 print(x[3])
 print(x[-1])
+
+print(x[1:3])
+print(x[:2])
+print(x[2:])
+
+print()
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+print(fruits)
+fruits.append("kiwi")
+print(fruits)
+print()
+fruits.insert(0,"Orange")
+print(fruits)
+
+fruits.insert(25,"peach")
+print(fruits)
+fruits.remove("Melon")
+print(fruits)
+print(fruits.pop(3))
+fruits[2]= "Strawberry"
+print(fruits)
+
+print()
+print("skip element question")
+print("skip_elements 함수는 첫 번째 요소부터 시작하여 입력 목록의 다른 모든 요소를 포함하는 목록을 반환합니다. 입력 목록을 반복하기 위해 for 루프를 사용하여 해당 작업을 수행하려면 이 함수를 완료하십시오.")
+print("")
+def skip_elements(elements):
+	new_list = []
+	for element in elements[::2]:
+		new_list.append(element)
+	return new_list
+
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
+print(skip_elements([])) # Should be []
+
+print()
