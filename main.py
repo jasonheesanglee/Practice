@@ -1112,3 +1112,178 @@ def initials(phrase):
 print(initials("Universal Serial Bus")) # Should be: USB
 print(initials("local area network")) # Should be: LAN
 print(initials("Operating system")) # Should be: OS
+
+print()
+print("format method")
+name = "Manny"
+number = len(name)*3
+print("Hello {}, your lucky number is {}".format(name, number))
+
+print()
+print("Your lucky number is {number}, {name}".format(name=name, number=len(name)*3))
+
+print()
+print("format sample question")
+print()
+def student_grade(name, grade):
+	return "{} received {}% on the exam".format(name,grade)
+
+print(student_grade("Reed", 80))
+print(student_grade("Paige", 92))
+print(student_grade("Jesse", 85))
+
+print()
+price = 7.5
+with_tax = price * 1.09
+print(price, with_tax)
+print("Base price: ${:.2f}. With Tax: ${:.2f}".format(price, with_tax))
+
+print()
+print("recap on celius example with format to reduce decimals")
+def to_celcius(x):
+    return(x-32)*5/9
+for x in range(0,101,10):
+    print(x, to_celcius(x))
+
+print()
+print("now look at below")
+def to_celcius(x):
+    return(x-32)*5/9
+for x in range(0,101,10):
+    print("{:>3} F | {:>6.2f} C".format(x, to_celcius(x)))
+print()
+print(":>숫자 이거는 오른쪽으로 숫자만큼 정렬")
+
+
+#Expr   의미 예시
+
+#{:d}   정수 값        '{:d}'.format(10.5) → '10'
+#{:.2f} 소수점이 많은 부동 소수점       '{:.2f}'.format(0.5) → '0.50'
+#{:.2s} 많은 문자가 포함된 문자열         '{:.2s}'.format('Python') → 'Py'
+#{:<6s} 많은 공백의 왼쪽으로 정렬된 문자열  '{:<6s}'.format('Py') → 'Py    '
+#{:>6s} 많은 공백의 오른쪽으로 정렬된 문자열    '{:>6s}'.format('Py') → '    Py'
+#{:^6s} 많은 공백의 가운데에 있는 문자열       '{:^6s}'.format('Py') → '  Py  '
+
+print("연습문제 1")
+print("is_palindrome 함수는 문자열이 회문인지 확인합니다.")
+print("회문은 왼쪽에서 오른쪽으로 읽거나 오른쪽에서 왼쪽으로 읽어도 똑같이 읽히며, 공백을 생락하고 대문자를 사용하지 않는 문자열입니다.")
+print("회문의 예로는 kayak(카약) 및 radar(레이더)와 같은 단어와 ‘Never Odd or Even’(홀수 또는 짝수 아님)과 같은 구문이 있습니다.")
+print("전달된 문자열이 회문이면 True(참)를 리턴하고 그렇지 않으면 False(거짓)를 리턴하도록 이 함수의 빈칸을 채우십시오. ")
+
+def is_palindrome(input_string):
+	# We'll create two strings, to compare them
+	new_string = ""
+	reverse_string = ""
+	# Traverse through each letter of the input string
+	for letter in input_string.strip():
+		# Add any non-blank letters to the
+		# end of one string, and to the front
+		# of the other string.
+		new_string = new_string+letter.replace(" ", "")
+		reverse_string = letter.replace(" ","") + reverse_string
+	# Compare the strings
+	if new_string.lower() == reverse_string.lower():
+		return True
+	return False
+
+print(is_palindrome("Never Odd or Even")) # Should be True
+print(is_palindrome("abc")) # Should be False
+print(is_palindrome("kayak")) # Should be True
+print()
+print("OR")
+print()
+def is_palindrome(input_string):
+    new_string = ""
+    reverse_string = ""
+    for letter in input_string.lower():
+        if letter != " ":
+            new_string = new_string + letter
+            reverse_string = letter + reverse_string
+    if new_string == reverse_string:
+        return True
+    return False
+
+print(is_palindrome("Never Odd or Even")) # Should be True
+print(is_palindrome("abc")) # Should be False
+print(is_palindrome("kayak")) # Should be True
+
+print()
+print("연습문제 2")
+print("format 메서드를 사용하여 convert_distance 함수의 공백을 채워서 Y가 소수점 이하 1자리만 가지면서 ‘X miles equals Y km’(X마일은 Ykm와 같다)라는 구문을 리턴하도록 합니다.")
+print("예를 들어, convert_distance(12)는 ‘12 miles equals 19.2 km’(12마일은 19.2km와 같다)를 리턴해야 합니다.")
+print()
+def convert_distance(miles):
+	km = miles * 1.6
+	result = "{} miles equals ${:.1f} km".format(miles,km)
+	return result
+
+print(convert_distance(12)) # Should be: 12 miles equals 19.2 km
+print(convert_distance(5.5)) # Should be: 5.5 miles equals 8.8 km
+print(convert_distance(11)) # Should be: 11 miles equals 17.6 km
+
+print()
+print("연습문제 3")
+print("Weather = \"Rainfall\"이라는 문자열 변수가 있는 경우 다음 중 \"f\" 앞의 하위 문자열 또는 모든 문자를 인쇄하는 것은 무엇입니까?")
+Weather = "Rainfall"
+print(Weather[:4])
+
+print()
+print("연습문제 4")
+print("first_name과 last_name의 첫 번째 이니셜 다음에 마침표를 리턴하도록 format 메서드를 사용하여 nametag 함수의 공백을 채우십시오.")
+print("예를 들어, nametag(\"Jane\", \"Smith\")는 ‘Jane S.’를 리턴해야 합니다.")
+def nametag(first_name, last_name):
+    return ("{}".format(first_name[0].upper()) + first_name[1:] + " {}.".format(last_name[0]).upper())
+
+print(nametag("Jane", "Smith"))
+# Should display "Jane S."
+print(nametag("Francesco", "Rinaldi"))
+# Should display "Francesco R."
+print(nametag("Jean-Luc", "Grand-Pierre"))
+# Should display "Jean-Luc G."
+
+print()
+print("연습문제 5")
+print("replace_ending 함수는 문장의 이전 문자열을 새 문자열로 바꿉니다. ")
+print("단, 문장이 이전 문자열로 끝나는 경우에만 가능합니다.")
+print("문장에 이전 문자열이 두 번 이상 있는 경우 전체가 아닌 끝에 있는 문자열만 대체됩니다.")
+print("예를 들어, replace_ending(“abcabc”, “abc”, “xyz”)은 xyzxyz 또는 xyzabc가 아니라 abcxyz로 리턴합니다.")
+print("문자열 비교는 대소문자를 구분하므로 replace_ending(“abcabc\", \"ABC\", \"xyz\")는 abcabc(변경 사항 없음)를 리턴해야 합니다.")
+print()
+
+def replace_ending(sentence, old, new):
+    # Check if the old string is at the end of the sentence
+    sentences = sentence.split()
+    if sentences[-1] == old:
+        # Using i as the slicing index, combine the part
+        # of the sentence up to the matched string at the
+        # end with the new string
+        sentences[-1] = new
+        new_sentence = " ".join(sentences)
+        return new_sentence
+
+    # Return the original sentence if there is no match
+    return sentence
+
+
+print(replace_ending("It's raining cats and cats", "cats", "dogs"))
+# Should display "It's raining cats and dogs"
+print(replace_ending("She sells seashells by the seashore", "seashells", "donuts"))
+# Should display "She sells seashells by the seashore"
+print(replace_ending("The weather is nice in May", "may", "april"))
+# Should display "The weather is nice in May"
+print(replace_ending("The weather is nice in May", "May", "April"))
+# Should display "The weather is nice in April"
+
+
+print()
+print("list")
+
+x = ["Now", "we", "are", "cooking!"]
+print(type(x))
+print(x)
+print("length of the list: ", len(x))
+
+print ("are" in x)
+print (x[0])
+print(x[3])
+print(x[-1])
