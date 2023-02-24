@@ -1353,3 +1353,145 @@ def file_size(file_info):
 print(file_size(('Class Assignment', 'docx', 17875))) # Should print 17.46
 print(file_size(('Notes', 'txt', 496))) # Should print 0.48
 print(file_size(('Program', 'py', 1239))) # Should print 1.21
+
+print()
+animals = ["Lion", "Zebra", "Dolphin", "Monkey"]
+chars = 0
+for animal in animals:
+    chars += len(animal)
+
+print("Total Characters: {}, Average Length: {}".format(chars, chars/len(animals)))
+
+print()
+winners = ["Ashley", "Dylan", "Reese"]
+for index, person in enumerate(winners):
+    print("{} - {}".format(index+1, person))
+
+print()
+print("enumerate practice question")
+print("이 빠른 연습에서 직접 열거 함수를 사용해 보십시오. skip_elements 함수를 완료하여 목록에서 다른 모든 요소를 반환합니다. 이번에는 요소가 짝수 위치에 있는지 또는 홀수 위치에 있는지 확인하기 위해 열거 함수를 사용합니다.")
+
+def skip_elements(elements):
+	# code goes here
+	element = []
+	for i, e in enumerate(elements):
+		if i % 2 == 0:
+			element.append(e)
+	return element
+
+def full_emails(people):
+    result = []
+    for email, name in people:
+        result.append("{} <{}>".format(name,email))
+    return result
+
+print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Shay Brandt")]))
+
+print()
+
+multiples = []
+for x in range(1,11):
+    multiples.append(x*7)
+print(multiples)
+multiples = [x*7 for x in range(1,11)]
+print(multiples)
+
+print()
+languages = ["Python", "Pearl", "Ruby", "Go", "Java", "C"]
+lengths = [len(language) for language in languages]
+print(lengths)
+z = [x for x in range(0,101) if x%3 == 0]
+print(z)
+
+print()
+print("practice question")
+print("odd_numbers 함수는 1과 n 사이의 홀수 목록을 반환합니다. 목록 이해를 사용하여 함수의 공백을 채우십시오. 힌트: 목록 및 범위 카운터는 0에서 시작하여 한계에서 1을 뺀 값에서 끝납니다.")
+def odd_numbers(n):
+	return [x for x in range(1,n+1,2) if x%1 == 0]
+
+print(odd_numbers(5))  # Should print [1, 3, 5]
+print(odd_numbers(10)) # Should print [1, 3, 5, 7, 9]
+print(odd_numbers(11)) # Should print [1, 3, 5, 7, 9, 11]
+print(odd_numbers(1))  # Should print [1]
+print(odd_numbers(-1)) # Should print []
+
+print()
+print("Practice Quiz")
+print()
+print("Practice Quiz 1")
+print("파일 이름 목록이 있는 상태에서 확장자 hpp로 된 모든 파일 이름을 확장자 h로 이름을 바꾸고자 합니다.")
+print("이를 수행하기 위해 새 파일 이름으로 구성된 newfilenames라는 새 목록을 생성하려고 합니다.")
+print("for 루프나 리스트 컴프리헨션과 같이 지금까지 배운 메서드를 사용하여 코드의 빈칸을 채우십시오.")
+
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+# Generate newfilenames as a list containing the new filenames
+# using as many lines of code as your chosen method requires.
+print("program"+"."+"c", "studio"+"."+"h", "sample"+"."+"h", "a"+"."+"out", "math"+"."+"h", "hpp"+"."+"out")
+print("이건 당연히 되겠지")
+print()
+print()
+
+def replace_extension(filename,old_extension,new_extension):
+    if"." + old_extension in filename:
+        filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+        index = filenames.index("."+ old_extension)
+        newfilenames = filenames[:index] + "." + new_extension
+        return newfilenames
+    return filename
+print(replace_extension(filenames,"hpp","h"))
+print()
+print("왜 위에께 안돼...?")
+
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+firstname = [firsthalf.split(".",1)[0] for firsthalf in filenames]
+secondname = [secondhalf.split(".",1)[1] for secondhalf in filenames]
+
+print(str(firstname),".",secondname)
+
+print("이게 안돼...?")
+
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+for filename in filenames:
+    for firsthalf in filename:
+        firstname = filename.split(".",1)[0]
+    for secondhalf in filename:
+        secondname = filename.split(".",1)[1]
+        secondname.replace("hpp","h")
+print(filename)
+
+print("이건 또 왜 이렇게 나와...")
+
+print()
+filenames = 0
+filename = 0
+print("차근차근해보자고")
+print("일단 전체 리스트부터 작은 리스트로 쪼개주기")
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+for filename in filenames:
+    oldfilenames = filename.split(".")
+    newfilenames = oldfilenames[1].replace("hpp","h")
+    print(oldfilenames[0]+"."+newfilenames)
+print("adsljdfl;kasl;ask;asdkl;askf;lk 와 진짜... 드디어.... 이 문제로 2시간 잡아먹었네... 연습문제 27번이랑 30번, 그리고 구글에 경의를 표합니다")
+print()
+print("아니 근데 잠깐만... 이거를 리스트로 다시 만들어야되잖아...")
+
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+for filename in filenames:
+    oldfilenames = filename.split(".")
+    newfilenames = oldfilenames[1].replace("hpp","h")
+    print([oldfilenames[0]+"."+newfilenames])
+
+print("이건 아니고...")
+print()
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+new_name = []
+for filename in filenames:
+    oldfilenames = filename.split(".")
+    newfilenames = oldfilenames[1].replace("hpp","h")
+    new_name.extend([oldfilenames[0]+"."+newfilenames])
+print(new_name)
+print()
+print("응...??")
+print("된건가...?")
+print("됐다... 마지막 코드들 보니까... 내가 처음에 괜히 복잡하게 생각했었네...")
+
