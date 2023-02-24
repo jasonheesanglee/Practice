@@ -1495,3 +1495,192 @@ print("응...??")
 print("된건가...?")
 print("됐다... 마지막 코드들 보니까... 내가 처음에 괜히 복잡하게 생각했었네...")
 
+word = "python"
+print(word[0])
+
+
+print("Practice Quiz 2")
+print("텍스트를 피그 라틴으로 변경하는 함수를 생성해보겠습니다.")
+print("각 단어의 첫 번째 글자를 끝으로 옮기고 끝에 ‘ay’를 덧붙여 수정하는 방식으로 간단하게 텍스트를 변환합니다. 예를 들어, python은 ythonpay가 됩니다.")
+
+def pig_latin(text):
+    say = ""
+    # Separate the text into words
+    newpiglatinword = []
+    words = text.split(" ")
+
+    for word in words:
+        # Create the pig latin word and add it to the list
+        newpiglatinword.extend(word[1:] + word[0] + "ay")
+        # Turn the list back into a phrase
+    return newpiglatinword
+
+
+print(pig_latin("hello how are you"))  # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun"))  # Should be "rogrammingpay niay ythonpay siay unfay"
+
+print("자... 아웃풋이 맞긴 맞는데... 왜 다 분리됐냐... 다시 해보자")
+
+
+def pig_latin(text):
+    say = " "
+    # Separate the text into words
+    newpiglatinword = []
+    words = text.split(" ")
+    for word in words:
+        # Create the pig latin word and add it to the list
+        word = word[1:] + word[0] + "ay"
+        newpiglatinword.append(word)
+        # Turn the list back into a phrase
+    return say.join(newpiglatinword)
+
+
+print(pig_latin("hello how are you"))  # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun"))  # Should be "rogrammingpay niay ythonpay siay unfay"
+
+print("음.. 일단 구글링으로 해봤네... 오케... 어펜드랑... 조인")
+print("그럼 원래 내 코드에 append만 붙여볼까?")
+print()
+
+def pig_latin(text):
+    say = ""
+    # Separate the text into words
+    newpiglatinword = []
+    words = text.split(" ")
+
+    for word in words:
+        # Create the pig latin word and add it to the list
+        newpiglatinword.append(word[1:] + word[0] + "ay")
+        # Turn the list back into a phrase
+    return newpiglatinword
+
+
+print(pig_latin("hello how are you"))  # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun"))  # Should be "rogrammingpay niay ythonpay siay unfay"
+print("아 이렇게되면 아예 separate 리스트가 되는구나")
+
+
+print()
+print("Practice Quiz 3")
+print("Linux 시스템에서 파일의 권한은 소유자, 그룹 및 기타의 세 권한에 대한 읽기, 쓰기 및 실행의 세 가지 세트로 나뉩니다.")
+print("각각의 세 가지 값은 각 권한을 합한 8진수로 표현할 수 있으며, 4는 읽기, 2는 쓰기, 1은 실행으로 표현됩니다.")
+print("또는 권한이 부여되지 않은 경우 r, w, x 또는 - 문자를 사용하여 문자열로 작성될 수 있습니다.")
+print("예: 640은 소유자에 대한 읽기/쓰기, 그룹에 대한 읽기, 다른 사람에 대한 권한 없음을 뜻합니다.")
+print("문자열로 변환하면 ‘rw-r-----’과 같습니다.")
+print()
+print("755는 소유자에 대한 읽기/쓰기/실행이고 그룹 및 기타에 대한 읽기/실행입니다. 문자열로 변환하면 ‘rwxr-xr-x’입니다. 코드가 권한을 8진수에서 문자열 형식으로 변환하도록 빈칸을 채우십시오.")
+
+print("??? 8진수요?")
+
+
+def octal_to_string(octal):
+    result = ""
+    value_letters = [(4, "r"), (2, "w"), (1, "x")]
+    # Iterate over each of the digits in octal
+    for digits in [int(n) for n in str(octal)]: #value_letters = 755
+        # Check for each of the permissions values
+        for value, letter in value_letters:
+            if digits >= value:
+                result += letter
+                digits -= value
+            else:
+                result += "-"
+    return result
+
+
+print(octal_to_string(755))  # Should be rwxr-xr-x
+print(octal_to_string(644))  # Should be rw-r--r--
+print(octal_to_string(750))  # Should be rwxr-x---
+print(octal_to_string(600))  # Should be rw-------
+
+print("이야 이거 문자열이 무슨 의미인진 진짜 모르겠다... ")
+
+
+print()
+print("Practice Quiz 4는 코드 짜는 문제 아니라서 패스")
+
+print()
+print("Practice Quiz 5")
+print("group_list 함수는 그룹 이름과 구성원 목록을 수락하고 다음 형식의 문자열을 리턴합니다.")
+print("group_name: member1, member2, … 예를 들어 group_list(\"g\", [\"a\",\"b\",\"c\"] )는 ‘g: a, b, c’를 리턴합니다.")
+print("해당 함수에서 이를 실행하도록 공백을 채우십시오.")
+
+def group_list(group, users):
+    new_list = []
+    members = users
+    return group, members
+
+print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
+print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
+print(group_list("Users", "")) # Should be "Users:"
+print("자 이건 아닌거 같고... 다시 해봅시다")
+
+def group_list(group, users):
+    return group + ": " + str(users)
+
+print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
+print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
+print(group_list("Users", "")) # Should be "Users:"
+print("자 일단 이정도까진 만들어놨다... 이제 이 users를 리스트에서 어떻게 빼냐")
+
+print()
+def group_list(group, users):
+    return group + ": " + " ".join(users)
+
+print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
+print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
+print(group_list("Users", "")) # Should be "Users:"
+print("join을 잊지말자")
+print("잠깐만... 콤마 어디갔는데...")
+
+print()
+
+def group_list(group, users):
+    return group + ": " + ", ".join(users)
+
+print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
+print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
+print(group_list("Users", "")) # Should be "Users:"
+print("됐다")
+
+print()
+print()
+
+
+print("guest_list 함수는 파티에 온 각 손님의 이름, 나이, 직업이 포함된 튜플 목록을 읽고 각각에 ‘Guest is X years and works as __.’(손님은 X세이며 직업은 __입니다.)라는 문장을 출력합니다.")
+print("예를 들어 guest_list(('Ken', 30, \"Chef\"), (\"Pat\", 35, 'Lawyer'), ('Amanda', 25, \"Engineer\"))는 다음과 같이 출력됩니다. ")
+print("Ken is 30 years old and works as Chef.(Ken은 30세이며 직업은 셰프입니다.)")
+print("Pat is 35 years old and works as Lawyer.(Pat은 35세이며 직업은 변호사입니다.)")
+print("Amanda is 25 years old and works as Engineer.(Amanda는 25세이며 직업은 엔지니어입니다.)")
+print("해당 함수에서 이를 실행하도록 공백을 채우십시오.")
+
+print()
+
+def guest_list(guests):
+    for guest in guests:
+        print("{} is {} years old and works as {}".format(guest[0], guest[1], guest[2]))
+
+guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
+#Click Run to submit code
+print("""
+Output should match:
+Ken is 30 years old and works as Chef
+Pat is 35 years old and works as Lawyer
+Amanda is 25 years old and works as Engineer
+""")
+print("wohahaha")
+def guest_list(guests):
+    for guest in guests:
+        name,age,job = guest
+        print("{} is {} years old and works as {}".format(name,age,job))
+
+guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
+#Click Run to submit code
+print("""
+Output should match:
+Ken is 30 years old and works as Chef
+Pat is 35 years old and works as Lawyer
+Amanda is 25 years old and works as Engineer
+""")
