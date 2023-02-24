@@ -1324,3 +1324,32 @@ print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # S
 print(skip_elements([])) # Should be []
 
 print()
+
+Fullname = ("Grace", "M", "Harper")
+print()
+def convert_seconds(seconds):
+    hours = seconds // 3600
+    minutes = (seconds - hours * 3600) // 60
+    remaining_seconds = seconds - hours * 3600 - minutes *60
+    return hours, minutes, remaining_seconds
+
+result = convert_seconds(5000)
+print(result)
+print(type(result))
+
+print()
+hours, minutes, seconds = result
+print(hours,minutes,seconds)
+hours, minutes, seconds = convert_seconds(1000)
+print (hours, minutes, seconds)
+
+print()
+print("Tuple Practice Questions")
+print("튜플을 사용하여 파일에 대한 정보(이름, 형식 및 크기(바이트))를 저장해 보겠습니다. 이 코드의 공백을 채워 소수점 이하 2자리까지 크기를 킬로바이트(킬로바이트는 1024바이트)로 반환합니다.")
+def file_size(file_info):
+	Name, Type, Size = file_info
+	return("{:.2f}".format(Size / 1024))
+
+print(file_size(('Class Assignment', 'docx', 17875))) # Should print 17.46
+print(file_size(('Notes', 'txt', 496))) # Should print 0.48
+print(file_size(('Program', 'py', 1239))) # Should print 1.21
