@@ -2269,3 +2269,55 @@ class Shirt(Clothing):
 
 polo = Shirt("Polo")
 polo.checkmaterial()
+
+print()
+print("Composition")
+
+class Repository:
+    def __init__(self):
+        self.packages = {}
+    def add_package(self,package):
+        self.packages[package.name] = package
+    def total_size(self):
+        result = 0
+        for package in self.packages.values():
+            result += package.size
+        return result
+
+print()
+print("practice quiz - composition")
+print("이전 비디오 내 질문에서 Clothing 클래스에 대해 조금 더 확장해 보겠습니다.")
+print("임무: \"Stock_by_Material\" 메서드를 완료하고 재고가 있는 주어진 재료의 각 항목 양을 반복합니다.")
+print("완료되면 스크립트에 최대 10개의 면 Polo 셔츠가 추가됩니다.")
+
+class Clothing:
+    stock = {'name': [], 'material': [], 'amount': []}
+    def __init__(self, name):
+        material = ""
+        self.name = name
+    def add_item(self, name, material, amount):
+        Clothing.stock['name'].append(self.name)
+        Clothing.stock['material'].append(self.material)
+        Clothing.stock['amount'].append(amount)
+    def Stock_by_Material(self, material):
+        count = 0
+        n = 0
+        for item in Clothing.stock['material']:
+            if item == material:
+                count += Clothing.stock['amount'][n]
+                n += 1
+        return count
+
+class shirt(Clothing):
+    material = "Cotton"
+class pants(Clothing):
+    material = "Cotton"
+
+polo = shirt("Polo")
+sweatpants = pants("Sweatpants")
+polo.add_item(polo.name, polo.material, 4)
+sweatpants.add_item(sweatpants.name, sweatpants.material, 6)
+current_stock = polo.Stock_by_Material("Cotton")
+print(current_stock)
+
+print()
