@@ -2219,3 +2219,53 @@ print("Jupyter Notebook...?")
 print()
 print("inheritance")
 print()
+class Fruit:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+class Apple(Fruit):
+    pass
+class Grape(Fruit):
+    pass
+granny_smith = Apple("green", "tart")
+carnelian = Grape("purple", "sweet")
+print(granny_smith.flavor)
+print(carnelian.color)
+
+print()
+
+class Animal:
+    sound = ""
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        print("{sound} I'm {name}! {sound}".format(name=self.name, sound=self.sound))
+class Piglet(Animal):
+    sound = "Oink!"
+hamlet = Piglet("Hamlet")
+hamlet.speak()
+
+class Cow(Animal):
+    sound = "Mooooo"
+milky = Cow("Milky White")
+milky.speak()
+
+print()
+print("practice quiz - inheritance")
+print("함께 새 클래스를 만들고 상속해 봅시다.")
+print("아래에는 Clothing이라는 기본 클래스가 있습니다.")
+print("함께 Clothing 클래스에서 메서드를 상속하는 Shirt라는 두 번째 클래스를 만들어 보겠습니다.")
+print("제대로 작동하도록 빈칸을 채우십시오.")
+print()
+class Clothing:
+    material = ""
+    def __init__(self, name):
+        self.name = name
+    def checkmaterial(self):
+       print("This {} is made of {}".format(self.name, self.material))
+
+class Shirt(Clothing):
+    material = "Cotton"
+
+polo = Shirt("Polo")
+polo.checkmaterial()
