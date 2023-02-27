@@ -125,6 +125,9 @@ print(a[t1[1:2]])
 print(dic.get('nokey'))
 print(dic.get('nalsdj', '값이 존재하지 않습니다'))
 print(dic.get('name', '값이 존재하지 않습니다'))
+print()
+
+print()
 
 print(type("a"))
 print(type(2))
@@ -1737,3 +1740,263 @@ count_letters("aaaaa")
 count_letters("tenant")
 count_letters("a long string with a lot of letters")
 
+ip_addresses = ["192.168.1.1","127.0.0.1","8.8.8.8"]
+host_addresses = {"router": "192.168.1.1", "localhost":"127.0.0.1","google":"8.8.8.8"}
+print("use dictionary when you are searching for a specific data; large data set")
+print()
+
+print("practice question:")
+print("파이썬에서 사전은 주어진 키에 대해 단일 값만 보유할 수 있습니다.")
+print("이 문제를 해결하기 위해 단일 값은 여러 값을 포함하는 목록이 될 수 있습니다. ")
+print("여기에 의류 항목과 색상이 포함된 \"wardrobe\"라는 사전이 있습니다. 예를 들어 \"red shirt\", \"blue shirt\" 등의 색상으로 각 의류 품목에 대한 줄을 인쇄하도록 공백을 채우십시오.")
+
+wardrobe = {"shirt":["red","blue","white"], "jeans":["blue","black"]}
+for clothes in wardrobe:
+	for colors in wardrobe[clothes]:
+		print("{} {}".format(colors, clothes))
+
+print()
+print("practice quiz")
+
+print("Question 1")
+print("email_list 함수는 도메인 이름을 키로 포함하고 사용자 목록을 값으로 포함하는 딕셔너리를 받습니다.")
+print("완전한 이메일 주소(예: diana.prince@gmail.com)가 포함된 목록을 생성하려면 빈칸을 채우십시오.")
+
+def email_list(domains):
+	emails = []
+	for domain, users in domains.items():
+	  for user in users:
+	    emails.append(user+"@"+domain)
+	return(emails)
+
+print(email_list({"gmail.com": ["clark.kent", "diana.prince", "peter.parker"], "yahoo.com": ["barbara.gordon", "jean.grey"], "hotmail.com": ["bruce.wayne"]}))
+
+print()
+print("Question 2")
+print("groups_per_user 함수는 사용자 목록과 함께 그룹 이름이 포함된 딕셔너리를 받습니다.")
+print("사용자는 여러 그룹에 속할 수 있습니다.")
+print("사용자를 키로, 이들의 그룹 목록을 값으로 포함하는 딕셔너리를 리턴하도록 빈칸을 채우십시오.")
+def groups_per_user(group_dictionary):
+	user_groups = {}
+	# Go through group_dictionary
+	for group, users in group_dictionary.items():
+		# Now go through the users in the group
+		for user in users:
+			user_groups[user] = user_groups.get(user,[])+[group]
+			# Now add the group to the the list of
+# groups for this user, creating the entry
+# in the dictionary if necessary
+
+	return(user_groups)
+
+print(groups_per_user({"local": ["admin", "userA"],
+		"public":  ["admin", "userB"],
+		"administrator": ["admin"] }))
+
+print()
+print("Question 3")
+print("dict.update 메서드는 하나의 사전을 다른 사전에서 가져온 항목으로 업데이트하므로 기존 항목이 대체되고 새 항목이 추가됩니다.")
+print("다음 코드 끝에 있는 사전 \"wardrobe\"의 내용은 무엇입니까?")
+
+wardrobe = {'shirt': ['red', 'blue', 'white'], 'jeans': ['blue', 'black']}
+new_items = {'jeans': ['white'], 'scarf': ['yellow'], 'socks': ['black', 'brown']}
+wardrobe.update(new_items)
+print(wardrobe)
+
+print()
+print("Question 4")
+print("목록보다 사전을 사용하는 주요 이점은 무엇입니까?")
+print("Answer: 사전에서 특정 요소를 더 빠르고 쉽게 찾을 수 있습니다.")
+
+print()
+print("Question 5")
+print("add_prices 함수는 딕셔너리에 있는 모든 식료품의 총 가격을 리턴합니다.")
+print("이 함수 작성을 완료하려면 빈칸을 채우십시오. ")
+
+def add_prices(basket):
+	# Initialize the variable that will be used for the calculation
+	total = 0
+	# Iterate through the dictionary items
+	for items in basket.values():
+		# Add each price to the total calculation
+		# Hint: how do you access the values of
+		# dictionary items?
+		total += items
+	# Limit the return value to 2 decimal places
+	return round(total, 2)
+
+groceries = {"bananas": 1.56, "apples": 2.50, "oranges": 0.99, "bread": 4.59,
+	"coffee": 6.99, "milk": 3.39, "eggs": 2.98, "cheese": 5.44}
+
+print(add_prices(groceries)) # Should print 28.44
+
+print()
+print()
+print("Module 4 Quiz")
+print()
+print("Question 1")
+print("format_address 함수는 주소 문자열의 일부를 새로운 문자열인 house_number 및 street_name으로 분리하고 ‘house number X on street named Y’(도로명 Y의 X번지)로 리턴합니다.")
+print("입력 문자열의 형식은 다음과 같습니다. 숫자로 된 번지, 그 뒤에 도로명이 오며 도로명은 숫자를 포함할 수 있지만 단독으로 사용할 수 없으며 여러 단어로 이어질 수 있습니다.")
+print("예를 들어, ‘123 Main Street’, ‘1001 1st Ave’ 또는 ‘55 North Center Drive’ 등이 될 수 있습니다. 이 함수 작성을 완료하려면 공백을 채우십시오.")
+def format_address(address_string):
+  # Declare variables
+    house_number = 0
+    street_name = []
+  # Separate the address string into parts
+    address = address_string.split()
+  # Traverse through the address parts
+    for item in address:
+      if item.isnumeric():
+          house_number = item
+      else:
+          street_name.append(item)
+    # Determine if the address part is the
+    # house number or part of the street name
+
+  # Does anything else need to be done
+  # before returning the result?
+
+  # Return the formatted string
+    return "house number {} on street named {}".format(house_number, " ".join(street_name))
+
+print(format_address("123 Main Street"))
+# Should print: "house number 123 on street named Main Street"
+
+print(format_address("1001 1st Ave"))
+# Should print: "house number 1001 on street named 1st Ave"
+
+print(format_address("55 North Center Drive"))
+# Should print "house number 55 on street named North Center Drive"
+
+
+print()
+print("Question 2")
+print("highlight_word 함수는 문장에서 주어진 단어를 대문자 버전으로 변경합니다.")
+print("예를 들어, highlight_word(\"Have a nice day\", \"nice\")는 ‘Have a NICE day’(좋은 하루 보내세요)를 리턴합니다. ")
+print("이 함수를 단 한 줄로 작성할 수 있습니까?")
+
+def highlight_word(sentence, word):
+	return(sentence.replace(word,word.upper()))
+
+print(highlight_word("Have a nice day", "nice"))
+print(highlight_word("Shhh, don't be so loud!", "loud"))
+print(highlight_word("Automating with Python is fun", "fun"))
+
+print()
+print("Question 3")
+print("amie와 Drew라는 두 명의 조수가 있는 교수는 학생들이 교실에 도착한 순서대로 작성한 출석 목록을 원합니다.")
+print("Drew는 도착한 학생들을 작성한 첫 번째 사람이고, 그 다음은 Jamie가 이어 적었습니다.")
+print("수업이 끝난 후, 그들은 각자 자신의 목록을 컴퓨터에 입력하고 교수에게 이메일로 보냈고 교수는 이 목록을 각 학생이 도착한 순서대로 하나로 만들고자 합니다.")
+print("한편 Jamie는 곧이어 그녀의 목록이 역순이라고 메일을 보냈습니다.")
+print("다음과 같이 하나의 목록으로 결합하는 단계를 수행하십시오.")
+print("Drew 목록의 내용과 그 후 이어지는 Jamie 의 역순 목록을 가지고 도착한 순서대로 정확한 학생의 목록을 작성하십시오.")
+
+
+def combine_lists(list1, list2):
+    return list2 + list1[::-1]
+
+# Generate a new list containing the elements of list2
+# Followed by the elements of list1 in reverse order
+
+
+Jamies_list = ["Alice", "Cindy", "Bobby", "Jan", "Peter"]
+Drews_list = ["Mike", "Carol", "Greg", "Marcia"]
+
+print(combine_lists(Jamies_list, Drews_list))
+
+print()
+print()
+
+
+print("Question 4")
+print("리스트 컴프리헨션을 사용하여 제곱수(n*n) 목록을 만듭니다.")
+print("이 함수는 변수 start와 end를 받고 start와 end 사이의 전부를 통틀어 연속 숫자 제곱 목록을 리턴합니다.")
+print("예를 들어, squares(2, 3)은 [4, 9]를 리턴합니다. ")
+def squares(start, end):
+	return [n*n for n in range(start, end+1)]
+
+print(squares(2, 3)) # Should be [4, 9]
+print(squares(1, 5)) # Should be [1, 4, 9, 16, 25]
+print(squares(0, 10)) # Should be [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+print()
+print("Question 5")
+print("car_prices 딕셔너리의 키와 값을 반복하는 코드를 완성하고 각각에 대한 정보를 출력합니다.")
+def car_listing(car_prices):
+  result = ""
+  for carname,price in car_prices.items():
+    result += "{} costs {} dollars".format(carname,price) + "\n"
+  return result
+
+print(car_listing({"Kia Soul":19000, "Lamborghini Diablo":55000, "Ford Fiesta":13000, "Toyota Prius":24000}))
+
+print()
+print("Question 6")
+print("Taylor와 Rory가 파티를 열려고 합니다.")
+print("그들은 초대장을 보냈고, 각 친구의 이름과 각 친구가 데려올 손님의 수가 포함된 답변을 딕셔너리에 각각 모았습니다.")
+print("각 딕셔너리는 부분적인 목록이지만 Rory의 목록에는 손님 수에 대한 최신 정보가 있습니다.")
+print("두 딕셔너리를 하나로 합하려면 빈칸을 채우십시오.")
+print("이름이 두 딕셔너리에 모두 포함되어 있는 경우 각 친구는 한 번만 나열되고 Rory의 딕셔너리에 있는 손님 수가 우선 적용됩니다.")
+print("그런 다음 딕셔너리 결과를 출력합니다.")
+
+def combine_guests(guests1, guests2):
+  # Combine both dictionaries into one, with each key listed
+  # only once, and the value from guests1 taking precedence
+  guests2.update(guests1)
+  return guests2
+
+Rorys_guests = { "Adam":2, "Brenda":3, "David":1, "Jose":3, "Charlotte":2, "Terry":1, "Robert":4}
+Taylors_guests = { "David":4, "Nancy":1, "Robert":2, "Adam":1, "Samantha":3, "Chris":5}
+
+print(combine_guests(Rorys_guests, Taylors_guests))
+
+print()
+print("Question 7")
+print("딕셔너리를 사용하여 입력 문자열의 문자 빈도를 계산합니다.")
+print("공백, 숫자 또는 구두점이 아닌 문자만 계산해야 합니다. 대문자는 소문자와 동일하게 간주해야 합니다.")
+print("예를 들어 count_letters(\"This is a sentence.\"(이것은 문장입니다.))는 다음과 같이 리턴합니다.")
+print("{'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}.")
+print()
+def count_letters(text):
+  result = {}
+  text = text.lower()
+  # Go through each letter in the text
+  #for letter in text:
+    # Check if the letter needs to be counted or not
+  for letter in text:
+    if letter.isalpha():
+        count = text.count(letter)
+        result[letter] = count
+    # Add or increment the value in the dictionary
+
+  return result
+
+print(count_letters("AaBbCc"))
+# Should be {'a': 2, 'b': 2, 'c': 2}
+
+print(count_letters("Math is fun! 2+2=4"))
+# Should be {'m': 1, 'a': 1, 't': 1, 'h': 1, 'i': 1, 's': 1, 'f': 1, 'u': 1, 'n': 1}
+
+print(count_letters("This is a sentence."))
+# Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
+
+print()
+print("Question 8")
+print("animal = \"Hippopotamus\"일 때 다음 명령은 무엇을 반환합니까?")
+animal = "Hippopotamus"
+print(animal[3:6])
+print(animal[-5])
+print(animal[10:])
+
+print()
+print("Question 9")
+print("이 명령이 실행된 후 \"colors\" 목록에는 무엇이 포함됩니까?")
+colors = ["red", "white", "blue"]
+colors.insert(2, "yellow")
+print(colors)
+
+print()
+print("Question 10")
+print("다음 명령은 무엇을 반환합니까?")
+host_addresses = {"router": "192.168.1.1", "localhost": "127.0.0.1", "google": "8.8.8.8"}
+print(host_addresses.keys())

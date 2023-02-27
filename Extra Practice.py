@@ -398,11 +398,7 @@ practice_27_6 = (practice_27_5.upper())
 print(practice_27_6)
 print("아니 practice_27.5.upper()을 그대로 practice_27_6으로만 만든건데 왜 이게 프린트가 안되는데... 하아... 정답지를 한번 보자...")
 print()
-practice_27 = ['dog', 'cat', 'parrot']
-for practice_27_7 in practice_27:
-    practice_27_8 = practice_27_7[0]
-    practice_27_9 = practice_27_8.upper()
-    print(practice_27_9 + practice_27_7[1:])
+f
 print("뭐야 왜 이게 돼, 내가 위에서 비슷하게 했구만")
 print()
 practice_27 = ['dog', 'cat', 'parrot']
