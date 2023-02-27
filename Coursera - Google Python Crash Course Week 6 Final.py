@@ -49,6 +49,7 @@ events = [
     Event("2020-01-21 08:20:01","login","webserver.local","Jordan"),
     Event("2020-01-23 11:24:35","login","mailserver.local","Chris")
 ]
+
 users = current_users(events)
 print(users)
 generate_report(users)
