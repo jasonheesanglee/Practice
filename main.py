@@ -1,4 +1,3 @@
-
 print("Coursera - Google Python")
 print("Christine Rafla")
 print("Hello, world!")
@@ -658,16 +657,16 @@ print(sum_divisors(102)) # Should be sum of 2+3+6+17+34+51
 print()
 
 def multiplication_table(number):
-	# Initialize the starting point of the multiplication table
+# Initialize the starting point of the multiplication table
 	multiplier = 1
-	# Only want to loop through 5
+# Only want to loop through 5
 	while multiplier <= 5:
 		result = number * multiplier
-		# What is the additional condition to exit out of the loop?
+# What is the additional condition to exit out of the loop?
 		if result > 25:
 			break
 		print(str(number) + "x" + str(multiplier) + "=" + str(result))
-		# Increment the variable for the loop
+# Increment the variable for the loop
 		multiplier += 1
 
 multiplication_table(3)
@@ -1877,3 +1876,346 @@ print("Question 10")
 print("다음 명령은 무엇을 반환합니까?")
 host_addresses = {"router": "192.168.1.1", "localhost": "127.0.0.1", "google": "8.8.8.8"}
 print(host_addresses.keys())
+
+print()
+
+print("Week 5")
+
+print("Introduction to OOP (Object-Oriented Programming)")
+print("how to describe apple")
+print("it is a type of fruit, can be red, green etc.")
+print("numbers, strings, lists, dictionaries are object")
+print()
+print(type(0))
+print(type(""))
+
+print("upper / isnumeric / isalpha etc. - type of methods for str")
+
+print(dir(""))
+print(help(""))
+
+print()
+print()
+class Apple:
+    pass
+class Apple:
+    color = ""
+    flavor = ""
+
+jonagold = Apple()
+jonagold.color = "red"
+jonagold.flavor = "sweet"
+print(jonagold.color)
+print(jonagold.flavor)
+print(jonagold.color.upper())
+print()
+golden = Apple()
+golden.color = "yellow"
+golden.flavor = "soft"
+print(Apple.color)
+
+print()
+print("Practice Question")
+print("한 번 해보시겠습니까? 코드의 빈칸을 채우면 시가 인쇄됩니다.")
+class Flower:
+  color = 'unknown'
+rose = Flower()
+rose.color = "red"
+violet = Flower()
+violet.color = "blue"
+this_pun_is_for_you = "This pun is for you"
+
+print("Roses are {},".format(rose.color))
+print("violets are {},".format(violet.color))
+print(this_pun_is_for_you)
+
+print("Practice Questions")
+print("Question 1")
+print("객체의 메서드와 속성에 액세스하기 위해 점 표기법을 사용하는 방법에 대한 지식을 테스트해 보겠습니다.")
+print("Birds라는 클래스가 있다고 가정해 보겠습니다.")
+print("Birds에는 color와 number의 두 가지 속성이 있습니다.")
+print("Birds에는 새의 수를 세는 count()라는 메서드도 있습니다(숫자에 값 추가).")
+print("다음 중 새의 수를 올바르게 출력하는 코드 줄은 무엇입니까? 새의 수는 셀 때까지 0입니다!")
+print()
+class Bird:
+   pass
+bluejay = Bird()
+bluejay.color = "blue"
+bluejay.number = "5"
+
+print(bluejay.number)
+print()
+
+print()
+print("Question 2")
+print("클래스 개체의 새 인스턴스를 만드는 것은 개체와 연결된 속성을 사용하여 값을 추적하는 좋은 방법이 될 수 있습니다.")
+print("이러한 속성의 값은 개체 수준에서 쉽게 변경할 수 있습니다.")
+print("다음 코드는 개체를 사용하여 사람을 나타내는 George Bernard Shaw의 유명한 인용문을 표시합니다.")
+print("코드가 인용문에 설명된 행동을 충족하도록 빈칸을 채우십시오.")
+
+print()
+class Person:
+    apples = 0
+    ideas = 0
+
+johanna = Person()
+johanna.apples = 1
+johanna.ideas = 1
+
+martin = Person()
+martin.apples = 2
+martin.ideas = 1
+
+def exchange_apples(you, me):
+    you.apples, me.apples = me.apples, you.apples
+    return you.apples, me.apples
+
+def exchange_ideas(you, me):
+    you.ideas += me.ideas
+    me.ideas += you.ideas - me.ideas
+    return you.ideas, me.ideas
+
+exchange_apples(johanna, martin)
+print("Johanna has {} apples and Martin has {} apples".format(johanna.apples, martin.apples))
+exchange_ideas(johanna, martin)
+print("Johanna has {} ideas and Martin has {} ideas".format(johanna.ideas, martin.ideas))
+
+print()
+print("Question 3")
+print("City(도시) 클래스는 이름, 국가(도시가 위치한 곳), 고도(미터로 측정), 인구(최근 통계에 따른 근사치) 속성을 포함합니다.")
+print("지정된 최소 인구에 대해 정의된 인스턴스 3개를 비교할 때 max_elevation_city 함수의 빈칸을 채워 도시와 그 도시의 국가 이름(쉼표로 구분)을 리턴합니다.")
+print("예를 들어, 최소 인구 100만 명에 대한 함수를 호출하면 max_elevation_city(1000000)는 ‘Sofia, Bulgaria’를 리턴합니다. ")
+
+# define a basic city class
+class City:
+	name = ""
+	country = ""
+	elevation = 0
+	population = 0
+
+# create a new instance of the City class and
+# define each attribute
+city1 = City()
+city1.name = "Cusco"
+city1.country = "Peru"
+city1.elevation = 3399
+city1.population = 358052
+
+# create a new instance of the City class and
+# define each attribute
+city2 = City()
+city2.name = "Sofia"
+city2.country = "Bulgaria"
+city2.elevation = 2290
+city2.population = 1241675
+
+# create a new instance of the City class and
+# define each attribute
+city3 = City()
+city3.name = "Seoul"
+city3.country = "South Korea"
+city3.elevation = 38
+city3.population = 9733509
+
+def max_elevation_city(min_population):
+	# Initialize the variable that will hold
+# the information of the city with
+# the highest elevation
+	return_city = City()
+
+	# Evaluate the 1st instance to meet the requirements:
+	# does city #1 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city1.population > min_population and city1.elevation > return_city.elevation:
+		return_city = city1
+	# Evaluate the 2nd instance to meet the requirements:
+	# does city #2 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city2.population > min_population and city2.elevation > return_city.elevation:
+		return_city = city2
+	# Evaluate the 3rd instance to meet the requirements:
+	# does city #3 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city3.population > min_population and city3.elevation > return_city.elevation:
+		return_city = city3
+
+	#Format the return string
+	if return_city.name:
+		return "{}, {}".format(return_city.name, return_city.country)
+	else:
+		return ""
+
+print(max_elevation_city(100000)) # Should print "Cusco, Peru"
+print(max_elevation_city(1000000)) # Should print "Sofia, Bulgaria"
+print(max_elevation_city(10000000)) # Should print ""
+
+print()
+print("Question 4")
+print("객체와 클래스의 다른 점은 무엇입니까?")
+print("객체는 클래스의 특정 인스턴스입니다.")
+
+print()
+print("Question 5")
+print("갈색 나무 테이블과 빨간색 가죽 소파, 두 가지 가구가 있습니다.")
+print("describe_furniture 함수가 다음과 같이 각 가구를 설명하는 문장을 만들도록 각 Furniture 클래스 인스턴스를 생성하고 빈칸을 채우십시오.")
+print("\"This piece of furniture is made of {color} {material}\"(이 가구는 {색상} {소재}로 만들어진 가구입니다.) ")
+
+class Furniture:
+	color = ""
+	material = ""
+
+table = Furniture()
+table.color = "brown"
+table.material = "wood"
+
+couch = Furniture()
+couch.color = "red"
+couch.material = "leather"
+
+def describe_furniture(piece):
+	return ("This piece of furniture is made of {} {}".format(piece.color, piece.material))
+
+print(describe_furniture(table))
+# Should be "This piece of furniture is made of brown wood"
+print(describe_furniture(couch))
+# Should be "This piece of furniture is made of red leather"
+
+print()
+
+class Piglet:
+    def speak(self):
+        print("oink oink")
+
+hamlet = Piglet()
+hamlet.speak()
+
+class Piglet:
+    name = "piglet"
+    def speak(self):
+        print("Oink! I'm {}! Oink!".format(self.name))
+
+hamlet = Piglet()
+hamlet.name = "Hamlet"
+hamlet.speak()
+petunia = Piglet()
+petunia.name = "Petunia"
+petunia.speak()
+
+class Piglet:
+    years = 0
+    def pig_years(self):
+        return self.years*18
+piggy = Piglet()
+print(piggy.pig_years())
+piggy.years = 2
+print(piggy.pig_years())
+
+print()
+print("Practice Question")
+print("자, 이제 여러분의 차례입니다! 클래스에 대한 작성 메서드를 살펴보십시오.")
+print("이전에 표시된 Piglet 클래스를 기반으로 dog_years로 Dog 클래스를 만듭니다(인간의 1년은 개의 7년).")
+class Dog:
+    years = 0
+    def dog_years(self):
+        return self.years * 7
+fido = Dog()
+fido.years = 3
+print(fido.dog_years())
+
+print()
+
+print("constructor")
+
+class Apple:
+    def __init__(self,color,flavor):
+        self.color = color
+        self.flavor = flavor
+jonagold = Apple("red", "sweet")
+print(jonagold.color)
+
+print("Practice Quiz")
+print("이 작업을 보고 싶으십니까? 이 코드에는 객체를 생성할 때 설정되는 속성 이름이 있는 Person 클래스가 있습니다.")
+print("1) 클래스의 인스턴스가 생성될 때 속성이 올바르게 설정되고, 2) Greeting() 메서드가 호출될 때 인사말이 할당된 이름을 나타내도록 공백을 채우십시오.")
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def greeting(self):
+        # Should return "hi, my name is " followed by the name of the Person.
+        return "hi, my name is {}".format(self.name)
+
+# Create a new instance with a name of your choice
+some_person = Person("Jason")
+# Call the greeting method
+print(some_person.greeting())
+
+print()
+print(jonagold)
+class Apple:
+    def __init__(self,color,flavor):
+        self.color = color
+        self.flavor = flavor
+    def __str__(self):
+        return "This apple is {} and its flavor is {}".format(self.color,self.flavor)
+jonagold = Apple("red", "sweet")
+print(jonagold)
+
+print()
+print("I can use __str__ on the last practice question as well")
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def __str__(self):
+        return "hi, my name is {}".format(self.name)
+
+some_person = Person("Jason")
+print(some_person)
+
+class Apple:
+    def __init__(self,color,flavor):
+        self.color = color
+        self.flavor = flavor
+    def __str__(self):
+        return "This apple is {} and its flavor is {}".format(self.color,self.flavor)
+#help(Apple)
+
+print()
+print("Docstring")
+def to_seconds(hours, minutes, seconds):
+    """Returns the amount of the seconds in the given hours, minutes and seconds."""
+    return hours*3600+minutes*60+seconds
+help(to_seconds)
+print()
+
+print()
+class Piglet:
+    """Represents a piglet that can say their name."""
+    years = 0
+    name = ""
+    def speak(self):
+        """Outputs a message including the name of the piglet."""
+        print("Oink! I'm {}! Oink!".format(self.name))
+    def pig_years(self):
+        """Converts the current age to equivalent pig years"""
+        return self.years*18
+help(Piglet)
+
+print("Practice - Docstring")
+print("지난 비디오의 Person 클래스를 기억하십니까? 인사말 메서드에 독스트링을 추가해 보겠습니다. \"Outputs a message with the name of the person\"은 어떻습니까?")
+
+class Person:
+  def __init__(self, name):
+    """한국어로도 되나?"""
+    self.name = name
+  def greeting(self):
+    """Outputs a message with the name of the person"""
+    print("Hello! My name is {name}.".format(name=self.name))
+
+help(Person)
+
+print("Jupyter Notebook...?")
+
+
+print()
+print("inheritance")
+print()
