@@ -2321,3 +2321,24 @@ current_stock = polo.Stock_by_Material("Cotton")
 print(current_stock)
 
 print()
+print("Python Modules")
+print("Python standard library")
+
+print()
+
+import random
+print(random.randint(1,10))
+print(random.randint(1,10))
+print(random.randint(1,10))
+
+import datetime
+now = datetime.datetime.now()
+print(type(now))
+print(now)
+print(now.year)
+print(now.day)
+print(now.month)
+print(now + datetime.timedelta(days=28))
+
+print()
+
