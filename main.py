@@ -2342,3 +2342,4 @@ print(now + datetime.timedelta(days=28))
 
 print()
 
+print("2/28 - 부트캠프 확인 및 지원")

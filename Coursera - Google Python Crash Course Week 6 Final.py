@@ -12,7 +12,7 @@ print(sorted(names))
 print(names)
 print(sorted(names,key=len))
 print()
-print("now it begins")
+print("practice")
 
 def get_event_date(event):
     return event.date
@@ -54,3 +54,6 @@ users = current_users(events)
 print(users)
 generate_report(users)
 
+print()
+print("Final Final Project Begins")
+print("Create a word cloud")
