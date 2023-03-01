@@ -1,136 +1,15 @@
-import k as k
+print("Coursera - Google Python")
+print("Christine Rafla")
+print("Hello, world!")
 
-print("hello world")
-print(3 + 4)
-a = 3
-b = 789
-print(a * b)
-a = "유진이"
-b = "사랑해"
-print(a + b)
-
-a = [1, 2, 3]
-b = ['life', 'is', 'short']
-print(a[2] * b[2])
-print(b[-1])
-
-print(a[-2])
-a = [1, 2, 3, ['a', 'b', 'c']]
-print(a[-1])
-print(a[-1][2])
-print(a[0:2])
-print(a[2:4])
-print(a[3][2])
-print(len(a))
-print(str(a[2]) + "hi")
-del a[2]
-print(a)
-a.append(3)
-print(a)
-a.reverse()
-print(a)
-a.reverse()
-print(a.index(3))
-a = [1, 2, 3]
-a.index(2)
-print(a.index(2))
-a = [1, 2, ['a', 'b', 'c']]
-a.index(2)
-print(a.index(2))
-print(a.index(['a', 'b', 'c']))
-a.insert(2, 5)
-print(a)
-a.remove(['a', 'b', 'c'])
-print(a)
-a.insert(2, 3)
-a.insert(4, 3)
-print(a)
-a.remove(3)
-print(a)
-a.pop()
-print(a)
-a.pop(1)
-print(a)
-a.insert(2, 3)
-a.insert(3, 5)
-a.insert(4, 3)
-print(a)
-print(a.count(3))
-print(a)
-a.extend([4, 5])
-print(a)
-b = [8, 10]
-a.extend(b)
-print(a)
-t1 = ()
-t2 = (1,)
-t3 = (1, 2, 3)
-t4 = 1, 2, 3
-print(t2)
-print(t4[0])
-
-t1 = (1, 2, 'a', 'b')
-print(t1[0] + t1[1])
-
-a = 1
-b = 2
-print(a + b)
-print(t1[1:])
-print(len(t1))
-
-dic = {'name': 'pey', 'phone': '010-4167-3900', 'birth date': '961128'}
-print(dic)
-a = {'jason', 'hi'}
-print(a)
-
-a = {1: 'a'}
-a[2] = 'b'
-print(a)
-a[4] = 'c'
-print(a)
-a[3] = 'd'
-print(a)
-a['tyrieikls'] = 'name'
-print(a)
-del a['tyrieikls']
-print(a)
-
-grade = {'jason': 10, 'yujin': 100}
-print(grade['jason'])
-print(grade['yujin'])
-print(grade['jason'] + grade['yujin'])
-print(grade['jason'])
-
-print(dic['name'])
-print(dic['phone'])
-print(grade.keys())
-print(list(grade.keys()))
-print(list(dic.keys()))
-print(dic.keys())
-# for k in dic.keys():
-print(dic.values())
-for k in dic.values():
-    print(k)
-print(dic.items())
-for k in dic.items():
-    print(k)
-print(dic.items())
-print(grade.items())
-print(dic.get('name'))
-print(dic.get('phone'))
-
-a = {t1[1:2]: 'hi'}
-print(a[t1[1:2]])
-
-print(dic.get('nokey'))
-print(dic.get('nalsdj', '값이 존재하지 않습니다'))
-print(dic.get('name', '값이 존재하지 않습니다'))
-
+print()
 print(type("a"))
 print(type(2))
 print(type(2.5))
 
 print(type(25534452))
+
+print()
 
 length = 10
 width = 2
@@ -778,16 +657,16 @@ print(sum_divisors(102)) # Should be sum of 2+3+6+17+34+51
 print()
 
 def multiplication_table(number):
-	# Initialize the starting point of the multiplication table
+# Initialize the starting point of the multiplication table
 	multiplier = 1
-	# Only want to loop through 5
+# Only want to loop through 5
 	while multiplier <= 5:
 		result = number * multiplier
-		# What is the additional condition to exit out of the loop?
+# What is the additional condition to exit out of the loop?
 		if result > 25:
 			break
 		print(str(number) + "x" + str(multiplier) + "=" + str(result))
-		# Increment the variable for the loop
+# Increment the variable for the loop
 		multiplier += 1
 
 multiplication_table(3)
@@ -980,5 +859,1487 @@ print(counter(1, 10)) # Should be "Counting up: 1,2,3,4,5,6,7,8,9,10"
 print(counter(2, 1)) # Should be "Counting down: 2,1"
 print(counter(5, 5)) # Should be "Counting up: 5"
 
+print()
+print("double_word 함수를 수정하여 동일한 단어를 두 번 반복하고 그 뒤에 새로 추가된 단어의 길이를 반환하도록 합니다. 예를 들어, double_word(\"hello\")는 hellohello10을 반환해야 합니다.")
+def double_word(word):
+    return word + word + str(len(word)*2)
+
+print(double_word("hello")) # Should return hellohello10
+print(double_word("abc"))   # Should return abcabc6
+print(double_word(""))      # Should return 0
+
+print()
+print("string indexing")
+name = "Jaylen"
+print(name[1])
+print(name[0])
+print(name[len(name)-1])
+print()
+text = "Random string with a lot of characters"
+print(name[len(name)-5])
+print(text[len(text)-13])
+
+print()
+print("string index question")
+def first_and_last(message):
+    if message:
+        if message == "" or message[0] == message[-1]:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+print(first_and_last("else"))
+print(first_and_last("tree"))
+print(first_and_last(""))
+print()
+print("simple way to do it")
+def first_and_last(message):
+    return message == "" or message[0] == message[-1]
+
+print(first_and_last("else"))
+print(first_and_last("tree"))
+print(first_and_last(""))
+print("is there one? I don't find this correct")
+print("oh nevermind, this was the correct one! :)")
 
 
+print()
+color = "Orange"
+print(color[1:4])
+
+fruit = "pineapple"
+print(fruit[:4])
+print(fruit[4:])
+
+print()
+print("creating new string")
+print()
+
+message = "A kong string with a silly typo"
+print(message)
+#message[2] = "l"
+
+new_message = message[0:2] + "l" + message[3:]
+print(new_message)
+message = "this is a new message"
+print(message)
+
+print()
+pets = "Cats & Dogs"
+print(pets.index("&"))
+print(pets.index("C"))
+print(pets.index("Dog"))
+print(pets.index("s"))
+#print(pets.index("x"))
+print("Dragons" in pets)
+if "Cats" in pets:
+    print("Wohahaha")
+
+print()
+def replace_domain(email, old_domain, new_domain):
+    if"@" + old_domain in email:
+        index = email.index("@" + old_domain)
+        new_email = email[:index] + "@" + new_domain
+        return new_email
+print(replace_domain("heesang.lee@atheneum-partners.com","atheneum-partners.com","atheneum.ai"))
+
+print()
+print("Mountains".upper())
+print("Mountains".lower())
+
+print()
+answer = 'YES'
+if answer.lower() == "yes":
+    print("User says yes")
+
+print()
+print(" yes ".strip())
+print(" yes ".lstrip())
+print(" yes ".rstrip())
+
+print()
+print("The number of times e occurs in this string is 4".count("e"))
+
+print()
+print("Forest".endswith("rest"))
+
+print()
+print("Forest".isnumeric())
+print("12345".isnumeric())
+
+print()
+print(int("12345")+int("54321"))
+
+print()
+print(" ".join(["This", "is", "a", "phrase", "joined", "by", "spaces"]))
+print("...".join(["This", "is", "a", "phrase", "joined", "by", "triple", "dots"]))
+print(("This is another example").split())
+print(("Thismismanothermexample").split("m"))
+
+
+print()
+print("sample question to take out first letter of each word then capitalize it")
+def initials(phrase):
+    words = phrase.split()
+    result = ""
+    for word in words:
+        result += word[0].upper()
+    return result
+
+print(initials("Universal Serial Bus")) # Should be: USB
+print(initials("local area network")) # Should be: LAN
+print(initials("Operating system")) # Should be: OS
+
+print()
+print("format method")
+name = "Manny"
+number = len(name)*3
+print("Hello {}, your lucky number is {}".format(name, number))
+
+print()
+print("Your lucky number is {number}, {name}".format(name=name, number=len(name)*3))
+
+print()
+print("format sample question")
+print()
+def student_grade(name, grade):
+	return "{} received {}% on the exam".format(name,grade)
+
+print(student_grade("Reed", 80))
+print(student_grade("Paige", 92))
+print(student_grade("Jesse", 85))
+
+print()
+price = 7.5
+with_tax = price * 1.09
+print(price, with_tax)
+print("Base price: ${:.2f}. With Tax: ${:.2f}".format(price, with_tax))
+
+print()
+print("recap on celius example with format to reduce decimals")
+def to_celcius(x):
+    return(x-32)*5/9
+for x in range(0,101,10):
+    print(x, to_celcius(x))
+
+print()
+print("now look at below")
+def to_celcius(x):
+    return(x-32)*5/9
+for x in range(0,101,10):
+    print("{:>3} F | {:>6.2f} C".format(x, to_celcius(x)))
+print()
+print(":>숫자 이거는 오른쪽으로 숫자만큼 정렬")
+
+
+#Expr   의미 예시
+
+#{:d}   정수 값        '{:d}'.format(10.5) → '10'
+#{:.2f} 소수점이 많은 부동 소수점       '{:.2f}'.format(0.5) → '0.50'
+#{:.2s} 많은 문자가 포함된 문자열         '{:.2s}'.format('Python') → 'Py'
+#{:<6s} 많은 공백의 왼쪽으로 정렬된 문자열  '{:<6s}'.format('Py') → 'Py    '
+#{:>6s} 많은 공백의 오른쪽으로 정렬된 문자열    '{:>6s}'.format('Py') → '    Py'
+#{:^6s} 많은 공백의 가운데에 있는 문자열       '{:^6s}'.format('Py') → '  Py  '
+
+print("연습문제 1")
+print("is_palindrome 함수는 문자열이 회문인지 확인합니다.")
+print("회문은 왼쪽에서 오른쪽으로 읽거나 오른쪽에서 왼쪽으로 읽어도 똑같이 읽히며, 공백을 생락하고 대문자를 사용하지 않는 문자열입니다.")
+print("회문의 예로는 kayak(카약) 및 radar(레이더)와 같은 단어와 ‘Never Odd or Even’(홀수 또는 짝수 아님)과 같은 구문이 있습니다.")
+print("전달된 문자열이 회문이면 True(참)를 리턴하고 그렇지 않으면 False(거짓)를 리턴하도록 이 함수의 빈칸을 채우십시오. ")
+
+def is_palindrome(input_string):
+	# We'll create two strings, to compare them
+	new_string = ""
+	reverse_string = ""
+	# Traverse through each letter of the input string
+	for letter in input_string.strip():
+		# Add any non-blank letters to the
+		# end of one string, and to the front
+		# of the other string.
+		new_string = new_string+letter.replace(" ", "")
+		reverse_string = letter.replace(" ","") + reverse_string
+	# Compare the strings
+	if new_string.lower() == reverse_string.lower():
+		return True
+	return False
+
+print(is_palindrome("Never Odd or Even")) # Should be True
+print(is_palindrome("abc")) # Should be False
+print(is_palindrome("kayak")) # Should be True
+print()
+print("OR")
+print()
+def is_palindrome(input_string):
+    new_string = ""
+    reverse_string = ""
+    for letter in input_string.lower():
+        if letter != " ":
+            new_string = new_string + letter
+            reverse_string = letter + reverse_string
+    if new_string == reverse_string:
+        return True
+    return False
+
+print(is_palindrome("Never Odd or Even")) # Should be True
+print(is_palindrome("abc")) # Should be False
+print(is_palindrome("kayak")) # Should be True
+
+print()
+print("연습문제 2")
+print("format 메서드를 사용하여 convert_distance 함수의 공백을 채워서 Y가 소수점 이하 1자리만 가지면서 ‘X miles equals Y km’(X마일은 Ykm와 같다)라는 구문을 리턴하도록 합니다.")
+print("예를 들어, convert_distance(12)는 ‘12 miles equals 19.2 km’(12마일은 19.2km와 같다)를 리턴해야 합니다.")
+print()
+def convert_distance(miles):
+	km = miles * 1.6
+	result = "{} miles equals ${:.1f} km".format(miles,km)
+	return result
+
+print(convert_distance(12)) # Should be: 12 miles equals 19.2 km
+print(convert_distance(5.5)) # Should be: 5.5 miles equals 8.8 km
+print(convert_distance(11)) # Should be: 11 miles equals 17.6 km
+
+print()
+print("연습문제 3")
+print("Weather = \"Rainfall\"이라는 문자열 변수가 있는 경우 다음 중 \"f\" 앞의 하위 문자열 또는 모든 문자를 인쇄하는 것은 무엇입니까?")
+Weather = "Rainfall"
+print(Weather[:4])
+
+print()
+print("연습문제 4")
+print("first_name과 last_name의 첫 번째 이니셜 다음에 마침표를 리턴하도록 format 메서드를 사용하여 nametag 함수의 공백을 채우십시오.")
+print("예를 들어, nametag(\"Jane\", \"Smith\")는 ‘Jane S.’를 리턴해야 합니다.")
+def nametag(first_name, last_name):
+    return ("{}".format(first_name[0].upper()) + first_name[1:] + " {}.".format(last_name[0]).upper())
+
+print(nametag("Jane", "Smith"))
+# Should display "Jane S."
+print(nametag("Francesco", "Rinaldi"))
+# Should display "Francesco R."
+print(nametag("Jean-Luc", "Grand-Pierre"))
+# Should display "Jean-Luc G."
+
+print()
+print("연습문제 5")
+print("replace_ending 함수는 문장의 이전 문자열을 새 문자열로 바꿉니다. ")
+print("단, 문장이 이전 문자열로 끝나는 경우에만 가능합니다.")
+print("문장에 이전 문자열이 두 번 이상 있는 경우 전체가 아닌 끝에 있는 문자열만 대체됩니다.")
+print("예를 들어, replace_ending(“abcabc”, “abc”, “xyz”)은 xyzxyz 또는 xyzabc가 아니라 abcxyz로 리턴합니다.")
+print("문자열 비교는 대소문자를 구분하므로 replace_ending(“abcabc\", \"ABC\", \"xyz\")는 abcabc(변경 사항 없음)를 리턴해야 합니다.")
+print()
+
+def replace_ending(sentence, old, new):
+    # Check if the old string is at the end of the sentence
+    sentences = sentence.split()
+    if sentences[-1] == old:
+        # Using i as the slicing index, combine the part
+        # of the sentence up to the matched string at the
+        # end with the new string
+        sentences[-1] = new
+        new_sentence = " ".join(sentences)
+        return new_sentence
+
+    # Return the original sentence if there is no match
+    return sentence
+
+
+print(replace_ending("It's raining cats and cats", "cats", "dogs"))
+# Should display "It's raining cats and dogs"
+print(replace_ending("She sells seashells by the seashore", "seashells", "donuts"))
+# Should display "She sells seashells by the seashore"
+print(replace_ending("The weather is nice in May", "may", "april"))
+# Should display "The weather is nice in May"
+print(replace_ending("The weather is nice in May", "May", "April"))
+# Should display "The weather is nice in April"
+
+
+print()
+print("list")
+
+x = ["Now", "we", "are", "cooking!"]
+print(type(x))
+print(x)
+print("length of the list: ", len(x))
+
+print ("are" in x)
+print (x[0])
+print(x[3])
+print(x[-1])
+
+print(x[1:3])
+print(x[:2])
+print(x[2:])
+
+print()
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+print(fruits)
+fruits.append("kiwi")
+print(fruits)
+print()
+fruits.insert(0,"Orange")
+print(fruits)
+
+fruits.insert(25,"peach")
+print(fruits)
+fruits.remove("Melon")
+print(fruits)
+print(fruits.pop(3))
+fruits[2]= "Strawberry"
+print(fruits)
+
+print()
+print("skip element question")
+print("skip_elements 함수는 첫 번째 요소부터 시작하여 입력 목록의 다른 모든 요소를 포함하는 목록을 반환합니다. 입력 목록을 반복하기 위해 for 루프를 사용하여 해당 작업을 수행하려면 이 함수를 완료하십시오.")
+print("")
+def skip_elements(elements):
+	new_list = []
+	for element in elements[::2]:
+		new_list.append(element)
+	return new_list
+
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
+print(skip_elements([])) # Should be []
+
+print()
+
+Fullname = ("Grace", "M", "Harper")
+print()
+def convert_seconds(seconds):
+    hours = seconds // 3600
+    minutes = (seconds - hours * 3600) // 60
+    remaining_seconds = seconds - hours * 3600 - minutes *60
+    return hours, minutes, remaining_seconds
+
+result = convert_seconds(5000)
+print(result)
+print(type(result))
+
+print()
+hours, minutes, seconds = result
+print(hours,minutes,seconds)
+hours, minutes, seconds = convert_seconds(1000)
+print (hours, minutes, seconds)
+
+print()
+print("Tuple Practice Questions")
+print("튜플을 사용하여 파일에 대한 정보(이름, 형식 및 크기(바이트))를 저장해 보겠습니다. 이 코드의 공백을 채워 소수점 이하 2자리까지 크기를 킬로바이트(킬로바이트는 1024바이트)로 반환합니다.")
+def file_size(file_info):
+	Name, Type, Size = file_info
+	return("{:.2f}".format(Size / 1024))
+
+print(file_size(('Class Assignment', 'docx', 17875))) # Should print 17.46
+print(file_size(('Notes', 'txt', 496))) # Should print 0.48
+print(file_size(('Program', 'py', 1239))) # Should print 1.21
+
+print()
+animals = ["Lion", "Zebra", "Dolphin", "Monkey"]
+chars = 0
+for animal in animals:
+    chars += len(animal)
+
+print("Total Characters: {}, Average Length: {}".format(chars, chars/len(animals)))
+
+print()
+winners = ["Ashley", "Dylan", "Reese"]
+for index, person in enumerate(winners):
+    print("{} - {}".format(index+1, person))
+
+print()
+print("enumerate practice question")
+print("이 빠른 연습에서 직접 열거 함수를 사용해 보십시오. skip_elements 함수를 완료하여 목록에서 다른 모든 요소를 반환합니다. 이번에는 요소가 짝수 위치에 있는지 또는 홀수 위치에 있는지 확인하기 위해 열거 함수를 사용합니다.")
+
+def skip_elements(elements):
+	# code goes here
+	element = []
+	for i, e in enumerate(elements):
+		if i % 2 == 0:
+			element.append(e)
+	return element
+
+def full_emails(people):
+    result = []
+    for email, name in people:
+        result.append("{} <{}>".format(name,email))
+    return result
+
+print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Shay Brandt")]))
+
+print()
+
+multiples = []
+for x in range(1,11):
+    multiples.append(x*7)
+print(multiples)
+multiples = [x*7 for x in range(1,11)]
+print(multiples)
+
+print()
+languages = ["Python", "Pearl", "Ruby", "Go", "Java", "C"]
+lengths = [len(language) for language in languages]
+print(lengths)
+z = [x for x in range(0,101) if x%3 == 0]
+print(z)
+
+print()
+print("practice question")
+print("odd_numbers 함수는 1과 n 사이의 홀수 목록을 반환합니다. 목록 이해를 사용하여 함수의 공백을 채우십시오. 힌트: 목록 및 범위 카운터는 0에서 시작하여 한계에서 1을 뺀 값에서 끝납니다.")
+def odd_numbers(n):
+	return [x for x in range(1,n+1,2) if x%1 == 0]
+
+print(odd_numbers(5))  # Should print [1, 3, 5]
+print(odd_numbers(10)) # Should print [1, 3, 5, 7, 9]
+print(odd_numbers(11)) # Should print [1, 3, 5, 7, 9, 11]
+print(odd_numbers(1))  # Should print [1]
+print(odd_numbers(-1)) # Should print []
+
+print()
+print("Practice Quiz")
+print()
+print("Practice Quiz 1")
+print("파일 이름 목록이 있는 상태에서 확장자 hpp로 된 모든 파일 이름을 확장자 h로 이름을 바꾸고자 합니다.")
+print("이를 수행하기 위해 새 파일 이름으로 구성된 newfilenames라는 새 목록을 생성하려고 합니다.")
+print("for 루프나 리스트 컴프리헨션과 같이 지금까지 배운 메서드를 사용하여 코드의 빈칸을 채우십시오.")
+
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+# Generate newfilenames as a list containing the new filenames
+# using as many lines of code as your chosen method requires.
+print("program"+"."+"c", "studio"+"."+"h", "sample"+"."+"h", "a"+"."+"out", "math"+"."+"h", "hpp"+"."+"out")
+print("이건 당연히 되겠지")
+print()
+print()
+
+def replace_extension(filename,old_extension,new_extension):
+    if"." + old_extension in filename:
+        filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+        index = filenames.index("."+ old_extension)
+        newfilenames = filenames[:index] + "." + new_extension
+        return newfilenames
+    return filename
+print(replace_extension(filenames,"hpp","h"))
+print()
+print("왜 위에께 안돼...?")
+
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+firstname = [firsthalf.split(".",1)[0] for firsthalf in filenames]
+secondname = [secondhalf.split(".",1)[1] for secondhalf in filenames]
+
+print(str(firstname),".",secondname)
+
+print("이게 안돼...?")
+
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+for filename in filenames:
+    for firsthalf in filename:
+        firstname = filename.split(".",1)[0]
+    for secondhalf in filename:
+        secondname = filename.split(".",1)[1]
+        secondname.replace("hpp","h")
+print(filename)
+
+print("이건 또 왜 이렇게 나와...")
+
+print()
+filenames = 0
+filename = 0
+print("차근차근해보자고")
+print("일단 전체 리스트부터 작은 리스트로 쪼개주기")
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+for filename in filenames:
+    oldfilenames = filename.split(".")
+    newfilenames = oldfilenames[1].replace("hpp","h")
+    print(oldfilenames[0]+"."+newfilenames)
+print("adsljdfl;kasl;ask;asdkl;askf;lk 와 진짜... 드디어.... 이 문제로 2시간 잡아먹었네... 연습문제 27번이랑 30번, 그리고 구글에 경의를 표합니다")
+print()
+print("아니 근데 잠깐만... 이거를 리스트로 다시 만들어야되잖아...")
+
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+for filename in filenames:
+    oldfilenames = filename.split(".")
+    newfilenames = oldfilenames[1].replace("hpp","h")
+    print([oldfilenames[0]+"."+newfilenames])
+
+print("이건 아니고...")
+print()
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+new_name = []
+for filename in filenames:
+    oldfilenames = filename.split(".")
+    newfilenames = oldfilenames[1].replace("hpp","h")
+    new_name.extend([oldfilenames[0]+"."+newfilenames])
+print(new_name)
+print()
+print("응...??")
+print("된건가...?")
+print("됐다... 마지막 코드들 보니까... 내가 처음에 괜히 복잡하게 생각했었네...")
+
+word = "python"
+print(word[0])
+
+
+print("Practice Quiz 2")
+print("텍스트를 피그 라틴으로 변경하는 함수를 생성해보겠습니다.")
+print("각 단어의 첫 번째 글자를 끝으로 옮기고 끝에 ‘ay’를 덧붙여 수정하는 방식으로 간단하게 텍스트를 변환합니다. 예를 들어, python은 ythonpay가 됩니다.")
+
+def pig_latin(text):
+    say = ""
+    # Separate the text into words
+    newpiglatinword = []
+    words = text.split(" ")
+
+    for word in words:
+        # Create the pig latin word and add it to the list
+        newpiglatinword.extend(word[1:] + word[0] + "ay")
+        # Turn the list back into a phrase
+    return newpiglatinword
+
+
+print(pig_latin("hello how are you"))  # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun"))  # Should be "rogrammingpay niay ythonpay siay unfay"
+
+print("자... 아웃풋이 맞긴 맞는데... 왜 다 분리됐냐... 다시 해보자")
+
+
+def pig_latin(text):
+    say = " "
+    # Separate the text into words
+    newpiglatinword = []
+    words = text.split(" ")
+    for word in words:
+        # Create the pig latin word and add it to the list
+        word = word[1:] + word[0] + "ay"
+        newpiglatinword.append(word)
+        # Turn the list back into a phrase
+    return say.join(newpiglatinword)
+
+
+print(pig_latin("hello how are you"))  # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun"))  # Should be "rogrammingpay niay ythonpay siay unfay"
+
+print("음.. 일단 구글링으로 해봤네... 오케... 어펜드랑... 조인")
+print("그럼 원래 내 코드에 append만 붙여볼까?")
+print()
+
+def pig_latin(text):
+    say = ""
+    # Separate the text into words
+    newpiglatinword = []
+    words = text.split(" ")
+
+    for word in words:
+        # Create the pig latin word and add it to the list
+        newpiglatinword.append(word[1:] + word[0] + "ay")
+        # Turn the list back into a phrase
+    return newpiglatinword
+
+
+print(pig_latin("hello how are you"))  # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun"))  # Should be "rogrammingpay niay ythonpay siay unfay"
+print("아 이렇게되면 아예 separate 리스트가 되는구나")
+
+
+print()
+print("Practice Quiz 3")
+print("Linux 시스템에서 파일의 권한은 소유자, 그룹 및 기타의 세 권한에 대한 읽기, 쓰기 및 실행의 세 가지 세트로 나뉩니다.")
+print("각각의 세 가지 값은 각 권한을 합한 8진수로 표현할 수 있으며, 4는 읽기, 2는 쓰기, 1은 실행으로 표현됩니다.")
+print("또는 권한이 부여되지 않은 경우 r, w, x 또는 - 문자를 사용하여 문자열로 작성될 수 있습니다.")
+print("예: 640은 소유자에 대한 읽기/쓰기, 그룹에 대한 읽기, 다른 사람에 대한 권한 없음을 뜻합니다.")
+print("문자열로 변환하면 ‘rw-r-----’과 같습니다.")
+print()
+print("755는 소유자에 대한 읽기/쓰기/실행이고 그룹 및 기타에 대한 읽기/실행입니다. 문자열로 변환하면 ‘rwxr-xr-x’입니다. 코드가 권한을 8진수에서 문자열 형식으로 변환하도록 빈칸을 채우십시오.")
+
+print("??? 8진수요?")
+
+
+def octal_to_string(octal):
+    result = ""
+    value_letters = [(4, "r"), (2, "w"), (1, "x")]
+    # Iterate over each of the digits in octal
+    for digits in [int(n) for n in str(octal)]: #value_letters = 755
+        # Check for each of the permissions values
+        for value, letter in value_letters:
+            if digits >= value:
+                result += letter
+                digits -= value
+            else:
+                result += "-"
+    return result
+
+
+print(octal_to_string(755))  # Should be rwxr-xr-x
+print(octal_to_string(644))  # Should be rw-r--r--
+print(octal_to_string(750))  # Should be rwxr-x---
+print(octal_to_string(600))  # Should be rw-------
+
+print("이야 이거 문자열이 무슨 의미인진 진짜 모르겠다... ")
+
+
+print()
+print("Practice Quiz 4는 코드 짜는 문제 아니라서 패스")
+
+print()
+print("Practice Quiz 5")
+print("group_list 함수는 그룹 이름과 구성원 목록을 수락하고 다음 형식의 문자열을 리턴합니다.")
+print("group_name: member1, member2, … 예를 들어 group_list(\"g\", [\"a\",\"b\",\"c\"] )는 ‘g: a, b, c’를 리턴합니다.")
+print("해당 함수에서 이를 실행하도록 공백을 채우십시오.")
+
+def group_list(group, users):
+    new_list = []
+    members = users
+    return group, members
+
+print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
+print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
+print(group_list("Users", "")) # Should be "Users:"
+print("자 이건 아닌거 같고... 다시 해봅시다")
+
+def group_list(group, users):
+    return group + ": " + str(users)
+
+print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
+print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
+print(group_list("Users", "")) # Should be "Users:"
+print("자 일단 이정도까진 만들어놨다... 이제 이 users를 리스트에서 어떻게 빼냐")
+
+print()
+def group_list(group, users):
+    return group + ": " + " ".join(users)
+
+print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
+print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
+print(group_list("Users", "")) # Should be "Users:"
+print("join을 잊지말자")
+print("잠깐만... 콤마 어디갔는데...")
+
+print()
+
+def group_list(group, users):
+    return group + ": " + ", ".join(users)
+
+print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
+print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
+print(group_list("Users", "")) # Should be "Users:"
+print("됐다")
+
+print()
+print()
+
+
+print("guest_list 함수는 파티에 온 각 손님의 이름, 나이, 직업이 포함된 튜플 목록을 읽고 각각에 ‘Guest is X years and works as __.’(손님은 X세이며 직업은 __입니다.)라는 문장을 출력합니다.")
+print("예를 들어 guest_list(('Ken', 30, \"Chef\"), (\"Pat\", 35, 'Lawyer'), ('Amanda', 25, \"Engineer\"))는 다음과 같이 출력됩니다. ")
+print("Ken is 30 years old and works as Chef.(Ken은 30세이며 직업은 셰프입니다.)")
+print("Pat is 35 years old and works as Lawyer.(Pat은 35세이며 직업은 변호사입니다.)")
+print("Amanda is 25 years old and works as Engineer.(Amanda는 25세이며 직업은 엔지니어입니다.)")
+print("해당 함수에서 이를 실행하도록 공백을 채우십시오.")
+
+print()
+
+def guest_list(guests):
+    for guest in guests:
+        print("{} is {} years old and works as {}".format(guest[0], guest[1], guest[2]))
+
+guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
+#Click Run to submit code
+print("""
+Output should match:
+Ken is 30 years old and works as Chef
+Pat is 35 years old and works as Lawyer
+Amanda is 25 years old and works as Engineer
+""")
+print("wohahaha")
+def guest_list(guests):
+    for guest in guests:
+        name,age,job = guest
+        print("{} is {} years old and works as {}".format(name,age,job))
+
+guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
+#Click Run to submit code
+print("""
+Output should match:
+Ken is 30 years old and works as Chef
+Pat is 35 years old and works as Lawyer
+Amanda is 25 years old and works as Engineer
+""")
+
+print()
+print("Dictionary")
+print("Key - Value : One Set")
+x = {}
+print(type(x))
+
+print()
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+print(file_counts)
+print(file_counts["txt"])
+print("jpg" in file_counts)
+print("html" in file_counts)
+
+print()
+file_counts["cfg"] = 8
+print(file_counts)
+file_counts["csv"] = 17
+print(file_counts)
+del file_counts["cfg"]
+print(file_counts)
+
+print()
+file_counts = {"jpg":10, "txt": 14, "csv": 2, "py": 23}
+for extension in file_counts:
+    print(extension)
+for ext, amount in file_counts.items():
+    print("There are {} files with the .{} extension".format(amount,ext))
+print(file_counts.keys())
+print(file_counts.values())
+print()
+for value in file_counts.values():
+    print(value)
+
+
+print()
+print("Practice Questions - Dictionary & Format")
+cool_beasts = {"octopuses":"tentacles", "dolphins":"fins", "rhinos":"horns"}
+for animals, characteristics in cool_beasts.items():
+    print("{} have {}".format(animals, characteristics))
+
+print()
+def count_letters(text):
+    result = {}
+    for letter in text:
+        if letter not in result:
+            result[letter] = 0
+        result[letter] += 1
+    return print(result)
+count_letters("aaaaa")
+count_letters("tenant")
+count_letters("a long string with a lot of letters")
+
+ip_addresses = ["192.168.1.1","127.0.0.1","8.8.8.8"]
+host_addresses = {"router": "192.168.1.1", "localhost":"127.0.0.1","google":"8.8.8.8"}
+print("use dictionary when you are searching for a specific data; large data set")
+print()
+
+print("practice question:")
+print("파이썬에서 사전은 주어진 키에 대해 단일 값만 보유할 수 있습니다.")
+print("이 문제를 해결하기 위해 단일 값은 여러 값을 포함하는 목록이 될 수 있습니다. ")
+print("여기에 의류 항목과 색상이 포함된 \"wardrobe\"라는 사전이 있습니다. 예를 들어 \"red shirt\", \"blue shirt\" 등의 색상으로 각 의류 품목에 대한 줄을 인쇄하도록 공백을 채우십시오.")
+
+wardrobe = {"shirt":["red","blue","white"], "jeans":["blue","black"]}
+for clothes in wardrobe:
+	for colors in wardrobe[clothes]:
+		print("{} {}".format(colors, clothes))
+
+print()
+print("practice quiz")
+
+print("Question 1")
+print("email_list 함수는 도메인 이름을 키로 포함하고 사용자 목록을 값으로 포함하는 딕셔너리를 받습니다.")
+print("완전한 이메일 주소(예: diana.prince@gmail.com)가 포함된 목록을 생성하려면 빈칸을 채우십시오.")
+
+def email_list(domains):
+	emails = []
+	for domain, users in domains.items():
+	  for user in users:
+	    emails.append(user+"@"+domain)
+	return(emails)
+
+print(email_list({"gmail.com": ["clark.kent", "diana.prince", "peter.parker"], "yahoo.com": ["barbara.gordon", "jean.grey"], "hotmail.com": ["bruce.wayne"]}))
+
+print()
+print("Question 2")
+print("groups_per_user 함수는 사용자 목록과 함께 그룹 이름이 포함된 딕셔너리를 받습니다.")
+print("사용자는 여러 그룹에 속할 수 있습니다.")
+print("사용자를 키로, 이들의 그룹 목록을 값으로 포함하는 딕셔너리를 리턴하도록 빈칸을 채우십시오.")
+def groups_per_user(group_dictionary):
+	user_groups = {}
+	# Go through group_dictionary
+	for group, users in group_dictionary.items():
+		# Now go through the users in the group
+		for user in users:
+			user_groups[user] = user_groups.get(user,[])+[group]
+			# Now add the group to the the list of
+# groups for this user, creating the entry
+# in the dictionary if necessary
+
+	return(user_groups)
+
+print(groups_per_user({"local": ["admin", "userA"],
+		"public":  ["admin", "userB"],
+		"administrator": ["admin"] }))
+
+print()
+print("Question 3")
+print("dict.update 메서드는 하나의 사전을 다른 사전에서 가져온 항목으로 업데이트하므로 기존 항목이 대체되고 새 항목이 추가됩니다.")
+print("다음 코드 끝에 있는 사전 \"wardrobe\"의 내용은 무엇입니까?")
+
+wardrobe = {'shirt': ['red', 'blue', 'white'], 'jeans': ['blue', 'black']}
+new_items = {'jeans': ['white'], 'scarf': ['yellow'], 'socks': ['black', 'brown']}
+wardrobe.update(new_items)
+print(wardrobe)
+
+print()
+print("Question 4")
+print("목록보다 사전을 사용하는 주요 이점은 무엇입니까?")
+print("Answer: 사전에서 특정 요소를 더 빠르고 쉽게 찾을 수 있습니다.")
+
+print()
+print("Question 5")
+print("add_prices 함수는 딕셔너리에 있는 모든 식료품의 총 가격을 리턴합니다.")
+print("이 함수 작성을 완료하려면 빈칸을 채우십시오. ")
+
+def add_prices(basket):
+	# Initialize the variable that will be used for the calculation
+	total = 0
+	# Iterate through the dictionary items
+	for items in basket.values():
+		# Add each price to the total calculation
+		# Hint: how do you access the values of
+		# dictionary items?
+		total += items
+	# Limit the return value to 2 decimal places
+	return round(total, 2)
+
+groceries = {"bananas": 1.56, "apples": 2.50, "oranges": 0.99, "bread": 4.59,
+	"coffee": 6.99, "milk": 3.39, "eggs": 2.98, "cheese": 5.44}
+
+print(add_prices(groceries)) # Should print 28.44
+
+print()
+print()
+print("Module 4 Quiz")
+print()
+print("Question 1")
+print("format_address 함수는 주소 문자열의 일부를 새로운 문자열인 house_number 및 street_name으로 분리하고 ‘house number X on street named Y’(도로명 Y의 X번지)로 리턴합니다.")
+print("입력 문자열의 형식은 다음과 같습니다. 숫자로 된 번지, 그 뒤에 도로명이 오며 도로명은 숫자를 포함할 수 있지만 단독으로 사용할 수 없으며 여러 단어로 이어질 수 있습니다.")
+print("예를 들어, ‘123 Main Street’, ‘1001 1st Ave’ 또는 ‘55 North Center Drive’ 등이 될 수 있습니다. 이 함수 작성을 완료하려면 공백을 채우십시오.")
+def format_address(address_string):
+  # Declare variables
+    house_number = 0
+    street_name = []
+  # Separate the address string into parts
+    address = address_string.split()
+  # Traverse through the address parts
+    for item in address:
+      if item.isnumeric():
+          house_number = item
+      else:
+          street_name.append(item)
+    # Determine if the address part is the
+    # house number or part of the street name
+
+  # Does anything else need to be done
+  # before returning the result?
+
+  # Return the formatted string
+    return "house number {} on street named {}".format(house_number, " ".join(street_name))
+
+print(format_address("123 Main Street"))
+# Should print: "house number 123 on street named Main Street"
+
+print(format_address("1001 1st Ave"))
+# Should print: "house number 1001 on street named 1st Ave"
+
+print(format_address("55 North Center Drive"))
+# Should print "house number 55 on street named North Center Drive"
+
+
+print()
+print("Question 2")
+print("highlight_word 함수는 문장에서 주어진 단어를 대문자 버전으로 변경합니다.")
+print("예를 들어, highlight_word(\"Have a nice day\", \"nice\")는 ‘Have a NICE day’(좋은 하루 보내세요)를 리턴합니다. ")
+print("이 함수를 단 한 줄로 작성할 수 있습니까?")
+
+def highlight_word(sentence, word):
+	return(sentence.replace(word,word.upper()))
+
+print(highlight_word("Have a nice day", "nice"))
+print(highlight_word("Shhh, don't be so loud!", "loud"))
+print(highlight_word("Automating with Python is fun", "fun"))
+
+print()
+print("Question 3")
+print("amie와 Drew라는 두 명의 조수가 있는 교수는 학생들이 교실에 도착한 순서대로 작성한 출석 목록을 원합니다.")
+print("Drew는 도착한 학생들을 작성한 첫 번째 사람이고, 그 다음은 Jamie가 이어 적었습니다.")
+print("수업이 끝난 후, 그들은 각자 자신의 목록을 컴퓨터에 입력하고 교수에게 이메일로 보냈고 교수는 이 목록을 각 학생이 도착한 순서대로 하나로 만들고자 합니다.")
+print("한편 Jamie는 곧이어 그녀의 목록이 역순이라고 메일을 보냈습니다.")
+print("다음과 같이 하나의 목록으로 결합하는 단계를 수행하십시오.")
+print("Drew 목록의 내용과 그 후 이어지는 Jamie 의 역순 목록을 가지고 도착한 순서대로 정확한 학생의 목록을 작성하십시오.")
+
+
+def combine_lists(list1, list2):
+    return list2 + list1[::-1]
+
+# Generate a new list containing the elements of list2
+# Followed by the elements of list1 in reverse order
+
+
+Jamies_list = ["Alice", "Cindy", "Bobby", "Jan", "Peter"]
+Drews_list = ["Mike", "Carol", "Greg", "Marcia"]
+
+print(combine_lists(Jamies_list, Drews_list))
+
+print()
+print()
+
+
+print("Question 4")
+print("리스트 컴프리헨션을 사용하여 제곱수(n*n) 목록을 만듭니다.")
+print("이 함수는 변수 start와 end를 받고 start와 end 사이의 전부를 통틀어 연속 숫자 제곱 목록을 리턴합니다.")
+print("예를 들어, squares(2, 3)은 [4, 9]를 리턴합니다. ")
+def squares(start, end):
+	return [n*n for n in range(start, end+1)]
+
+print(squares(2, 3)) # Should be [4, 9]
+print(squares(1, 5)) # Should be [1, 4, 9, 16, 25]
+print(squares(0, 10)) # Should be [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+print()
+print("Question 5")
+print("car_prices 딕셔너리의 키와 값을 반복하는 코드를 완성하고 각각에 대한 정보를 출력합니다.")
+def car_listing(car_prices):
+  result = ""
+  for carname,price in car_prices.items():
+    result += "{} costs {} dollars".format(carname,price) + "\n"
+  return result
+
+print(car_listing({"Kia Soul":19000, "Lamborghini Diablo":55000, "Ford Fiesta":13000, "Toyota Prius":24000}))
+
+print()
+print("Question 6")
+print("Taylor와 Rory가 파티를 열려고 합니다.")
+print("그들은 초대장을 보냈고, 각 친구의 이름과 각 친구가 데려올 손님의 수가 포함된 답변을 딕셔너리에 각각 모았습니다.")
+print("각 딕셔너리는 부분적인 목록이지만 Rory의 목록에는 손님 수에 대한 최신 정보가 있습니다.")
+print("두 딕셔너리를 하나로 합하려면 빈칸을 채우십시오.")
+print("이름이 두 딕셔너리에 모두 포함되어 있는 경우 각 친구는 한 번만 나열되고 Rory의 딕셔너리에 있는 손님 수가 우선 적용됩니다.")
+print("그런 다음 딕셔너리 결과를 출력합니다.")
+
+def combine_guests(guests1, guests2):
+  # Combine both dictionaries into one, with each key listed
+  # only once, and the value from guests1 taking precedence
+  guests2.update(guests1)
+  return guests2
+
+Rorys_guests = { "Adam":2, "Brenda":3, "David":1, "Jose":3, "Charlotte":2, "Terry":1, "Robert":4}
+Taylors_guests = { "David":4, "Nancy":1, "Robert":2, "Adam":1, "Samantha":3, "Chris":5}
+
+print(combine_guests(Rorys_guests, Taylors_guests))
+
+print()
+print("Question 7")
+print("딕셔너리를 사용하여 입력 문자열의 문자 빈도를 계산합니다.")
+print("공백, 숫자 또는 구두점이 아닌 문자만 계산해야 합니다. 대문자는 소문자와 동일하게 간주해야 합니다.")
+print("예를 들어 count_letters(\"This is a sentence.\"(이것은 문장입니다.))는 다음과 같이 리턴합니다.")
+print("{'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}.")
+print()
+def count_letters(text):
+  result = {}
+  text = text.lower()
+  # Go through each letter in the text
+  #for letter in text:
+    # Check if the letter needs to be counted or not
+  for letter in text:
+    if letter.isalpha():
+        count = text.count(letter)
+        result[letter] = count
+    # Add or increment the value in the dictionary
+
+  return result
+
+print(count_letters("AaBbCc"))
+# Should be {'a': 2, 'b': 2, 'c': 2}
+
+print(count_letters("Math is fun! 2+2=4"))
+# Should be {'m': 1, 'a': 1, 't': 1, 'h': 1, 'i': 1, 's': 1, 'f': 1, 'u': 1, 'n': 1}
+
+print(count_letters("This is a sentence."))
+# Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
+
+print()
+print("Question 8")
+print("animal = \"Hippopotamus\"일 때 다음 명령은 무엇을 반환합니까?")
+animal = "Hippopotamus"
+print(animal[3:6])
+print(animal[-5])
+print(animal[10:])
+
+print()
+print("Question 9")
+print("이 명령이 실행된 후 \"colors\" 목록에는 무엇이 포함됩니까?")
+colors = ["red", "white", "blue"]
+colors.insert(2, "yellow")
+print(colors)
+
+print()
+print("Question 10")
+print("다음 명령은 무엇을 반환합니까?")
+host_addresses = {"router": "192.168.1.1", "localhost": "127.0.0.1", "google": "8.8.8.8"}
+print(host_addresses.keys())
+
+print()
+
+print("Week 5")
+
+print("Introduction to OOP (Object-Oriented Programming)")
+print("how to describe apple")
+print("it is a type of fruit, can be red, green etc.")
+print("numbers, strings, lists, dictionaries are object")
+print()
+print(type(0))
+print(type(""))
+
+print("upper / isnumeric / isalpha etc. - type of methods for str")
+
+print(dir(""))
+print(help(""))
+
+print()
+print()
+class Apple:
+    pass
+class Apple:
+    color = ""
+    flavor = ""
+
+jonagold = Apple()
+jonagold.color = "red"
+jonagold.flavor = "sweet"
+print(jonagold.color)
+print(jonagold.flavor)
+print(jonagold.color.upper())
+print()
+golden = Apple()
+golden.color = "yellow"
+golden.flavor = "soft"
+print(Apple.color)
+
+print()
+print("Practice Question")
+print("한 번 해보시겠습니까? 코드의 빈칸을 채우면 시가 인쇄됩니다.")
+class Flower:
+  color = 'unknown'
+rose = Flower()
+rose.color = "red"
+violet = Flower()
+violet.color = "blue"
+this_pun_is_for_you = "This pun is for you"
+
+print("Roses are {},".format(rose.color))
+print("violets are {},".format(violet.color))
+print(this_pun_is_for_you)
+
+print("Practice Questions")
+print("Question 1")
+print("객체의 메서드와 속성에 액세스하기 위해 점 표기법을 사용하는 방법에 대한 지식을 테스트해 보겠습니다.")
+print("Birds라는 클래스가 있다고 가정해 보겠습니다.")
+print("Birds에는 color와 number의 두 가지 속성이 있습니다.")
+print("Birds에는 새의 수를 세는 count()라는 메서드도 있습니다(숫자에 값 추가).")
+print("다음 중 새의 수를 올바르게 출력하는 코드 줄은 무엇입니까? 새의 수는 셀 때까지 0입니다!")
+print()
+class Bird:
+   pass
+bluejay = Bird()
+bluejay.color = "blue"
+bluejay.number = "5"
+
+print(bluejay.number)
+print()
+
+print()
+print("Question 2")
+print("클래스 개체의 새 인스턴스를 만드는 것은 개체와 연결된 속성을 사용하여 값을 추적하는 좋은 방법이 될 수 있습니다.")
+print("이러한 속성의 값은 개체 수준에서 쉽게 변경할 수 있습니다.")
+print("다음 코드는 개체를 사용하여 사람을 나타내는 George Bernard Shaw의 유명한 인용문을 표시합니다.")
+print("코드가 인용문에 설명된 행동을 충족하도록 빈칸을 채우십시오.")
+
+print()
+class Person:
+    apples = 0
+    ideas = 0
+
+johanna = Person()
+johanna.apples = 1
+johanna.ideas = 1
+
+martin = Person()
+martin.apples = 2
+martin.ideas = 1
+
+def exchange_apples(you, me):
+    you.apples, me.apples = me.apples, you.apples
+    return you.apples, me.apples
+
+def exchange_ideas(you, me):
+    you.ideas += me.ideas
+    me.ideas += you.ideas - me.ideas
+    return you.ideas, me.ideas
+
+exchange_apples(johanna, martin)
+print("Johanna has {} apples and Martin has {} apples".format(johanna.apples, martin.apples))
+exchange_ideas(johanna, martin)
+print("Johanna has {} ideas and Martin has {} ideas".format(johanna.ideas, martin.ideas))
+
+print()
+print("Question 3")
+print("City(도시) 클래스는 이름, 국가(도시가 위치한 곳), 고도(미터로 측정), 인구(최근 통계에 따른 근사치) 속성을 포함합니다.")
+print("지정된 최소 인구에 대해 정의된 인스턴스 3개를 비교할 때 max_elevation_city 함수의 빈칸을 채워 도시와 그 도시의 국가 이름(쉼표로 구분)을 리턴합니다.")
+print("예를 들어, 최소 인구 100만 명에 대한 함수를 호출하면 max_elevation_city(1000000)는 ‘Sofia, Bulgaria’를 리턴합니다. ")
+
+# define a basic city class
+class City:
+	name = ""
+	country = ""
+	elevation = 0
+	population = 0
+
+# create a new instance of the City class and
+# define each attribute
+city1 = City()
+city1.name = "Cusco"
+city1.country = "Peru"
+city1.elevation = 3399
+city1.population = 358052
+
+# create a new instance of the City class and
+# define each attribute
+city2 = City()
+city2.name = "Sofia"
+city2.country = "Bulgaria"
+city2.elevation = 2290
+city2.population = 1241675
+
+# create a new instance of the City class and
+# define each attribute
+city3 = City()
+city3.name = "Seoul"
+city3.country = "South Korea"
+city3.elevation = 38
+city3.population = 9733509
+
+def max_elevation_city(min_population):
+	# Initialize the variable that will hold
+# the information of the city with
+# the highest elevation
+	return_city = City()
+
+	# Evaluate the 1st instance to meet the requirements:
+	# does city #1 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city1.population > min_population and city1.elevation > return_city.elevation:
+		return_city = city1
+	# Evaluate the 2nd instance to meet the requirements:
+	# does city #2 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city2.population > min_population and city2.elevation > return_city.elevation:
+		return_city = city2
+	# Evaluate the 3rd instance to meet the requirements:
+	# does city #3 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city3.population > min_population and city3.elevation > return_city.elevation:
+		return_city = city3
+
+	#Format the return string
+	if return_city.name:
+		return "{}, {}".format(return_city.name, return_city.country)
+	else:
+		return ""
+
+print(max_elevation_city(100000)) # Should print "Cusco, Peru"
+print(max_elevation_city(1000000)) # Should print "Sofia, Bulgaria"
+print(max_elevation_city(10000000)) # Should print ""
+
+print()
+print("Question 4")
+print("객체와 클래스의 다른 점은 무엇입니까?")
+print("객체는 클래스의 특정 인스턴스입니다.")
+
+print()
+print("Question 5")
+print("갈색 나무 테이블과 빨간색 가죽 소파, 두 가지 가구가 있습니다.")
+print("describe_furniture 함수가 다음과 같이 각 가구를 설명하는 문장을 만들도록 각 Furniture 클래스 인스턴스를 생성하고 빈칸을 채우십시오.")
+print("\"This piece of furniture is made of {color} {material}\"(이 가구는 {색상} {소재}로 만들어진 가구입니다.) ")
+
+class Furniture:
+	color = ""
+	material = ""
+
+table = Furniture()
+table.color = "brown"
+table.material = "wood"
+
+couch = Furniture()
+couch.color = "red"
+couch.material = "leather"
+
+def describe_furniture(piece):
+	return ("This piece of furniture is made of {} {}".format(piece.color, piece.material))
+
+print(describe_furniture(table))
+# Should be "This piece of furniture is made of brown wood"
+print(describe_furniture(couch))
+# Should be "This piece of furniture is made of red leather"
+
+print()
+
+class Piglet:
+    def speak(self):
+        print("oink oink")
+
+hamlet = Piglet()
+hamlet.speak()
+
+class Piglet:
+    name = "piglet"
+    def speak(self):
+        print("Oink! I'm {}! Oink!".format(self.name))
+
+hamlet = Piglet()
+hamlet.name = "Hamlet"
+hamlet.speak()
+petunia = Piglet()
+petunia.name = "Petunia"
+petunia.speak()
+
+class Piglet:
+    years = 0
+    def pig_years(self):
+        return self.years*18
+piggy = Piglet()
+print(piggy.pig_years())
+piggy.years = 2
+print(piggy.pig_years())
+
+print()
+print("Practice Question")
+print("자, 이제 여러분의 차례입니다! 클래스에 대한 작성 메서드를 살펴보십시오.")
+print("이전에 표시된 Piglet 클래스를 기반으로 dog_years로 Dog 클래스를 만듭니다(인간의 1년은 개의 7년).")
+class Dog:
+    years = 0
+    def dog_years(self):
+        return self.years * 7
+fido = Dog()
+fido.years = 3
+print(fido.dog_years())
+
+print()
+
+print("constructor")
+
+class Apple:
+    def __init__(self,color,flavor):
+        self.color = color
+        self.flavor = flavor
+jonagold = Apple("red", "sweet")
+print(jonagold.color)
+
+print("Practice Quiz")
+print("이 작업을 보고 싶으십니까? 이 코드에는 객체를 생성할 때 설정되는 속성 이름이 있는 Person 클래스가 있습니다.")
+print("1) 클래스의 인스턴스가 생성될 때 속성이 올바르게 설정되고, 2) Greeting() 메서드가 호출될 때 인사말이 할당된 이름을 나타내도록 공백을 채우십시오.")
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def greeting(self):
+        # Should return "hi, my name is " followed by the name of the Person.
+        return "hi, my name is {}".format(self.name)
+
+# Create a new instance with a name of your choice
+some_person = Person("Jason")
+# Call the greeting method
+print(some_person.greeting())
+
+print()
+print(jonagold)
+class Apple:
+    def __init__(self,color,flavor):
+        self.color = color
+        self.flavor = flavor
+    def __str__(self):
+        return "This apple is {} and its flavor is {}".format(self.color,self.flavor)
+jonagold = Apple("red", "sweet")
+print(jonagold)
+
+print()
+print("I can use __str__ on the last practice question as well")
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def __str__(self):
+        return "hi, my name is {}".format(self.name)
+
+some_person = Person("Jason")
+print(some_person)
+
+class Apple:
+    def __init__(self,color,flavor):
+        self.color = color
+        self.flavor = flavor
+    def __str__(self):
+        return "This apple is {} and its flavor is {}".format(self.color,self.flavor)
+#help(Apple)
+
+print()
+print("Docstring")
+def to_seconds(hours, minutes, seconds):
+    """Returns the amount of the seconds in the given hours, minutes and seconds."""
+    return hours*3600+minutes*60+seconds
+help(to_seconds)
+print()
+
+print()
+class Piglet:
+    """Represents a piglet that can say their name."""
+    years = 0
+    name = ""
+    def speak(self):
+        """Outputs a message including the name of the piglet."""
+        print("Oink! I'm {}! Oink!".format(self.name))
+    def pig_years(self):
+        """Converts the current age to equivalent pig years"""
+        return self.years*18
+help(Piglet)
+
+print("Practice - Docstring")
+print("지난 비디오의 Person 클래스를 기억하십니까? 인사말 메서드에 독스트링을 추가해 보겠습니다. \"Outputs a message with the name of the person\"은 어떻습니까?")
+
+class Person:
+  def __init__(self, name):
+    """한국어로도 되나?"""
+    self.name = name
+  def greeting(self):
+    """Outputs a message with the name of the person"""
+    print("Hello! My name is {name}.".format(name=self.name))
+
+help(Person)
+
+print("Jupyter Notebook...?")
+
+
+print()
+print("inheritance")
+print()
+class Fruit:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+class Apple(Fruit):
+    pass
+class Grape(Fruit):
+    pass
+granny_smith = Apple("green", "tart")
+carnelian = Grape("purple", "sweet")
+print(granny_smith.flavor)
+print(carnelian.color)
+
+print()
+
+class Animal:
+    sound = ""
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        print("{sound} I'm {name}! {sound}".format(name=self.name, sound=self.sound))
+class Piglet(Animal):
+    sound = "Oink!"
+hamlet = Piglet("Hamlet")
+hamlet.speak()
+
+class Cow(Animal):
+    sound = "Mooooo"
+milky = Cow("Milky White")
+milky.speak()
+
+print()
+print("practice quiz - inheritance")
+print("함께 새 클래스를 만들고 상속해 봅시다.")
+print("아래에는 Clothing이라는 기본 클래스가 있습니다.")
+print("함께 Clothing 클래스에서 메서드를 상속하는 Shirt라는 두 번째 클래스를 만들어 보겠습니다.")
+print("제대로 작동하도록 빈칸을 채우십시오.")
+print()
+class Clothing:
+    material = ""
+    def __init__(self, name):
+        self.name = name
+    def checkmaterial(self):
+       print("This {} is made of {}".format(self.name, self.material))
+
+class Shirt(Clothing):
+    material = "Cotton"
+
+polo = Shirt("Polo")
+polo.checkmaterial()
+
+print()
+print("Composition")
+
+class Repository:
+    def __init__(self):
+        self.packages = {}
+    def add_package(self,package):
+        self.packages[package.name] = package
+    def total_size(self):
+        result = 0
+        for package in self.packages.values():
+            result += package.size
+        return result
+
+print()
+print("practice quiz - composition")
+print("이전 비디오 내 질문에서 Clothing 클래스에 대해 조금 더 확장해 보겠습니다.")
+print("임무: \"Stock_by_Material\" 메서드를 완료하고 재고가 있는 주어진 재료의 각 항목 양을 반복합니다.")
+print("완료되면 스크립트에 최대 10개의 면 Polo 셔츠가 추가됩니다.")
+
+class Clothing:
+    stock = {'name': [], 'material': [], 'amount': []}
+    def __init__(self, name):
+        material = ""
+        self.name = name
+    def add_item(self, name, material, amount):
+        Clothing.stock['name'].append(self.name)
+        Clothing.stock['material'].append(self.material)
+        Clothing.stock['amount'].append(amount)
+    def Stock_by_Material(self, material):
+        count = 0
+        n = 0
+        for item in Clothing.stock['material']:
+            if item == material:
+                count += Clothing.stock['amount'][n]
+                n += 1
+        return count
+
+class shirt(Clothing):
+    material = "Cotton"
+class pants(Clothing):
+    material = "Cotton"
+
+polo = shirt("Polo")
+sweatpants = pants("Sweatpants")
+polo.add_item(polo.name, polo.material, 4)
+sweatpants.add_item(sweatpants.name, sweatpants.material, 6)
+current_stock = polo.Stock_by_Material("Cotton")
+print(current_stock)
+
+print()
+print("Python Modules")
+print("Python standard library")
+
+print()
+
+import random
+print(random.randint(1,10))
+print(random.randint(1,10))
+print(random.randint(1,10))
+
+import datetime
+now = datetime.datetime.now()
+print(type(now))
+print(now)
+print(now.year)
+print(now.day)
+print(now.month)
+print(now + datetime.timedelta(days=28))
+
+print()
+
+print("2/28 - 부트캠프 확인 및 지원")
