@@ -132,5 +132,7 @@ print()
 
 hrs = input("Enter Hours: ")
 rte = input("Enter Rate: ")
-print("Pay:", int(hrs) * int(rte))
+print("Pay:", float(hrs) * float(rte))
 
+result = 2+(4/2)*4
+print(result)
