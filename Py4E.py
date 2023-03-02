@@ -78,3 +78,59 @@ x = 3.9 * x * (1-x)
 print(x)
 
 print()
+
+print("Expressions")
+print("+ = Addition")
+print("- = Subtraction")
+print("* = Multiplication")
+print("/ = Division")
+print("** = Power")
+print("% = Remainder")
+
+print("Order of Evaluation")
+x = 1 + 2* 3 - 5 / 5**6
+print(x)
+print("Parenthesis ->  Power -> Multiplication -> Addition -> Left to Right")
+
+print("Integer -> numbers with no decimals")
+print("string -> words/numbers in word format")
+ddd = 1 + 2
+eee = "Hello " + "There "
+print(ddd)
+print(eee)
+print(eee + str(1))
+
+print(float(99) + 100)
+
+print()
+
+sval = "123"
+print(type(sval))
+ival = int(sval)
+print(ival + 1)
+nsv = "hello bob"
+niv = int(len(nsv))
+print(niv + 5)
+
+print()
+nam = input("Who are you? ")
+print("Welcome", nam)
+
+print()
+inp = input("Europe Floor? ")
+usf = int(inp) + 1
+print("US Floor ", usf)
+
+
+print()
+print("Exercise")
+
+nzt = input("Enter your name: ")
+print("Hello", nzt)
+
+print()
+
+hrs = input("Enter Hours: ")
+rte = input("Enter Rate: ")
+print("Pay:", int(hrs) * int(rte))
+
