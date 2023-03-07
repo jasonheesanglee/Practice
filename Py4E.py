@@ -136,3 +136,185 @@ print("Pay:", float(hrs) * float(rte))
 
 result = 2+(4/2)*4
 print(result)
+
+print()
+
+print("if statement")
+print()
+
+x = 5
+if x < 10:
+    print("Smaller")
+if x > 20:
+    print("Bigger")
+
+print()
+print("Finis")
+print("< Less than")
+print("<= Less than or Equal to")
+print("== Equal to")
+print(">= Greater than or Equal to")
+print("> Greater than")
+print("!= Not equal")
+print("\"=\" is used for assignment")
+
+print()
+x = 5
+if x == 5:
+    print("Equals 5")
+if x > 4:
+    print("Greater than 4")
+if x >= 5:
+    print("Greater than or Equals 5")
+if x < 6: print ("Less than 6")
+if x <= 5:
+    print("Less than or Equals 5")
+if x != 6:
+    print("Not equal 6")
+
+print()
+x = 5
+print("Before 5")
+if x == 5:
+    print("Is 5")
+    print("Is still 5")
+    print("Third 5")
+print("Afterwards 5")
+print("Before 6")
+if x == 6:
+    print("Is 6")
+    print("Is still 6")
+    print("Third 6")
+print("Afterwards 6")
+
+print()
+print("Indentation is a KEY for Python")
+print("4 spaces = 1 tab, TURN OFF TAB, Python can get confused")
+
+print()
+x = 5
+if x > 2:
+    print("Bigger than 2")
+    print("Still Bigger, Indentation lasts til here")
+print("Done with 2")
+print()
+for i in range(5):
+    print(i)
+    if i > 2:
+        print("Bigger than 2")
+    print("Done with i", i)
+print("All done ")
+
+print()
+x = 42
+if x > 1:
+    print("More than 1")
+    if x < 100:
+        print("Less than 100")
+print("All Done")
+
+print()
+x = 4
+if x > 2:
+    print("Bigger")
+else:
+    print("Smaller")
+print("All Done")
+
+print()
+x = 0
+if x < 2:
+    print("Small")
+elif x < 10:
+    print("Medium")
+else:
+    print("Large")
+print("All Done")
+
+x = 20
+if x < 2:
+    print("Small")
+elif x < 10:
+    print("Medium")
+else:
+    print("Large")
+print("All Done")
+
+print()
+print("No Else")
+x = 5
+if x < 2:
+    print("Small")
+elif x < 10:
+    print("Medium")
+print("All Done")
+
+print()
+print("Which will never print regardless of the value for X?")
+if x < 2:
+    print("Below 2")
+elif x >= 2:
+    print("2 or more")
+else:
+    print("Something else") #This will never be printed
+
+print()
+
+if x < 2:
+    print("Below 2")
+elif x < 20:
+    print("Below 20")
+elif x < 10: #This will never be printed
+    print("Below 10")
+else:
+    print("Something else")
+
+print("")
+rawstr = input("Enter a Number:")
+try:
+    ival = int(rawstr)
+except: - 1
+if ival > 0:
+    print("Nicework")
+else:
+    print("Not a number")
+
+print()
+print("Practice Exercise 1")
+print()
+hours = input("Enter Hours:")
+rate = input("Enter Rate:")
+floating_point_hours = float(hours)
+floating_point_rate = float(rate)
+# print(floating_point_hours, floating_point_rate)
+if floating_point_hours > 40:
+    #print("Overtime")
+    reg = floating_point_hours * floating_point_rate
+    otp = (floating_point_hours - 40) * (floating_point_rate * 0.5)
+    #print(reg, otp)
+    xp = reg + otp
+else:
+    #print("Regular")
+    xp = floating_point_hours * floating_point_rate
+print("Pay:", xp)
+
+print()
+print("Practice Exercise 2")
+
+hour = input("Enter Hours:")
+rates = input("Enter Rate:")
+try:
+    fh = float(hour)
+    fr = float(rates)
+except:
+    print("Error, please enter numeric input")
+    quit()
+
+print(fh, fr)
+if fh > 40:
+    reg = fh * fr
+    otp = (fh - 40) * (fr* 0.5)
+    xp = reg + otp
+else:
+    xp = fh * fr
+print("Pay:", xp)
