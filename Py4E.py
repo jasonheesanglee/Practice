@@ -355,3 +355,68 @@ print(f)
 print(type(f))
 print(1+2*float(3)/4-5)
 
+print()
+print()
+print("Building our own functions")
+print()
+
+print("Invoking")
+x=5
+print("Hello")
+def print_lyrics():
+    print("I'm a lumberjack, and I'm okay")
+    print("I sleep all night and I work all day.")
+print("Yo")
+print_lyrics()
+x = x + 2
+print(x)
+
+print()
+
+def greet(lang):
+    if lang == "es":
+        return "Hola"
+    elif lang == "fr":
+        return "Bonjour"
+    else:
+        return "Hello"
+greet("en")
+greet("es")
+greet("fr")
+
+print()
+
+print(greet("en"), "Glenn")
+print(greet("es"), "Sally")
+print(greet("fr"), "Michael")
+
+print()
+
+def addtwo(a,b):
+    added = a + b
+    return added
+x = addtwo(3,5)
+print(x)
+
+print("Practice Exercise 1")
+
+def computepay(hours, rate):
+    #print("In computepay", hours, rate)
+    if hours > 40:
+        reg = rate * hours
+        otp = (hours - 40) * (rate * 0.5)
+        pay = reg + otp
+    else:
+        pay = hours * rate
+    #print("Returning", pay)
+    return pay
+
+sh = input("Enter Hours:")
+sr = input("Enter Rate:")
+fh = float(sh)
+fr = float(sr)
+xp = computepay(fh, fr)
+
+computepay(fh, fr)
+print("Pay:", xp)
+
