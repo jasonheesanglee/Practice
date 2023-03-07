@@ -318,3 +318,5 @@ if fh > 40:
 else:
     xp = fh * fr
 print("Pay:", xp)
+
+print()
