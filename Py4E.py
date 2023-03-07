@@ -524,13 +524,13 @@ print()
 print("Finding Average in Loop")
 
 count = 0
-sum = 0
-print("Before", count, sum)
+summ = 0
+print("Before", count, summ)
 for value in [9, 41, 12, 3, 74, 15]:
     count = count + 1
-    sum = sum + value
-    print(count, sum, value)
-print("After", count, sum, sum / count)
+    summ = summ + value
+    print(count, summ, value)
+print("After", count, summ, summ / count)
 
 print()
 print("Filtering in a Loop")
@@ -563,7 +563,7 @@ for value in [9, 41, 12, 3, 74, 15]:
         smallest = value
     elif value < smallest:
         smallest = value
-    print(smallest, value) # this is to show the progress of how computer works in order
+    print(smallest, value)  # this is to show the progress of how computer works in order
 print("After", smallest)
 
 print()
@@ -573,5 +573,43 @@ print("\"is\" is stronger than \"==\", but try to use less of it. It might get c
 print()
 print(0 is 0.0)
 print(0 == 0.0)
+
+print()
+
+print("Practice Exercise")
+print()
+
+num = 0
+tot = 0.0
+while True:
+    sval = input("Enter a number: ")
+    if sval == "done":
+        break
+    try:
+        fval = float(sval)
+    except Exception as e:
+        print(f"Invalid Input:\n{e}")
+        continue
+    num = num + 1
+    tot = tot + fval
+print(tot, num, tot/num)
+
+print()
+print("hi")
+
+print()
+i = 0
+while i < 5:
+    print(i)
+    i = i + 1
+
+print()
+x = 0
+while x < 10:
+    if x < 10:
+        x = x + 1
+    elif x > 8:
+        print(x)
+print(x)
 
 print()
