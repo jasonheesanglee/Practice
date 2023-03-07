@@ -459,3 +459,45 @@ while True:
     print(line)
 print("Done!")
 
+print()
+
+print("Definite Loops")
+print("For Loops")
+print()
+
+for i in [5,4,3,2,1]:
+    print(i)
+print("Blastoff")
+
+print()
+
+friends = ["Joseph","Glenn","Sally"]
+for friend in friends:
+    print("Happy New Year", friend)
+print("Done!")
+
+print()
+
+어쩔 =['냉장고','세탁기','믹서기','헤어드라이기','티비']
+for 가전이름 in 어쩔:
+    print("어쩔", 가전이름)
+print("끗!")
+
+print()
+print("Loop Idioms")
+
+print()
+print("Before")
+for thing in [9, 41, 12, 3, 74, 15]:
+    print(thing)
+print("After")
+
+print()
+largest_so_far = -1
+print("Before", largest_so_far)
+for the_num in [9, 41, 12, 3, 74, 15]:
+    if the_num > largest_so_far:
+        largest_so_far = the_num
+    print(largest_so_far, the_num) # this is to show the progress of how computer works in order
+print("After", largest_so_far)
+

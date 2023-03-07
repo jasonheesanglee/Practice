@@ -61,7 +61,7 @@
       <updated>1676987678028</updated>
       <workItem from="1676987680207" duration="8000" />
       <workItem from="1677641204814" duration="7000" />
-      <workItem from="1678155619747" duration="9350000" />
+      <workItem from="1678155619747" duration="11123000" />
     </task>
     <task id="LOCAL-00001" summary="Python Trial access trial">
       <created>1677723471711</created>
@@ -133,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678172866455</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Py4E">
+      <created>1678173490153</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678173490153</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +163,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Py4E" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Practice$Py4E.coverage" NAME="Py4E Coverage Results" MODIFIED="1678173242862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practice$Py4E.coverage" NAME="Py4E Coverage Results" MODIFIED="1678174994731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$PY4E.coverage" NAME="PY4E Coverage Results" MODIFIED="1677649521072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Practice/Practice" />
   </component>
 </project>
