@@ -320,3 +320,38 @@ else:
 print("Pay:", xp)
 
 print()
+
+print("Functions")
+print("Store & Reuse")
+print()
+print("def stores the codes indented")
+def thing():
+    print("Hello")
+    print("Fun")
+
+print()
+thing()
+print("Zip")
+thing()
+
+print()
+
+big = max("Hello world")
+print(big)
+
+tiny = min("Helloworld")
+print(tiny)
+
+tiny = min("helloworld")
+print(tiny)
+
+print()
+
+print(float(99)/100)
+i = 42
+print(type(i))
+f = float(i)
+print(f)
+print(type(f))
+print(1+2*float(3)/4-5)
+
