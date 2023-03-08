@@ -908,3 +908,32 @@ while True:
     numlist.append(value)
 average = sum(numlist) / len(numlist)
 print("Average:", average)
+
+print()
+
+print("List & Spring")
+
+abc = "With three words"
+stuff = abc.split()
+print(len(stuff))
+print(stuff[0])
+
+print()
+print(stuff)
+for w in stuff:
+    print(w)
+
+print()
+
+line = "A lot                    of spaces"
+etc = line.split()
+print(etc)
+
+
+line = "first;second;third"
+thing = line.split()
+print(thing)
+print(len(thing))
+thing = line.split(";")
+print(thing)
+print(len(thing))
