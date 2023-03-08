@@ -929,7 +929,7 @@ line = "A lot                    of spaces"
 etc = line.split()
 print(etc)
 
-
+print()
 line = "first;second;third"
 thing = line.split()
 print(thing)
@@ -937,3 +937,50 @@ print(len(thing))
 thing = line.split(";")
 print(thing)
 print(len(thing))
+
+print()
+fhand = open("mbox-short.txt")
+for line in fhand:
+    line = line.rstrip()
+    if not line.startswith("From "): continue
+    words = line.split()
+    print(words[2])
+
+print()
+fhand = open("mbox-short.txt")
+for line in fhand:
+    line = line.rstrip()
+    if not line.startswith("From "): continue
+    words = line.split()
+    email = words[1]
+    pieces = email.split("@")
+    print(pieces[1])
+
+print()
+
+han = open("mbox-short.txt")
+for line in han:
+    line = line.rstrip()
+    wds = line.split()
+    #  print("Words:", wds)
+    #  Guardian
+    if len(wds) < 3:
+        continue
+    if wds[0] != "From":
+    #    print("Ignore")
+        continue
+    print(wds[2])
+
+
+print()
+
+han = open("mbox-short.txt")
+for line in han:
+    line = line.rstrip()
+    wds = line.split()
+    #  print("Words:", wds)
+    #  Guardian
+    if len(wds) < 3 or wds[0] != "From":
+    #    print("Ignore")
+        continue
+    print(wds[2])
