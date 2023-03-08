@@ -682,4 +682,56 @@ greet = "Hello Bob"
 zap = greet.lower()
 print(zap)
 print(greet)
+print("Hi There".lower())
 
+print()
+stuff = "Hello World"
+print(type(stuff))
+print(dir(stuff))
+
+print()
+fruit = "I Like Banana"
+print(fruit.replace("Banana", "Apple"))
+print(fruit. replace("a", "x"))
+
+print()
+greet = "    Hello     Bob     "
+print(greet.lstrip())
+print(greet.rstrip())
+print(greet.strip())
+
+print()
+line = "Please have a nice day"
+print(line.startswith("Please"))
+print(line.startswith("P"))
+print(line.startswith("p"))
+
+print()
+data = "From stephen.macquard@uct.ac.za Sat Jan   5  09:14:16 2008"
+atpos = data.find("@")
+print(atpos)
+sppos = data.find(" ",atpos)
+print(sppos)
+host = data[atpos+1 : sppos]
+print(host)
+
+print()
+
+x = "이광춘"
+print(type(x))
+x = u"이광춘"
+print(type(x))
+
+
+print()
+print("Practice Exercise")
+str = "X-DSPAM-Confidence: 0.8475"
+#  print(str)
+ipos = str.find(":")
+#  print(ipos)
+
+piece = str[ipos+1:]
+#  print(piece)
+value = float(piece)
+#  print(value)
+print(value+42)
