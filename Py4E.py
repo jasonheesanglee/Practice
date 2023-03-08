@@ -761,3 +761,150 @@ print(fh)
 for lx in fh:
     ly = lx.rstrip()
     print(ly.upper())
+
+print()
+print()
+print("LISTS")
+
+friends = ["Joseph", "Glenn", "Sally"]
+caarryon = ["socks", "shirts", "perfume"]
+
+print()
+print([1, 24, 76])
+print(["red", "yellow", "blue"])
+print(["red", 24, 98.6])
+print([1, [5, 6], 7])
+print([])
+
+print()
+
+for i in [5, 4, 3, 2, 1]:
+    print(i)
+print("Blastoff!")
+
+print()
+
+friends = ["Joseph", "Glenn", "Sally"]
+print(friends[1])
+
+print()
+print("string is immutable")
+fruit = "Banana"
+print(fruit[0] == "b")
+x = fruit.lower()
+print(x)
+
+print()
+print("List is mutable")
+lotto = [2, 14, 26, 41, 63]
+print(lotto)
+lotto[2] = 28
+print(lotto)
+
+print()
+print("Length of a list")
+x = [1, 2, "joe", 99]
+print(len(x))
+
+
+print("range function")
+print(range(4))
+
+friends = ["Joseph", "Glenn", "Sally"]
+print(range(len(friends)))
+
+print("for loops with list")
+
+friends = ["Joseph", "Glenn", "Sally"]
+for friend in friends:
+    print("Happy New Year", friend)
+
+print()
+for i in range(len(friends)):
+    friend = friends[i]
+    print("Happy New Year", friend)
+
+print()
+print(len(friends))
+print(range(len(friends)))
+
+print()
+
+print("concatenating with list")
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b
+print(c)
+print(a)
+
+print()
+print("list slicing")
+
+t = [9, 41, 12, 3, 74, 15]
+print(t[1:3])
+print(t[:4])
+print(t[3:])
+print(t[:])
+
+print()
+print("List Methods")
+x = list()
+print(type(x))
+print(dir(x))
+
+print()
+print("Building a list from scratch")
+stuff = list()
+stuff.append("book")
+stuff.append(99)
+print(stuff)
+stuff.append("cookie")
+print(stuff)
+
+print()
+print("Is sth in the list?")
+
+some = [1, 9, 21, 10, 16]
+print(9 in some)
+print(15 in some)
+print(20 not in some)
+
+print()
+print("list in order")
+friends = ["Joseph", "Glenn", "Sally"]
+friends.sort()
+print(friends)
+print(friends[1])
+
+print()
+print("Built-in functions and lists")
+nums = [3, 41, 12, 9, 74, 15]
+print(len(nums))
+print(max(nums))
+print(min(nums))
+print(sum(nums))
+print(sum(nums)/len(nums))
+
+print()
+
+total = 0
+count = 0
+while True:
+    inp = input("Enter a number: ")
+    if inp == "done": break
+    value = float(inp)
+    total = total + value
+    count = count + 1
+average = total / count
+print("Average:", average)
+
+print()
+
+numlist = list()
+while True:
+    inp = input("Enter a number: ")
+    if inp == "done": break
+    value = float(inp)
+    numlist.append(value)
+average = sum(numlist) / len(numlist)
+print("Average:", average)
