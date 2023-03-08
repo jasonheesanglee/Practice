@@ -646,3 +646,40 @@ for letter in word:
     if letter == "a":
         count = count + 1
     print(count)
+
+print()
+s = "Monty Python"
+print(s[0:4])
+print(s[6:7])
+print(s[6:20])
+print(s[:2])
+print(s[8:])
+print(s[:])
+
+print()
+
+fruit = "Banana"
+print("n" in fruit)
+print("m" in fruit)
+print("nan" in fruit)
+print("a" in fruit)
+
+print()
+
+word = "Canana"
+if word == "Banana":
+    print("Alright, Bananas")
+if word < "Banana":
+    print("Your word, " + word + ", comes before Banana")
+elif word > "Banana":
+    print("Your word, " + word + ", comes after Banana")
+else:
+    print("Alright, Bananas")
+
+print()
+
+greet = "Hello Bob"
+zap = greet.lower()
+print(zap)
+print(greet)
+
