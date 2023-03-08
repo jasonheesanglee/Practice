@@ -5,7 +5,7 @@ b = 5
 
 print(a*b)
 
-for i in range(1,11):
+for i in range(1, 11):
     print(a, "X", b*i, "=", a*b*i)
 
 print()
@@ -88,7 +88,7 @@ print("** = Power")
 print("% = Remainder")
 
 print("Order of Evaluation")
-x = 1 + 2* 3 - 5 / 5**6
+x = 1 + 2 * 3 - 5 / 5**6
 print(x)
 print("Parenthesis ->  Power -> Multiplication -> Addition -> Left to Right")
 
@@ -166,7 +166,7 @@ if x > 4:
     print("Greater than 4")
 if x >= 5:
     print("Greater than or Equals 5")
-if x < 6: print ("Less than 6")
+if x < 6: print("Less than 6")
 if x <= 5:
     print("Less than or Equals 5")
 if x != 6:
@@ -256,7 +256,7 @@ if x < 2:
 elif x >= 2:
     print("2 or more")
 else:
-    print("Something else") #This will never be printed
+    print("Something else")  #  This will never be printed
 
 print()
 
@@ -264,7 +264,7 @@ if x < 2:
     print("Below 2")
 elif x < 20:
     print("Below 20")
-elif x < 10: #This will never be printed
+elif x < 10:   #  This will never be printed
     print("Below 10")
 else:
     print("Something else")
@@ -735,3 +735,21 @@ piece = str[ipos+1:]
 value = float(piece)
 #  print(value)
 print(value+42)
+
+print()
+print()
+print("Reading Files")
+
+#  handle = open(filename, mode)
+#  fhand = open(mbox.rtf, "r")
+#  fhand = open(mbox.rtf)
+#  print(fhand)
+print()
+stuff = "Hello\nworld!"
+print(stuff)
+stuff = "X\nY"
+print(stuff)
+print(len(stuff))
+
+print()
+
