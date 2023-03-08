@@ -613,3 +613,36 @@ while x < 10:
 print(x)
 
 print()
+
+print("String")
+fruit = "Banana"
+letter = fruit[0]
+print(letter)
+x = 3
+w = fruit[x - 1]
+print(w)
+
+print()
+print(len(fruit))
+x = len(fruit)
+print(x)
+
+print()
+fruit = "Banana"
+index = 0
+while index < len(fruit):
+    letter = fruit[index]
+    print(index, letter)
+    index = index + 1
+
+print()
+for letter in fruit:
+    print(letter)
+
+print()
+word = "banana"
+count = 0
+for letter in word:
+    if letter == "a":
+        count = count + 1
+    print(count)
