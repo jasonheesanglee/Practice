@@ -1210,3 +1210,104 @@ for k, v in di.items():
         largest = v
         theword = k
 print('Done-->', theword, largest)
+
+print()
+print()
+print("Tuples")
+
+print()
+
+x = ("Glenn", "Sally", "Joseph")
+print(x[2])
+y = (1,9,2)
+print(y)
+print(max(y))
+
+for iter in y:
+    print(iter)
+
+print()
+x = [9, 8, 7]
+x[2] = 6
+print(x)
+print("List is mutable")
+
+print()
+#  z = (5, 4, 3)
+#  z[2] = 0
+#  print(z)
+print("Tuple is immutable")
+
+t = tuple()
+print(type(t))
+print(dir(t))
+
+print()
+(x, y) = (4, "Fred")
+print(y)
+(a, b) = (99, 98)
+print(a)
+
+print()
+d = dict()
+d["csev"] = 2
+d["cwen"] = 4
+for (k, v) in d.items():
+    print(k, v)
+
+tups = d.items()
+print(tups)
+
+print()
+print((0, 1, 2) < (5, 1, 2))
+print((0, 1, 20000000) < (0, 3, 4))
+print(("Jones", "Sally") < ("Jones", "Sam"))
+print(("Jones", "Sally") > ("Adams", "Sam"))
+print((0, 1, 2) > (5, 6, 7))
+
+print()
+
+print("Sorting Lists of Tuples")
+print()
+d = {"a": 10, "b": 1, "c": 22}
+print(d.items())
+print(sorted(d.items()))
+
+print()
+d = {"a": 10, "b": 1, "c": 22}
+t = sorted(d.items())
+for k, v in sorted(d.items()):
+    print(k, v)
+
+print()
+
+c = {"a": 10, "b": 1, "c": 22}
+tmp = list()
+for k, v in c.items():
+    tmp.append((v, k))
+print(tmp)
+tmp = sorted(tmp, reverse=True)
+print(tmp)
+
+print()
+
+fhand = open("clown.txt")
+counts = dict()
+for line in fhand:
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+
+lst = list()
+for key,val in counts.items():
+    newtup = (val, key)
+    lst.append(newtup)
+    lst = sorted(lst, reverse=True)
+
+for val, key in lst[:10]:
+    print(key, val)
+
+print()
+
+c = {"a": 10, "b": 1, "c": 22}
+print(sorted([(v, k) for k, v in c.items()]))

@@ -96,7 +96,7 @@
       <workItem from="1677641204814" duration="7000" />
       <workItem from="1678155619747" duration="18392000" />
       <workItem from="1678238988374" duration="12032000" />
-      <workItem from="1678327404600" duration="6418000" />
+      <workItem from="1678327404600" duration="8689000" />
     </task>
     <task id="LOCAL-00001" summary="Python Trial access trial">
       <created>1677723471711</created>
@@ -266,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678337858156</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Py4E">
+      <created>1678341393771</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678341393771</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +297,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Py4E" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Practice$Py4E.coverage" NAME="Py4E Coverage Results" MODIFIED="1678341314049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practice$Py4E.coverage" NAME="Py4E Coverage Results" MODIFIED="1678343644894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$PY4E.coverage" NAME="PY4E Coverage Results" MODIFIED="1677649521072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Practice/Practice" />
   </component>
 </project>
