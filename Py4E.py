@@ -1136,3 +1136,77 @@ for k, v in di.items():
         theword = k
 print(theword, largest)
 
+print()
+dict_var = {"csev": 2, "cwen" : 2, "zqian" : 1}
+print(1)
+for out in dict_var.values():
+    print(out)
+print()
+print(2)
+for out in dict_var.keys():
+    print(out)
+print()
+print(3)
+for out in dict_var:
+    print(out)
+print()
+print(4)
+for out,out2 in dict_var.items():
+    print(out)
+print()
+print(5)
+for out,out2 in dict_var.items():
+    print(out2)
+
+print()
+
+di = {'kim': 2, 'park': 2, 'son': 1, 'lee': 4}
+
+def func_get(dic_var, name, dft):
+  if name in dic_var:
+      return dic_var[name]
+  else:
+      return dft
+
+print('내장함수 get 결과', di.get('lee',10))
+print('함수fuct_get 결과', func_get(di,'lee',10))
+print('내장함수 get 결과', di.get('jung',10))
+print('함수fuct_get 결과', func_get(di,'jung',10))
+
+print()
+zen = '''
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+'''
+di = dict()
+words = zen.split()
+for word in words:
+    di[word] = di.get(word, 0) + 1
+
+largest = -1
+theword = None
+for k, v in di.items():
+
+    if v > largest:
+        largest = v
+        theword = k
+print('Done-->', theword, largest)
