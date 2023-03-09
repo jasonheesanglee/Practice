@@ -1025,3 +1025,114 @@ print(ooo)
 
 print()
 
+ccc = dict()
+ccc["csev"] = 1
+ccc["cwen"] = 1
+print(ccc)
+ccc["cwen"] = ccc["cwen"] + 1
+print(ccc)
+
+print()
+counts = dict()
+names = ["csev", "cwen", "csev", "zqian", "cwen"]
+for name in names:
+    if name not in counts:
+        counts[name] = 1
+    else:
+        counts[name] = counts[name] + 1
+print(counts)
+
+print()
+
+if name in counts:
+    x = counts[name]
+else:
+    x = 0
+
+x = counts.get(name, 0)
+print(x)
+
+print()
+counts = dict()
+names = ["csev", "cwen", "csev", "zqian", "cwen"]
+for name in names:
+    if name not in counts:
+        counts[name] = counts.get(name, 0) + 1
+print(counts)
+
+print()
+print("counting words in text")
+
+
+counts = dict()
+print("Enter a line of text:")
+line = input("")
+words = line.split()
+print("Words:", words)
+print("Counting...")
+for word in words:
+    counts [word] = counts.get(word,0) + 1
+print("Counts", counts)
+
+print()
+counts = {"chuck": 1, "fred": 42, "jan": 100}
+for key in counts:
+    print(key, counts[key])
+
+print()
+jjj = {"chuck": 1, "fred": 42, "jan": 100}
+print(list(jjj))
+print(jjj.keys())
+print(jjj.values())
+print(jjj.items())
+
+print()
+for aaa, bbb in jjj.items():
+    print(aaa, bbb)
+
+print()
+name = input("Enter file:")
+if len(name) < 1: name = "clown.txt"
+handle = open(name)
+
+counts = dict()
+for line in handle:
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+
+bigcount = None
+bigword = None
+for word,count in counts.items():
+    if bigcount is None or count > bigcount:
+        bigword = word
+        bigcount = count
+
+print(bigword, bigcount)
+
+print()
+print("Practice Exercise")
+print("Word Count")
+
+print()
+fname = input("Enter File: ")
+if len(fname) < 1: fname = "clown.txt"
+hand = open(fname)
+
+di = dict()
+for lin in hand:
+    lin = lin.rstrip()
+    wds = lin.split()
+    for w in wds:
+        di[w] = di.get(w,0) + 1
+        print(w, "new", di[w])
+
+#print(di)
+largest = -1
+theword = None
+for k, v in di.items():
+    if v > largest:
+        largest = v
+        theword = k
+print(theword, largest)
+
