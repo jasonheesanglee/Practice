@@ -24,7 +24,6 @@ print("return, for, from, global, try, import, in, is")
 print("is, lambda, while, not, or, pass, raise")
 print("finally, continue, nonlocal, with, yield")
 
-
 print()
 x = 2
 x = x + 2

@@ -2,6 +2,7 @@ print("Coursera - Google Python")
 print("Christine Rafla")
 print("Hello, world!")
 
+print((((1+2)*3)/4)**5)
 print()
 print(type("a"))
 print(type(2))
@@ -20,7 +21,7 @@ base = 5
 height = 3
 area = (base * height) / 2
 print(area)
-
+print(7 + float("8.5"))
 print(7 + 8.5)
 
 print("a" + "b" + "c")
@@ -201,9 +202,9 @@ print(2 != 2)
 print()
 
 print(1 == "1")
-
+print(1 == 1.0)
 print()
-
+print("이광춘", "이광춘" > "steve")
 print("cat" > "Cat")
 
 print()
