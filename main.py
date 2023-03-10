@@ -536,16 +536,16 @@ def attempts(n):
     x = 1
     while x <= n:
         print("Attempt " + str(x))
-        x += 1 #same as x = x+1
+        x += 1 #  same as x = x+1
     print("Done")
 attempts(5)
 
 print()
 print("get username, please check #codes")
-#username = get_username()
-#while not valid_username(username):
-#   print("Invalid username")
-#    username = get_username()
+#  username = get_username()
+#  while not valid_username(username):
+#     print("Invalid username")
+#      username = get_username()
 
 print()
 
@@ -830,7 +830,7 @@ print("haha")
 for x in range (1,10,3):
     print(x)
 print("x")
-
+print()
 for x in range(10):
     for y in range(x):
         print(y)
