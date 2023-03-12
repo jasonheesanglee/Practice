@@ -933,7 +933,7 @@ print(pets.index("&"))
 print(pets.index("C"))
 print(pets.index("Dog"))
 print(pets.index("s"))
-#print(pets.index("x"))
+#  print(pets.index("x"))
 print("Dragons" in pets)
 if "Cats" in pets:
     print("Wohahaha")
