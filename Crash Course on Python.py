@@ -1186,6 +1186,7 @@ print(fruits)
 fruits.remove("Melon")
 print(fruits)
 print(fruits.pop(3))
+print(fruits)
 fruits[2]= "Strawberry"
 print(fruits)
 
@@ -2344,3 +2345,14 @@ print(now + datetime.timedelta(days=28))
 print()
 
 print("2/28 - 부트캠프 확인 및 지원")
+
+
+friends_strings = ["Joseph", "Sally", "Glenn"]
+number_integer = [1, 2, 53, 34, 74, 96]
+
+print(friends_strings[0])
+print(friends_strings[2])
+print(number_integer[0:3])
+print()
+
+print(number_integer[0:5])
