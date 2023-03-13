@@ -157,3 +157,5 @@ print("rectangle's height x : ", rectangle_x)
 print("rectangle's length x : ", rectangle_y)
 
 print("rectangle's width : ", calculate_rectangle_area(rectangle_x, rectangle_y))
+
+print()
