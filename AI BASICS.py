@@ -245,5 +245,46 @@ print("Product: {0:5s}, Price per unit: {1:.5f}".format("Apple", 5.243))
 print("Product: {0:>10s}, Price per unit: {1:10.3f}".format("Apple", 5.243))
 
 print()
+print("Product: %(name)10s, Price per unit: %(price)10.5f" % {"name": "Apple", "price": 5.243})
+print("Product: {name:>10s}, Price per unit: {price:10.5f}".format(name="Apple", price=5.243))
+
+print()
 value = 12
 print(f"value is {value}")
+
+print()
+name = "Jason"
+age = 26
+print(f"Hello, {name}. You are {age}.")
+print(f"{name:20}")
+print(f"{name:>20}")
+print(f"{name:*<20}")
+print(f"{name:*>20}")
+print(f"{name:*^20}")
+
+number = 3.141592653589793
+print(f"{number:.2f}")
+
+print()
+print("This is a Celsius-Fahrenheit converter.")
+Celsius = float(input("Please enter celsius that you would like to convert: "))
+print("Celsius:", Celsius)
+Fahrenheit = Celsius * (9/5) + 32
+print("Farenheit", Fahrenheit)
+
+print()
+
+print("This is a Celsius-Fahrenheit converter.")
+Celsius = float(input("Please enter celsius that you would like to convert: "))
+print(f"Celsius: {Celsius:.2f}")
+Fahrenheit = Celsius * (9/5) + 32
+print(f"Farenheit: {Fahrenheit:.2f}")
+
+print()
+print("This is a Celsius-Fahrenheit converter.")
+print("Please enter celsius that you would like to convert: ")
+cel_value = float(input())
+fah_value = ((9/5) * cel_value) + 32
+
+print(f"Celsius Temperature: {cel_value:.2f}")
+print(f"Fahrenheit Temperature: {fah_value:.2f}")
