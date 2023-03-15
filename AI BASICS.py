@@ -345,3 +345,36 @@ print("Never mind, I'm back")
 print("Oh.. never mind the never mind, I just went to fix my airpods and they took it...")
 print("I will be back tomorrow")
 print()
+
+a, b, *c = (14, 21, 25, 39, 46, 57)
+print(c)
+
+print()
+class Car():
+    def __init__(self):
+        self.model = "BEN"
+
+    def change_model(self):
+        self.model = "CAR"
+
+    def change_model_another(self):
+        self.model = "TRUCK"
+
+car = Car()
+car.change_model_another()
+car.change_model()
+print(car.model)
+
+print()
+class House():
+    def __init__(self):
+        self.__door = []
+
+print()
+
+import random as rd
+
+a = rd.random()
+b = rd.random()
+
+print(a, b)
