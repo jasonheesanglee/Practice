@@ -159,3 +159,91 @@ print("rectangle's length x : ", rectangle_y)
 print("rectangle's width : ", calculate_rectangle_area(rectangle_x, rectangle_y))
 
 print()
+
+def f(x):
+		return 2 * x + 7
+
+def g(x):
+		return x ** 2
+
+x = 2
+print (f(x) + g(x) + f(g(x)) + g(f(x)))
+
+def f(x):
+    return 2 * x + 7
+
+def g(x):
+    return x ** 2
+
+    print(x + 10)
+
+print(f(10))
+
+c = f(10)
+print(c)
+
+print()
+
+list_ex = [5, 4, 3, 2, 1]
+print(sorted(list_ex))
+print(list_ex)
+list_ex.sort()
+print(list_ex)
+print()
+
+print("Enter your name: ")
+somebody = input()
+print("Hi", somebody + ". How are you today?")
+print()
+
+temperature = float(input("Please enter the outdoor temperature: "))
+print(temperature)
+print()
+
+print("Please enter the outdoor temperature: ")
+temperature = input()
+print("It is", float(temperature), "celcius outside")
+print()
+
+temp = float(input("Please enter the outdoor temperature: "))
+print("It is", temp, "celcius outside")
+print()
+
+print("Hello World!!", "Hello Again!!!")
+print("Hello World!!" + "Hello Again!!!")
+print("Hello World!!" + str(100))
+print()
+
+print(1, 2, 3)
+print("a" + " " + "b" + " " + "c")
+print("%s %s" % ("one", "two"))
+print("%d %d %d" % (1, 2, 3))
+print("{} {} {}".format("a", "b", "c"))
+print("{} {} {}".format(1, 2, 3))
+print()
+
+print("I eat %d apples." % 3)
+print("I eat %s apples." % "five")
+number = 3
+day = "three"
+print("I ate %d apples. I was sick for %s days" % (number, day))
+print("Product: %s, Price per unit: %f" % ("Apple", 5.243))
+print("Product: %s, Price per unit: %8.2f" % ("Apple", 5.243))
+
+print()
+age = 26
+name = "Jason Lee"
+print("I'm {0} years old.".format(age))
+print("My name is {0} and {1} years old.".format(name, age))
+print("My name is {1} and {0} years old.".format(name, age))
+print("Product: {0}, Price per unit: {1:.3f}".format("Apple", 5.243))
+
+print()
+print("Product: %5s, Price per unit: %.5f" % ("Apple", 5.243))
+print("Product: %10s, Price per unit: %10.5f" % ("Apple", 5.243))
+print("Product: {0:5s}, Price per unit: {1:.5f}".format("Apple", 5.243))
+print("Product: {0:>10s}, Price per unit: {1:10.3f}".format("Apple", 5.243))
+
+print()
+value = 12
+print(f"value is {value}")
