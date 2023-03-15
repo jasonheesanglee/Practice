@@ -288,3 +288,56 @@ fah_value = ((9/5) * cel_value) + 32
 
 print(f"Celsius Temperature: {cel_value:.2f}")
 print(f"Fahrenheit Temperature: {fah_value:.2f}")
+
+
+print()
+print("Tell me yor age?")
+myage = int(input())
+if myage < 30:
+	print("Welcome to the club")
+else:
+	print("Oh no! You are not accepted.")
+
+if 1:
+    print("Hello")
+else:
+    print("GoodBye")
+
+print()
+
+a = True
+b = True
+print(a and b)
+
+a = True
+b = False
+print(a and b)
+
+a = True
+b = False
+print(a or b)
+
+boolean_list = [True, False, True, False, True]
+print(all(boolean_list))
+print(any(boolean_list))
+
+value = 12
+is_even = True if value % 2 == 0 else False
+print(is_even)
+
+print()
+
+age = int(input("Please enter your age: "))
+if age < 14 and age > 7:
+    print("Elementary School Student")
+elif age < 17 and age >13:
+    print("Junior High School Student")
+elif age < 20 and age > 16:
+    print("High School Student")
+elif age < 27 and age >19:
+    print("Univ student")
+else:
+    print("You are not a student")
+
+
+
