@@ -13,5 +13,7 @@ I'm still not fluent with github.
 This is what I have been doing.
 
 ✅ Completed Crash Course on Python (Free ver.)
+
 ✅ Completed PY4E (The whole course, thanks to Naver Boost Course)
+
 🧭 Working on AI Basics (The whole course, thanks to Naver Boost Course as well)
