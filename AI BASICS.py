@@ -339,6 +339,9 @@ elif age < 27 and age >19:
 else:
     print("You are not a student")
 
+print()
 print("3.15 done")
 print("Never mind, I'm back")
 print("Oh.. never mind the never mind, I just went to fix my airpods and they took it...")
+print("I will be back tomorrow")
+print()
