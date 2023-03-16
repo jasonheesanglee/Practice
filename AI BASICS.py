@@ -536,3 +536,37 @@ print("Nice Try")
 
 print()
 
+true_value = rd.randint(1,100)
+input_value = 99999999
+
+print("Try to guess the number. number is between 1 to 100: ")
+while true_value != input_value:
+    input_value = int(input())
+
+    if input_value > true_value and input_value < 101:
+        print("Oops, the number you entered is bigger than the correct number")
+    elif input_value < true_value and input_value > 0:
+        print("Oops, the number you entered is smaller than the correct number")
+    elif input_value == true_value:
+        print(f"Yes, it's correct! {input_value} is a correct number")
+    else:
+        print("You are way too off, the number is between 1 to 100")
+
+print("Nice Try")
+
+print()
+
+true_value_2 = rd.randint(1,100)
+input_value = 99999999
+
+print("Try to guess the number. number is between 1 to 100: ")
+while true_value != input_value:
+    input_value = int(input())
+
+    if input_value > true_value_2:
+        print("Oops, the number you entered is bigger than the correct number")
+    elif input_value < true_value_2:
+        print("Oops, the number you entered is smaller than the correct number")
+    else:
+        break
+print(f"Yes, it's correct! {true_value_2} is a correct number")
