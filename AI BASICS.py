@@ -408,3 +408,24 @@ print()
 for i in range(1,10,2):
     print(i)
 
+print()
+for i in range(10, 1, -1):
+    print(i)
+
+print()
+print("Can you see below?")
+for i in range(10, 1):
+    print(i)
+print("Can you see above?")
+
+print()
+
+i = 1
+while i < 10:
+    print(i)
+    i += 1
+
+i = 1
+while i < 10:
+    print(f"{i} : Hello")
+    i += 1
