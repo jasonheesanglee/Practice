@@ -378,3 +378,33 @@ a = rd.random()
 b = rd.random()
 
 print(a, b)
+
+print()
+
+for looper in [1, 2, 3, 4, 5]:
+    print("Hello")
+
+for looper in [1, 2, 3, 4, 5]:
+    print(f"{looper} : Hello")
+
+print()
+
+for looper in range(0,5):
+    print("Hello")
+
+for looper in range(0,5):
+    print(f"{looper} : Hello")
+
+print()
+for i in "abcdefg":
+    print(i)
+
+print()
+for i in ["americano", "latte", "frafuchino"]:
+    print(i)
+
+
+print()
+for i in range(1,10,2):
+    print(i)
+
