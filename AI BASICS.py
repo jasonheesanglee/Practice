@@ -609,7 +609,7 @@ print()
 print("Are you here?")
 
 for subject in midterm_score:
-    for score in subject:
+    for score in subject:˚
         student_score[i] += score
         i += 1
     i = 0

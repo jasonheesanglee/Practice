@@ -222,3 +222,5 @@ else:
     print(student_average_integer)
 
 print("Yay!!!!!!!!!!!!!!!!!!!!!!")
+
+print()
