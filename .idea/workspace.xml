@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6df6c25-ce23-45cc-a687-c4f844fa0fda" name="Changes" comment="3/16 commit">
+      <change afterPath="$PROJECT_DIR$/Practice file just for Removing decimal, float to int.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI BASICS.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI BASICS.py" afterDir="false" />
     </list>
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -76,7 +77,7 @@
       <workItem from="1678686661292" duration="6060000" />
       <workItem from="1678700374219" duration="3000" />
       <workItem from="1678849797860" duration="12749000" />
-      <workItem from="1678936503025" duration="8576000" />
+      <workItem from="1678936503025" duration="14769000" />
     </task>
     <task id="LOCAL-00001" summary="AI BASICS - Boost Course">
       <created>1678347883079</created>
@@ -246,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678948319898</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="3/16 commit">
+      <created>1678950256050</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678950256050</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,8 +284,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Practice$Py4E.coverage" NAME="Py4E Coverage Results" MODIFIED="1678611650289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$Crash_Course_on_Python.coverage" NAME="Crash Course on Python Coverage Results" MODIFIED="1678621794583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practice$Practice_file_just_for_Removing_decimal__float_to_int.coverage" NAME="Practice file just for Removing decimal, float to int Coverage Results" MODIFIED="1678957120016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1678686992238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Practice$main.coverage" NAME="main Coverage Results" MODIFIED="1678430532537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Practice$AI_BASICS.coverage" NAME="AI BASICS Coverage Results" MODIFIED="1678950189274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practice$AI_BASICS.coverage" NAME="AI BASICS Coverage Results" MODIFIED="1678955461742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -536,7 +536,7 @@ print("Nice Try")
 
 print()
 
-true_value = rd.randint(1,100)
+true_value = rd.randint(1, 100)
 input_value = 99999999
 
 print("Try to guess the number. number is between 1 to 100: ")
@@ -556,17 +556,76 @@ print("Nice Try")
 
 print()
 
-true_value_2 = rd.randint(1,100)
-input_value = 99999999
-
 print("Try to guess the number. number is between 1 to 100: ")
 while true_value != input_value:
     input_value = int(input())
 
-    if input_value > true_value_2:
+    if input_value > true_value:
         print("Oops, the number you entered is bigger than the correct number")
-    elif input_value < true_value_2:
+    elif input_value < true_value:
         print("Oops, the number you entered is smaller than the correct number")
     else:
         break
-print(f"Yes, it's correct! {true_value_2} is a correct number")
+print(f"Yes, it's correct! {true_value} is a correct number")
+
+
+print()
+
+print("Average score per person")
+print("I don't have data, please refer to my notion")
+print("https://www.notion.so/Basic-Python-Grammar-c8a8c90209954a95812eef04cf2a9877?pvs=4")
+print("nvm, lecturer gave the data.")
+
+print()
+
+kor_score = [49, 79, 20, 100, 80]
+math_score = [43, 59, 85, 30, 90]
+eng_score = [49, 97, 48, 60, 100]
+midterm_score = [kor_score, math_score, eng_score]
+
+student_score = [0, 0, 0, 0, 0]
+i = 0
+
+
+print()
+print("Where are you error")
+
+for subject in midterm_score:
+    for score in subject:
+        student_score[i] += score
+        i += 1
+    i = 0
+
+else:
+    student_average_two_decimal = list()
+    a, b, c, d, e = student_score
+    student_average = [a/3, b/3, c/3, d/3, e/3]
+    for j in student_average:
+        j = float(f"{j:.2f}")  # 여기까진 오케이
+        student_average_two_decimal.append(j)
+    print(student_average_two_decimal)
+
+print()
+print("Are you here?")
+
+for subject in midterm_score:
+    for score in subject:
+        student_score[i] += score
+        i += 1
+    i = 0
+
+else:
+    student_average_two_decimal = list()
+    student_average_integer = list()
+    a, b, c, d, e = student_score
+    student_average = [a/3, b/3, c/3, d/3, e/3]
+    for j in student_average:
+        j = float(f"{j:.2f}")  # 여기까진 오케이
+        student_average_two_decimal.append(j)
+        for k in student_average_two_decimal:
+            if k.is_integer() == True:
+                k = int(k)
+            else:
+                k = k
+            student_average_integer.append(k)
+            print(student_average_integer)
