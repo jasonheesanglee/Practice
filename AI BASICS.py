@@ -517,4 +517,22 @@ while (decimal > 0):
     loop_counter += 1
 print("Binary number is :", result)
 
+print()
+
+import random as rd
+
+guess_number = int(input("Try to guess the number. number is between 1 to 100."))
+number = (rd.randint(1, 100))
+for guess_number in range(1, 101):
+    if guess_number == number:
+        print(f"Yes, it's correct! {number} is a correct number")
+    elif guess_number > number and guess_number < 102:
+        print("Oops, the number you entered is bigger than the correct number")
+    elif guess_number < number and guess_number > 0:
+        print("Oops, the number you entered is smaller than the correct number")
+    else:
+        print("You are way too off, the number is between 1 to 100")
+print("Nice Try")
+
+print()
 
