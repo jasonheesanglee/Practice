@@ -429,3 +429,92 @@ i = 1
 while i < 10:
     print(f"{i} : Hello")
     i += 1
+
+
+print()
+
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+print("EOP")
+
+for i in range(10):
+    if i == 5:
+        continue
+    print(i)
+print("EOP")
+
+for i in range(10):
+    print(i,)
+else:
+    print("EOP")
+
+print()
+
+print("Muliplication of 5")
+
+mltplctn = int(input("Which set of multiplication should we calculate? "))
+print(f"Here is multiplication of {mltplctn}.")
+
+for i in range(1,10):
+    print(mltplctn, "X", i, "=", mltplctn*i)
+print()
+
+print("Which set of multiplication should we calculate? ")
+dan = int(input())
+print(f"Here is multiplication of {dan}.")
+
+for i in range(1,10):
+    print(f"{dan} X {i} = {dan*i}")
+
+print("Practice")
+
+sentence = "I love you"
+reverse_sentence = ""
+for char in sentence:
+    reverse_sentence = char + reverse_sentence
+    print(reverse_sentence)
+
+print()
+decimal = 10
+result = ""
+while (decimal > 0):
+    remainder = decimal % 2
+    decimal = decimal // 2
+    result = str(remainder) + result
+print(result)
+
+print()
+
+decimal_num = int(input("Please enter decimal number: "))
+print(f"Your number is {decimal_num}")
+result_2 = ""
+while (decimal_num > 0):
+    remainder_2 = decimal_num % 2
+    decimal_num = decimal_num // 2
+    result_2 = str(remainder_2) + result_2
+print(result_2)
+
+print("Input decimal number: ",)
+decimal = int(input())
+result = ""
+loop_counter = 0
+while (decimal > 0):
+    temp_decimal_input = decimal
+    temp_result_input = result
+
+    remainder = decimal % 2
+    decimal = decimal // 2
+    result = str(remainder) + result
+
+    print("------------------", loop_counter, "loop value check ------------------")
+    print("Initial decimal:", temp_decimal_input, ", Remainder:", remainder, ", Initial result", temp_result_input)
+    print("Output decimal:", decimal, ", Output result:", result)
+    print("-----------------------------------------------------------")
+    print()
+
+    loop_counter += 1
+print("Binary number is :", result)
+
+
