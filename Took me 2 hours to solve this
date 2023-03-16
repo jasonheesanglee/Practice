@@ -224,3 +224,28 @@ else:
 print("Yay!!!!!!!!!!!!!!!!!!!!!!")
 
 print()
+
+kor_score = [49, 79, 20, 100, 80]
+math_score = [43, 59, 85, 30, 90]
+eng_score = [49, 97, 48, 60, 100]
+midterm_score = [kor_score, math_score, eng_score]
+
+student_score = [0, 0, 0, 0, 0]
+i = 0
+
+student_average_two_decimal = list()
+student_average_integer = list()
+a, b, c, d, e = student_score
+student_average = [a/3, b/3, c/3, d/3, e/3]
+
+for j in student_average:
+    j = float(f"{j:.2f}")  # 여기까진 오케이
+    student_average_two_decimal.append(j)
+
+    for k in student_average_two_decimal:
+        if k.is_integer() == True:
+            k = int(k)
+        else:
+            continue
+    student_average_integer.append(k)
+print(student_average_integer)
