@@ -63,5 +63,34 @@ print(type(yesterday))
 
 lower_yesterday = yesterday.lower()
 
+print(yesterday.count("yesterday"))
+print(yesterday.count("Yesterday"))
 print(lower_yesterday.count("yesterday"))
+print()
 
+def swap_value(x, y):
+    temp = x
+    x = y
+    y = temp
+
+def swap_offset(offset_x, offset_y):
+    temp = ex[offset_x]
+    ex[offset_x] = ex[offset_y]
+    ex[offset_y] = temp
+
+def swap_reference(list, offset_x, offset_y):
+    temp = list[offset_x]
+    list[offset_x] = list[offset_y]
+    list[offset_y] = temp
+
+ex = [1, 2, 3, 4, 5]
+swap_value(ex[0], ex[1])
+print(ex)
+
+ex = [1, 2, 3, 4, 5]
+swap_offset(0,1)
+print(ex)
+
+ex = [1, 2, 3, 4, 5]
+swap_reference(ex, 3, 4)
+print(ex)
