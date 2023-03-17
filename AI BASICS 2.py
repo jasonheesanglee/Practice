@@ -51,3 +51,17 @@ trial"
 print(trial)
 
 print()
+f = open("yesterday.txt", "r")
+yesterday = ""
+while True:
+    line = f.readline()
+    if not line:
+        break
+    yesterday = yesterday + line.strip() + "\n"
+f.close()
+print(type(yesterday))
+
+lower_yesterday = yesterday.lower()
+
+print(lower_yesterday.count("yesterday"))
+
