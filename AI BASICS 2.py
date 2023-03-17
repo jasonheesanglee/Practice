@@ -149,3 +149,73 @@ sum = calculate(a, b)
 print("After Calculation")
 print("Total :", str(total) + ", Sum :", str(sum))
 
+print()
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(int(input("Input Number for Factorial Calculation: "))))
+
+
+def add_variables(x, y):
+    return x + y
+def add_variables(x, y):
+    print(x, y)
+    return x + y
+
+def count_word(string_variable):
+    string_variable = list(string_variable)
+    return len(string_variable)
+
+def count_word(string_variable):
+    return len(string_variable)
+
+print()
+
+a = 5
+if (a > 3):
+    print("Hi")
+    print("Hello")
+if (a > 4):
+    print("Hi")
+    print("Hello")
+if (a > 5):
+    print("Hi")
+    print("Hello")
+
+def print_Hello():
+    print("Hi")
+    print("Hello")
+
+a = 5
+if (a > 3):
+    print_Hello()
+if (a > 4):
+    print_Hello()
+if (a > 5):
+    print_Hello()
+
+
+print()
+import math
+
+a = 1
+b = -2
+c = 1
+
+print(((-b + math.sqrt(b ** 2 - (4 * a * c)))) / (2 * a))
+print(((-b - math.sqrt(b ** 2 - (4 * a * c)))) / (2 * a))
+
+import math
+
+def get_result_quadratic_equation(a, b, c):
+    values = []
+    values.append(((-b + math.sqrt(b ** 2 - (4 * a * c)))) / (2 * a))
+    values.append(((-b - math.sqrt(b ** 2 - (4 * a * c)))) / (2 * a))
+    return values
+
+print(get_result_quadratic_equation(1, -2, 1))
+
+print()
