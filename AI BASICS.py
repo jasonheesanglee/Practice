@@ -644,4 +644,4 @@ print("Yay!!!!!!!!!!!!!!!!!!!!!! Please check this file to check my effort\nhttp
 
 print()
 
-print("To be continued in AI Basics 2.py")
+print("To be continued in AI BASICS 2.py")
