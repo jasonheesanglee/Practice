@@ -94,3 +94,58 @@ print(ex)
 ex = [1, 2, 3, 4, 5]
 swap_reference(ex, 3, 4)
 print(ex)
+
+print()
+
+def test(t):
+    print(x)
+    t = 20
+    print("In function :", t)
+
+x = 10
+test(x)
+# print(t)
+
+print()
+
+def test(t):
+    t = 20
+    print("In Function :", t)
+x = 10
+print("Before :", x)
+test(x)
+print("After :", x)
+
+print()
+
+def f():
+    s = "I love London"
+    print(s)
+s = "I love Paris"
+f()
+print(s)
+
+def f():
+    global s
+    s = "I love London"
+    print(s)
+s = "I love Paris"
+f()
+print(s)
+print()
+def calculate(x, y):
+    total = x +y
+    print("In Function :")
+    print("a:", str(a) + ", b:", str(b) + ", a+b", str(a+b) + ", total :", str(a+b))
+    return total
+
+a = 5
+b = 7
+total = 0
+print("In program - 1")
+print("a:", str(a) + ", b:", str(b) + ", a+b" + str("a+b"))
+print()
+sum = calculate(a, b)
+print("After Calculation")
+print("Total :", str(total) + ", Sum :", str(sum))
+
