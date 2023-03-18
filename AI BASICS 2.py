@@ -85,3 +85,23 @@ print(s1.intersection(s2))
 print(s1 & s2)
 print(s1.difference(s2))
 print(s1 - s2)
+
+print()
+country_code = {}
+country_code = {"America": 1, "Korea": 82, "China": 86, "Japan": 81}
+print(country_code)
+print(country_code.items())
+print(country_code.keys())
+country_code["German"] = 49
+print(country_code)
+print(country_code.values())
+
+
+for k, v in country_code.items():
+    print("Key :", k)
+    print("Value :", v)
+
+print("Korea" in country_code.keys())
+print(82 in country_code.values())
+
+
