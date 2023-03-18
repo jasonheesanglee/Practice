@@ -264,4 +264,70 @@ print(Point(x=11, y=22))
 # print(student_nametuple_list)
 # print(student_nametuple_list[0].full_name)
 
+print()
 
+colors = ["red", "blue", "green", "yellow"]
+result = ""
+for s in colors:
+    result += s
+print(result)
+
+colors = ["red", "blue", "green", "yellow"]
+result = "".join(colors)
+print(result)
+
+print()
+
+items = "zero one two three".split()
+print(items)
+
+example = "python, java, javascript"
+for content in example.split(","):
+    print(content.strip())
+
+a, b, c = example.split(",")
+print(a, b, c)
+
+example = "teamlab.technology.io"
+subdomain, domain, tld = example.split(".")
+print(subdomain, domain, tld)
+
+print()
+
+colors = ["red", "blue", "green", "yellow"]
+result = "-".join(colors)
+print(result)
+
+print("        ".join(colors))
+
+print()
+
+result = []
+for i in range(10):
+    result.append(i)
+
+print(result)
+
+result = [i for i in range(10)]
+print(result)
+result = [i for i in range(10) if i % 2 ==0]
+print(result)
+
+word_1 = "Hello"
+word_2 = "World"
+result = [i+j for i in word_1 for j in word_2]
+print(result)
+
+print()
+
+case_1 = ["A", "B", "C"]
+case_2 = ["D", "E", "A"]
+result = [i+j for i in case_1 for j in case_2]
+print(result)
+result = [i+j for i in case_1 for j in case_2 if not(i==j)]
+print(result)
+result.sort()
+print(result)
+
+result = [i+j if not(i==j) else i for i in case_1 for j in case_2]
+print(result)
