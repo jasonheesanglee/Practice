@@ -329,5 +329,27 @@ print(result)
 result.sort()
 print(result)
 
-result = [i+j if not(i==j) else i for i in case_1 for j in case_2]
+result = [i+j if not(i==j) else "BEE" for i in case_1 for j in case_2]
+print(result)
+
+print()
+
+words = "The quick brown fox jumps over the lazy dog".split()
+print(words)
+
+stuff = [[w.upper(), w.lower(), len(w)] for w in words]
+print(stuff)
+
+import pprint as pp
+pp.pprint(stuff)
+
+print()
+
+case_1 = ["A", "B", "C"]
+case_2 = ["D", "E", "A"]
+result = [i+j for i in case_1 for j in case_2]
+print(result)
+result = [[i+j for i in case_1]for j in case_2]
+print(result)
+result = [[j + i for i in case_1 if j !="D"] for j in case_2]
 print(result)
