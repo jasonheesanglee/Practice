@@ -353,3 +353,273 @@ result = [[i+j for i in case_1]for j in case_2]
 print(result)
 result = [[j + i for i in case_1 if j !="D"] for j in case_2]
 print(result)
+
+print()
+
+for i, v in enumerate(["tic", "tac", "toe"]):
+    print(i,v)
+
+print()
+
+for i, v in enumerate("ABC"):
+    print("{0} \t {1}".format(i, v))
+
+
+print()
+
+my_str = "ABCD"
+print({v : i for i, v in enumerate(my_str)})
+
+
+text = "Samsung Group is a South Korean multinational conglomerate headquartered in Samsung town, Seoul"
+set_text = list(set(text.split()))
+print({i : v.lower() for i, v in enumerate(text.split())})
+
+print({i:v.lower() for i, v in enumerate(set_text)})
+
+print({v.lower():i for i, v in enumerate(set_text)})
+
+print()
+
+alist = ["a1", "a2", "a3"]
+blist = ["b1", "b2", "b3"]
+print([[a,b] for a, b in zip(alist, blist)])
+
+print([c for c in zip(alist, blist)])
+
+print()
+
+math = (100, 90, 80)
+kor = (90, 90, 70)
+eng = (90, 80, 70)
+
+average_score = [sum(value) / 3 for value in zip(math, kor, eng)]
+print(average_score)
+for i in average_score:
+    i = float(f"{i:.2f}")
+    print(i)
+
+print()
+
+alist = ["a1", "a2", "a3"]
+blist = ["b1", "b2", "b3"]
+for i, values in enumerate(zip(alist, blist)):
+    print(i, values)
+print()
+print(zip(alist, blist))
+print(list(zip(alist, blist)))
+print(enumerate(list(zip(alist, blist))))
+print(list(enumerate(list(zip(alist, blist)))))
+
+print()
+
+def f(x, y):
+    return x + y
+print(f(1, 4))
+
+f = lambda x, y: x + y
+print(f(1, 4))
+
+print()
+f = (lambda x, y: x + y)
+print(f(10, 50))
+
+print((lambda x, y: x + y)(10, 50))
+print()
+
+up_low = lambda x : x.upper() + x.lower()
+print(up_low("My Happy"))
+print((lambda x : x.upper() + x.lower())("My Happy"))
+
+print()
+up_low = lambda x : "-".join(x.split())
+print(up_low("My Happy"))
+print((lambda x : "-".join(x.split()))("My Happy"))
+
+print()
+up_low = lambda x : "-".join(x.split())
+print(up_low("My Happy"))
+print((lambda x : "-".join(x.split()))("My Happy"))
+
+print()
+
+ex = [1, 2, 3, 4, 5]
+f = lambda x, y: x + y
+print(list(map(f, ex, ex)))
+
+
+f = lambda x: x ** 2
+print(list(map(f, ex)))
+print([f(value) for value in ex])
+
+def f(x):
+    return x + 5
+print(list(map(f, ex)))
+
+print([f(value) for value in ex])
+
+print()
+
+print(list(map(lambda x : x ** 2 if x % 2 == 0 else x, ex)))
+
+print([value**2 if value % 2 == 0 else value for value in ex])
+
+print()
+
+from functools import reduce
+print(reduce(lambda x, y : x+y, [1, 2, 3, 4, 5]))
+
+print()
+
+for city in ["Seoul", "Busan", "Pohoang"]:
+    print(city, end="\t")
+
+for language in ("Python", "C", "Java"):
+    print(language, end="\t")
+for char in "Python is easy":
+    print(char, end=" ")
+
+print()
+
+cities = ["Seoul", "Busan", "Pohoang"]
+iter_obj = iter(cities)
+
+print(next(iter_obj))
+print(next(iter_obj))
+print(next(iter_obj))
+# print(next(iter_obj))
+
+
+print()
+
+def general_list(value):
+    result = []
+    for i in range(value):
+        result.append(i)
+    return result
+print(general_list(50))
+
+import sys
+result = general_list(50)
+print(sys.getsizeof(result))
+
+def generator_list(value):
+    result = []
+    for i in range(value):
+        yield i
+
+for a in generator_list(50):
+    print(a)
+
+result = generator_list(50)
+print(sys.getsizeof(result))
+
+gen_ex = (n*n for n in range(500))
+print(type(gen_ex))
+print(list(gen_ex))
+
+print()
+from sys import getsizeof
+
+gen_ex = (n*n for n in range(500))
+print(getsizeof(gen_ex))
+print(getsizeof(list(gen_ex)))
+
+
+gen_ex = (n*n for n in range(5000))
+print(getsizeof(gen_ex))
+print(getsizeof(list(gen_ex)))
+
+list_ex = [n*n for n in range(500)]
+print(getsizeof(list_ex))
+
+
+list_ex = [n*n for n in range(5000)]
+print(getsizeof(list_ex))
+
+
+print()
+
+def print_something(my_name, your_name, third_name):
+    print("Hello {0}, My name is {1}".format(your_name, my_name))
+
+print_something(third_name="abc", my_name="Jason", your_name="TeamLab")
+print_something("abc", "Jason", "TeamLab")
+
+
+print()
+
+def print_something_2(my_name, your_name = "TeamLab"):
+    print("Hello {0}, My name is {1}".format(your_name, my_name))
+
+print_something_2("Jason")
+print_something_2("Jason", "Naver")
+
+print()
+
+def asterisk_test(a, b, *args):
+    print(list(args))
+    print(type(args))
+    return a+b+sum(args)
+
+print(asterisk_test(1,2,3,4,5))
+
+print()
+
+def kwargs_test_1(**kwargs):
+    print(kwargs)
+    print(type(kwargs))
+
+kwargs_test_1(first=3, second=4, third=5)
+
+print()
+def kwargs_test_3(one, two=3, *args,**kwargs):
+    print(one + two + sum(args))
+    print(args)
+    print(kwargs)
+
+kwargs_test_3(10, 30, 3, 5, 6, 7, 8, first=3, second=4, third=5)
+
+print()
+
+def asterisk_test(a, *args):
+    print(a, args)
+    print(*args)
+    print(args)
+    print(type(args))
+asterisk_test(1, *(2,3,4,5,6))
+
+print()
+
+def asterisk_test(a, args):
+    print(a, *args)
+    print(*args)
+    print(args)
+    print(type(args))
+asterisk_test(1, (2,3,4,5,6))
+
+print()
+
+a, b, c = ([1, 2], [3, 4], [5,6])
+print(a, b, c)
+
+data = ([1, 2], [3, 4], [5,6])
+print(*data)
+
+def asterisk_test(a, b, c, d):
+    print(a, b, c, d)
+data = {"b":1, "c":2, "d":3}
+asterisk_test(10, **data)
+
+print()
+
+ex = ([1, 2], [3, 4], [5, 6], [5, 6], [5, 6])
+print(ex)
+print(*ex)
+print()
+for value in zip(ex):
+    print(value)
+
+for value in zip(*ex):
+    print(value)
+    print(sum(value))
