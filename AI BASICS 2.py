@@ -245,3 +245,23 @@ x, y = p
 print(x, y)
 print(p.x + p.y)
 print(Point(x=11, y=22))
+
+# f = open("users.csv", "r")
+# next(f)
+# reader = csv.reader(f)
+# student_list = []
+# for row in reader :
+#     student_list.append(row)
+#     print(row)
+#
+# columns = ["user_id", "integration_id", "login_id", "password", "first_name", "last_name", "full_name", "sortable_name", "short_name", "email", "status"]
+#
+# Student = namedtuple("Student", " ".join(columns))
+# student_nametuple_list = []
+# for row in student_list:
+#     student = Student(*row)
+#     student_nametuple_list.append(student)
+# print(student_nametuple_list)
+# print(student_nametuple_list[0].full_name)
+
+
