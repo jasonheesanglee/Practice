@@ -623,3 +623,5 @@ for value in zip(ex):
 for value in zip(*ex):
     print(value)
     print(sum(value))
+    
+print()
