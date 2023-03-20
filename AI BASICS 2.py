@@ -784,3 +784,220 @@ for animal in animals:
     print(animal.name + " : " + animal.talk())
 
 print()
+
+class Product(object):
+    pass
+class Inventory(object):
+    def __init__(self):
+        self.items = []
+        self.test = "ABC"
+
+    def add_new_items(self, product):
+        if type(product) == Product:
+            self.items.append(product)
+            print("New Item has been added")
+        else:
+            raise ValueError("Invalid Item")
+
+    def get_number_of_items(self):
+        return len(self.items)
+
+my_inventory = Inventory()
+my_inventory.add_new_items(Product())
+my_inventory.add_new_items(Product())
+my_inventory.items.append("ABC")
+my_inventory.items.append("ABC")
+my_inventory.items.append("ABC")
+my_inventory.items.append("ABC")
+
+print()
+class Product(object):
+    pass
+class Inventory(object):
+    def __init__(self):
+        self.__items = []
+
+    def add_new_items(self, product):
+        if type(product) == Product:
+            self.__items.append(product)
+            print("New Item has been added")
+        else:
+            raise ValueError("Invalid Item")
+
+    def get_number_of_items(self):
+        return len(self.__items)
+
+my_inventory = Inventory()
+my_inventory.add_new_items(Product())
+my_inventory.add_new_items(Product())
+# print(my_inventory.items.append("ABC"))
+# print(my_inventory.items.append("ABC"))
+# print(my_inventory.items.append("ABC"))
+# print(my_inventory.items.append("ABC"))
+
+print()
+
+class Product(object):
+    pass
+class Inventory(object):
+    def __init__(self):
+        self.__items = []
+
+    def add_new_items(self, product):
+        if type(product) == Product:
+            self.__items.append(product)
+            print("New Item has been added")
+        else:
+            raise ValueError("Invalid Item")
+
+    def get_number_of_items(self):
+        return len(self.__items)
+
+    @property
+    def items(self):
+        return self.__items
+
+my_inventory = Inventory()
+my_inventory.add_new_items(Product())
+my_inventory.add_new_items(Product())
+print(my_inventory.get_number_of_items())
+
+
+items = my_inventory.items
+items.append(Product())
+print(my_inventory.get_number_of_items())
+
+print()
+
+def square(x):
+    return x * x
+
+f = square
+
+print(f(5))
+print()
+
+def cube(x):
+    return x * x * x
+g = cube
+
+print(g(7))
+print()
+
+def formula(method, argument_list):
+    return [method(value) for value in argument_list]
+
+print()
+
+def print_msg(msg):
+    def printer():
+        print(msg)
+    printer()
+
+print_msg("Hi Python")
+
+print()
+
+def print_msg(msg):
+    def printer():
+        print(msg)
+    return printer
+
+another = print_msg("Hello Python")
+another()
+
+def tag_func(tag, text):
+    text = text
+    tag = tag
+    def inner_func():
+        return "<{0}>{1}<{0}>".format(tag, text)
+
+    return inner_func()
+
+h1_func = tag_func("Title", "This is Python Class")
+p_func = tag_func("p", "Data Academy")
+
+print(h1_func)
+print(p_func)
+
+
+print()
+
+def star(func):
+    def inner(*args, **kwargs):
+        print("*" * 30)
+        func(*args, **kwargs)
+        print("*" * 30)
+    return inner
+
+@star
+def printer(msg):
+    print(msg)
+printer("Hello")
+
+print()
+
+def star(func):
+    def inner(*args, **kwargs):
+        print(args[1] * 30)
+        func(*args, **kwargs)
+        print(args[1] * 30)
+    return inner
+
+@star
+def printer(msg, mark):
+    print(msg)
+printer("Hello", "T")
+
+print()
+
+def star(func):
+    def inner(*args, **kwargs):
+        print(args[1] * 30)
+        func(*args, **kwargs)
+        print(args[1] * 30)
+    return inner
+
+@star
+def printer(msg, mark):
+    print(msg)
+printer("Hello", "*")
+
+print()
+
+def star(func):
+    def inner(*args, **kwargs):
+        print("&" * 30)
+        func(*args, **kwargs)
+        print("&" * 30)
+    return inner
+def percent(func):
+    def inner(*args, **kwargs):
+        print("*" * 30)
+        func(*args, **kwargs)
+        print("*" * 30)
+    return inner
+
+@star
+@percent
+def printer(msg):
+    print(msg)
+printer("Hello")
+
+print()
+
+def generate_power(exponent):
+    def wrapper(f):
+        def inner(*args):
+            result = f(*args)
+            return exponent ** result
+        return inner
+    return wrapper
+
+@generate_power(2)
+def raise_two(n):
+    return n ** 2
+
+print(raise_two(7))
+
+print()
