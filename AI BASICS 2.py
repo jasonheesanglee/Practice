@@ -1001,3 +1001,28 @@ def raise_two(n):
 print(raise_two(7))
 
 print()
+
+#  fah_converter
+def covert_c_to_f(celcius_value):
+    return celcius_value * 9.0 / 5 +32
+
+import fah_converter
+
+if __name__ == "__main__":
+    print("Enter a celsius value")
+    celsius = float(input())
+    print("Here is your celsius: ", fah_converter.convert_c_to_f(celsius))
+
+import random
+print(random.randint(0, 100))
+print(random.random())
+
+import time
+print(time.localtime())
+
+# import urllib.request
+# response = urllib.request.urlopen("http://naver.com")
+# print(response.read())
+
+print()
+

@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6df6c25-ce23-45cc-a687-c4f844fa0fda" name="Changes" comment="3/20 commit">
+      <change afterPath="$PROJECT_DIR$/fah_converter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI BASICS 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI BASICS 2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trial.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Trial.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,14 +113,7 @@
       <workItem from="1679019388364" duration="9494000" />
       <workItem from="1679117190904" duration="899000" />
       <workItem from="1679118168422" duration="13654000" />
-      <workItem from="1679278196554" duration="9389000" />
-    </task>
-    <task id="LOCAL-00004" summary="3/12 Update">
-      <created>1678607678896</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1678607678896</updated>
+      <workItem from="1679278196554" duration="11946000" />
     </task>
     <task id="LOCAL-00005" summary="3/12 Update">
       <created>1678615420422</created>
@@ -456,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679300649837</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="3/20 commit">
+      <created>1679305718621</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1679305718621</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,9 +504,10 @@
     <SUITE FILE_PATH="coverage/Practice$Crash_Course_on_Python.coverage" NAME="Crash Course on Python Coverage Results" MODIFIED="1678621794583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$Practice_file_just_for_Removing_decimal__float_to_int.coverage" NAME="Practice file just for Removing decimal, float to int Coverage Results" MODIFIED="1678957120016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1678686992238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/Practice$AI_BASICS_2.coverage" NAME="AI BASICS 2 Coverage Results" MODIFIED="1679305708298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practice$AI_BASICS_2.coverage" NAME="AI BASICS 2 Coverage Results" MODIFIED="1679308969784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$main.coverage" NAME="main Coverage Results" MODIFIED="1678430532537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$AI_BASICS.coverage" NAME="AI BASICS Coverage Results" MODIFIED="1679019403910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practice$fah_converter.coverage" NAME="fah_converter Coverage Results" MODIFIED="1679308397993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$Took_me_2_hours_to_solve_this.coverage" NAME="Took me 2 hours to solve this Coverage Results" MODIFIED="1678963797944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
