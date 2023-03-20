@@ -658,18 +658,129 @@ print("Choi's back number is :", Choi.back_number)
 
 print()
 
-class Note(object):
-    def __init__(self,content = None):
-        self.content = content
+# class Note(object):
+#     def __init__(self, content = None):
+#         self.content = content
+#         self.page_number = 0
+#
+#     def write_content(self, content):
+#         self.content = content
+#
+#     def remove_all(self):
+#         self.content = ""
+#
+#     def __add__(self, other):
+#         return self.content + other.content
+#
+#     def __str__(self):
+#         return self.content
+#
+# class NoteBook(object):
+#     def __init__(self, title, page_number, notes):
+#         self.title = title
+#         self.page_number = 1
+#         self.notes = {}
+#
+#     def add_note(self, note, page=0):
+#         if self.page < 300:
+#             if page == 0:
+#                 self.notes[self.page_number] = note
+#                 self.page_number += 1
+#             else:
+#                 self.notes[page] = note
+#                 self.page_number += 1
+#         else:
+#             print("Notebook is full, cannot add page.")
+#
+#     def remove_note(self, page_number):
+#         if page_number in self.notes.keys():
+#             return self.notes.pop(page_number)
+#         else:
+#             print("This page does not exist")
+#     def get_number_of_pages(self):
+#         return len(self.notes.keys())
+#
+# my_notebook = NoteBook
+# print(my_notebook)
+#
+#
+# new_note = Note("Blah Blah Blah")
+# print(new_note)
+#
+# new_note_1 = Note("Haha")
+# print(new_note_1)
+#
+# my_notebook.add_note(new_note, 0)
+# my_notebook.add_note(new_note_1, 100)
+#
+# print(my_notebook.notes)
+# print()
 
-    def write_content(self,content):
-        self.content = content
-
-    def remove_all(self,content):
-        self.content = ""
-
-    def __add__(self, other):
-        return self.content + other.content
+class Person(object):
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
 
     def __str__(self):
-        return self.content
+        return "My name is {0}. My age is {1}".format(self.name, self.age)
+
+class Korean(Person):
+    pass
+
+first_korean = Korean("Jason", 28)
+print(first_korean)
+
+class Tourist(object):
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+
+    def about_me(self):
+        print("My name is", self.name, "My age is ", str(self.age))
+    def __str__(self):
+        print("My name is", self.name, "My age is ", str(self.age))
+
+class Employee(Tourist):
+    def __init__(self, name, age, gender, salary, hire_date):
+        super().__init__(name, age, gender)
+        self.salary = salary
+        self.hire_date = hire_date
+
+    def do_work(self):
+        print("Works Hard")
+
+    def about_me(self):
+        super().about_me()
+        print("My name is", self.name, "My salary is ", self.salary, ". My hire date is ", self.hire_date)
+
+
+myPerson = Tourist("John", 34, "Male")
+myPerson.about_me()
+
+myEmployee = Employee("Jake", 25, "Male", 3000000, "2023/02/01")
+myEmployee.about_me()
+
+print()
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    def talk(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+class Cat(Animal):
+    def talk(self):
+        return "Meow!"
+class Dog(Animal):
+    def talk(self):
+        return "Woof! Woof!"
+
+animals = [Cat("Bread"),
+           Cat("Imja"),
+           Dog("Happy")]
+
+for animal in animals:
+    print(animal.name + " : " + animal.talk())
+
+print()
