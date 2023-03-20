@@ -623,5 +623,37 @@ for value in zip(ex):
 for value in zip(*ex):
     print(value)
     print(sum(value))
-    
+
+print()
+
+class SoccerPlayer(object):
+    def __init__(self, name : str, position : str, back_number : int):
+        self.name = name
+        self.position = position
+        self.back_number = back_number
+
+    def __str__(self):
+        return "Hello, My name is %s. I play in %s in the center"% (self.name, self.position)
+
+    # def __add__(self.other):
+    #     return self.name, other.name
+    def change_back_number(self, new_number):
+        print("Changing the player's back number: From %d to %d" %(self.back_number, new_number))
+        self.back_number = new_number
+
+
+abc = SoccerPlayer("Son", "FW", 7)
+Park = SoccerPlayer("Park", "WF", 13)
+Choi = SoccerPlayer("Choi", "MF", 10)
+print()
+
+print("Choi's back number is :", Choi.back_number)
+Choi.change_back_number(5)
+print("Choi's back number now is :", Choi.back_number)
+
+Choi.change_back_number(7)
+print("Choi's back number now is :", Choi.back_number)
+Choi.back_number = 20
+print("Choi's back number is :", Choi.back_number)
+
 print()
