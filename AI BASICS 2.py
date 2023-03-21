@@ -1060,7 +1060,7 @@ for i in range(10):
     else:
         print(10 // i)
 
-print("Here")
+print()
 
 for i in range(10):
     try:
@@ -1069,3 +1069,74 @@ for i in range(10):
         print("Not divided by 0")
     finally:
         print(i, "______", result)
+
+
+for i in range(10):
+    try:
+        result = 10 // i
+    except ZeroDivisionError:
+        print("Not divided by 0")
+    finally:
+        print(i, "______", result)
+
+
+print()
+# while True:
+#     value = input("Enter integer you want to convert :")
+#     for digit in value:
+#         if digit not in "0123456789":
+#             raise ValueError("You have not entered a number")
+#     print("Number converted to integer - ", int(value))
+
+print()
+
+def get_binary_number(decimal_number):
+    assert isinstance(decimal_number, int)
+    return bin(decimal_number)
+
+print(get_binary_number(10))
+
+print()
+
+f = open("yesterday.txt", "r")
+contents = f.read()
+print(contents)
+f.close()
+
+print()
+print()
+
+with open("yesterday.txt", "r") as my_file:
+    contents = my_file.read()
+    print(type(contents), contents)
+
+with open("yesterday.txt", "r") as my_file:
+    content_list = my_file.readlines()
+    print(type(content_list))
+    print(content_list)
+print(content_list[0])
+
+
+print()
+
+with open("yesterday.txt", "r") as my_file:
+    i = 0
+    while True:
+        line = my_file.readline()
+        if not line:
+            break
+        print(str(i) + " === " + line.replace("\n", ""))
+        i = i + 1
+
+print("Here")
+
+with open("yesterday.txt", "r") as my_file:
+    contents = my_file.read()
+    word_list = contents.split(" ")
+    line_list = contents.split("\n")
+
+print("Total Number of Characters: ", len(contents))
+print("Total Number of Words: ", len(word_list))
+print("Total Number of Lines: ", len(line_list))
+
+print()
