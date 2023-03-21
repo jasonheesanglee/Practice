@@ -1036,3 +1036,5 @@ for i in range(10):
     # code that might make exception
 #  except <Exception Type>:
     # code that executes when a exception has occured.
+
+print()
