@@ -1232,44 +1232,59 @@ print(multiply_pickle.multiply(5))
 
 print()
 
-import logging
-logging.debug("Wrong")
-logging.info("Check it")
-logging.warning("Be careful!")
-logging.error("Error Alert")
-logging.critical("END OF THE DAY, END OF THE WORLD, WE ARE ALL DOOMED")
-
-
-import logging
-logger = logging.getLogger("main")
-stream_handler = logging.StreamHandler()
-logger.addHandler(stream_handler)
-
-logger.setLevel(logging.DEBUG)
-logging.debug("Wrong")
-logging.info("Check it")
-logging.warning("Be careful!")
-logging.error("Error Alert")
-logging.critical("END OF THE DAY, END OF THE WORLD, WE ARE ALL DOOMED")
-
-print()
-
-logger.setLevel(logging.CRITICAL)
-logging.debug("Wrong")
-logging.info("Check it")
-logging.warning("Be careful!")
-logging.error("Error Alert")
-logging.critical("END OF THE DAY, END OF THE WORLD, WE ARE ALL DOOMED")
+# import logging
+# logging.debug("Wrong")
+# logging.info("Check it")
+# logging.warning("Be careful!")
+# logging.error("Error Alert")
+# logging.critical("END OF THE DAY, END OF THE WORLD, WE ARE ALL DOOMED")
+#
+#
+# import logging
+# logger = logging.getLogger("main")
+# stream_handler = logging.StreamHandler()
+# logger.addHandler(stream_handler)
+#
+# logger.setLevel(logging.DEBUG)
+# logging.debug("Wrong")
+# logging.info("Check it")
+# logging.warning("Be careful!")
+# logging.error("Error Alert")
+# logging.critical("END OF THE DAY, END OF THE WORLD, WE ARE ALL DOOMED")
+#
+# print()
+#
+# logger.setLevel(logging.CRITICAL)
+# logging.debug("Wrong")
+# logging.info("Check it")
+# logging.warning("Be careful!")
+# logging.error("Error Alert")
+# logging.critical("END OF THE DAY, END OF THE WORLD, WE ARE ALL DOOMED")
 
 print()
 
 import configparser
 config = configparser.ConfigParser()
-config.sections()
 
 config.read("example.cfg")
-config.sections()
+print(config.sections())
 
-for key in config["SectionOne"]:
-    print(key)
-config["SectionOne"]["Status"]
+print(config["SectionThree"])
+for key in config["SectionTwo"]:
+    value = config["SectionTwo"][key]
+    print("{0} : {1}".format(key, value))
+
+print()
+
+import argparse
+
+parser = argparse.ArgumentParser(description="Sum two integers.")
+
+parser.add_argument("-a", "--a_value", dest="A_value", help="A integers", type=int)
+parser.add_argument("-b", "--b_value", dest="B_value", help="B integers", type=int)
+
+args = parser.parse_args()
+print(args)
+print(args.a)
+print(args.b)
+print(args.a + args.b)
