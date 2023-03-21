@@ -1128,7 +1128,7 @@ with open("yesterday.txt", "r") as my_file:
         print(str(i) + " === " + line.replace("\n", ""))
         i = i + 1
 
-print("Here")
+print()
 
 with open("yesterday.txt", "r") as my_file:
     contents = my_file.read()
@@ -1140,3 +1140,32 @@ print("Total Number of Words: ", len(word_list))
 print("Total Number of Lines: ", len(line_list))
 
 print()
+
+f = open("yesterday_1.txt", "w", encoding="utf8")
+for i in range(1, 11):
+    data = "It is line %d. \n" % i
+    f.write(data)
+f.close()
+print(str(f))
+
+with open("yesterday_1.txt", "a", encoding = "utf8") as f:
+    for i in range(1, 11):
+        data = "It is line %d. \n" % i
+        f.write(data)
+print(str(f))
+
+print()
+
+import os
+try:
+    os.mkdir("fiile.ipynb")
+except FileExistsError as e:
+    print("alrady created")
+
+print(os.path.exists("abc"))
+
+import shutil
+source = "yesterday_1.txt"
+dest = os.path.join("abc", "yesterday_1.txt")
+shutil.copy(source, dest)
+
