@@ -1,3 +1,5 @@
+import logging
+
 a = [1,2,3,4,5]
 print(a)
 a.append(10)
@@ -1276,15 +1278,48 @@ for key in config["SectionTwo"]:
 
 print()
 
-import argparse
+# import argparse
+#
+# parser = argparse.ArgumentParser(description="Sum two integers.")
+#
+# parser.add_argument("-a", "--a_value", dest="A_value", help="A integers", type=int)
+# parser.add_argument("-b", "--b_value", dest="B_value", help="B integers", type=int)
+#
+# args = parser.parse_args()
+# print(args)
+# print(args.a)
+# print(args.b)
+# print(args.a + args.b)
 
-parser = argparse.ArgumentParser(description="Sum two integers.")
 
-parser.add_argument("-a", "--a_value", dest="A_value", help="A integers", type=int)
-parser.add_argument("-b", "--b_value", dest="B_value", help="B integers", type=int)
-
-args = parser.parse_args()
-print(args)
-print(args.a)
-print(args.b)
-print(args.a + args.b)
+# import logging
+# import logging.config
+# import csv
+#
+# logging.config.fileConfig("logging.conf")
+# logger = logging.getloger()
+#
+# line_counter = 0
+# data_header =[]
+# employee = []
+# customer_USA_only_list = []
+# customer = None
+#
+# logger.info("Open file {0}".format("Test"))
+# try:
+#     with open("customers.csv",  "r") as customer_data:
+#         customer_data, delimiter==",", quotechar=="'"
+#         for customer in customer_reader:
+#             if customer[10].upper() == "USA":
+#                 logger.info("ID {0} added".format(customer[0],))
+#                 customer_USA_only_list.append(customer)
+# except FileNotFoundError as e:
+#     logger.error("File NOT found {0}".format(e,))
+#     raise FileNotFoundError
+#
+# logger.info("Write USA only data at {0}".format("customer_USA_only.csv",))
+# with open("customer_USA_only.csv", "w") as customer_USA_only_csv:
+#     for customer in customer_USA_only_list:
+#         customer_USA_only_csv.write("m".join(customer).strip("\n")+"\n")
+#
+# logger.info("Program Finished")
