@@ -1169,3 +1169,64 @@ source = "yesterday_1.txt"
 dest = os.path.join("abc", "yesterday_1.txt")
 shutil.copy(source, dest)
 
+print()
+
+import pathlib
+
+cwd = pathlib.Path.cwd()
+print(cwd)
+print(cwd.parent)
+print(cwd.parent.parent)
+
+print(list(cwd.parent.parents))
+print(list(cwd.glob("*")))
+
+print()
+
+import os
+if not os.path.isdir("log"):
+    os.mkdir("log")
+if not os.path.exists("log/count_log.txt"):
+    f = open("log/count_log.txt","w", encoding = "utf8")
+    f.write("Writing begins \n")
+    f.close()
+
+with open("log/count_log.txt", "a", encoding = "utf8") as f:
+    import random, datetime
+    for i in range(1,11):
+        stamp = str(datetime.datetime.now())
+        value = random.random() * 1000000
+        log_line = stamp + "\t" + str(value) + " is generated " + "\n"
+        f.write(log_line)
+
+
+import pickle
+f = open("list.pickle", "wb")
+test = [1,2,3,4,5]
+pickle.dump(test, f)
+f. close()
+
+f = open("list.pickle", "rb")
+test_pickle = pickle.load(f)
+print(test_pickle)
+f. close()
+
+
+print()
+class Multiply(object):
+    def __init__(self, multiplier):
+        self.multiplier = multiplier
+    def multiply(self, number):
+        return number * self.multiplier
+
+multiply = Multiply(5)
+multiply = Multiply(10)
+
+f = open("multiply_object.pickle", "wb")
+pickle.dump(multiply, f)
+f.close()
+
+f = open("multiply_object.pickle", "rb")
+multiply_pickle = pickle.load(f)
+print(multiply_pickle.multiply(5))
+
