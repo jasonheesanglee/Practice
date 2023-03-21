@@ -1025,3 +1025,14 @@ print(time.localtime())
 # print(response.read())
 
 print()
+
+for i in range(10):
+    try:
+        print(10/i)
+    except ZeroDivisionError:
+        print("Not divided by 0")
+
+#  try:
+    # code that might make exception
+#  except <Exception Type>:
+    # code that executes when a exception has occured.
