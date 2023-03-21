@@ -1038,3 +1038,34 @@ for i in range(10):
     # code that executes when a exception has occured.
 
 print()
+
+a = [1, 2, 3, 4, 5]
+for i in range (10):
+    try:
+        print(i, 10 // i)
+        print(a[i])
+    except ZeroDivisionError:
+        print("Error")
+        print("Not divided by 0")
+    except Exception as g:
+        print(g)
+
+print()
+
+for i in range(10):
+    try:
+        result = 10 // i
+    except ZeroDivisionError:
+        print("Not divided by 0")
+    else:
+        print(10 // i)
+
+print("Here")
+
+for i in range(10):
+    try:
+        result = 10 // i
+    except ZeroDivisionError:
+        print("Not divided by 0")
+    finally:
+        print(i, "______", result)
