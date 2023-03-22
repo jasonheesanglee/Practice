@@ -1323,3 +1323,82 @@ print()
 #         customer_USA_only_csv.write("m".join(customer).strip("\n")+"\n")
 #
 # logger.info("Program Finished")
+
+# line_counter = 0
+# data_header = []
+# customer_list = []
+#
+# with open("customers.csv") as customer_data:
+#
+#     while True:
+#         data = customer_data.readline()
+#         if not data:
+#             break
+#         if not line_counter == 0:
+#             data_header = data.split(",")
+#         else:
+#             customer_list.append(data.split(","))
+#         line_counter += 1
+#
+# print("Header :\t", data_header)
+# for i in range(0, 10):
+#     print("Data", i, ":\t\t", customer_list[i])
+# print(len(customer_list))
+
+
+# import csv
+# reader = csv.reader(f,
+#                     delimiter=',', quotechar='"',
+#                     quoting=csv.QUOTE_ALL)
+
+# import csv
+# seong_nam_data = []
+# header = []
+# rownum = 0
+#
+# with open("korea_foot_traffic_data.csv","r",encoding="cp949") as p_file:
+#     csv_data = csv.reader(p_file)
+#     for row in csv_data:
+#         if rownum == 0:
+#             header = row
+#         location = row[7]
+#         if location.find(u"성남시") != -1:
+#             seong_nam_data.append(row)
+#
+#         rownum +=1
+#
+# with open("korea_foot_traffic_data.csv","w",encoding="utf8") as s_p_file:
+#     writer = csv.writer(s_p_file, delimiter="\t", quotechar="'", quoting=csv.QUOTE_ALL)
+#     writer.writerow(header)
+#     for row in seong_nam_data:
+#         writer.writerow(row)
+
+import re
+import urllib.request
+
+url = "https://bit.ly/3rxQFS4"
+html = urllib.request.urlopen(url)
+html_contents = str(html.read())
+id_results = re.findall(r"([A-Za-z0-9]+\*\*\*)", html_contents)
+
+# for result in id_results:
+#     print(result)
+#
+# url = "http://www.google.com/googlebooks/uspto-patents-grants-text.html"
+# html = urllib.request.urlopen(url)
+# html_contents = str(html.read().decode("utf8"))
+#
+# url_list = re.findall(r"(http)(.+)(zip)", html_contents)
+# for url in url_list:
+#     print("".join(url))
+#
+# from bs4 import BeautifulSoup
+# soup = BeautifulSoup(books.xml, "lxml")
+# soup.find_all("author")
+#
+# import json
+#
+# with open("json.example.json", "r", encoding="utf8") as f:
+#     contents = f.read()
+#     json_data = json.loads(contents)
+#     print(json_data["employees"])
