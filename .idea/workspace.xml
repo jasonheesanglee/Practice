@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d6df6c25-ce23-45cc-a687-c4f844fa0fda" name="Changes" comment="3/22 commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI BASICS 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI BASICS 2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,21 +112,8 @@
       <workItem from="1679117190904" duration="899000" />
       <workItem from="1679118168422" duration="13654000" />
       <workItem from="1679278196554" duration="15570000" />
-      <workItem from="1679364605749" duration="15276000" />
-    </task>
-    <task id="LOCAL-00020" summary="3/15 final commit">
-      <created>1678875002685</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1678875002685</updated>
-    </task>
-    <task id="LOCAL-00021" summary="3/16 commit">
-      <created>1678938099644</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1678938099644</updated>
+      <workItem from="1679364605749" duration="15307000" />
+      <workItem from="1679574275395" duration="68000" />
     </task>
     <task id="LOCAL-00022" summary="3/16 commit">
       <created>1678938894931</created>
@@ -456,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679486563740</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="3/22 commit">
+      <created>1679486655197</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1679486655197</updated>
+    </task>
+    <task id="LOCAL-00070" summary="3/22 commit">
+      <created>1679486672184</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1679486672184</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +502,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Practice$AI_BASICS_2.coverage" NAME="AI BASICS 2 Coverage Results" MODIFIED="1679486539832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practice$AI_BASICS_2.coverage" NAME="AI BASICS 2 Coverage Results" MODIFIED="1679486660513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$main.coverage" NAME="main Coverage Results" MODIFIED="1678430532537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice$echo.coverage" NAME="echo Coverage Results" MODIFIED="1679313637439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/package_example/game/sound" />
     <SUITE FILE_PATH="coverage/Practice$fah_converter.coverage" NAME="fah_converter Coverage Results" MODIFIED="1679308397993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
