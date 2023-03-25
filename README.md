@@ -17,3 +17,15 @@ This is what I have been doing.
 ✅ Completed PY4E (The whole course, thanks to Naver Boost Course)
 
 🧭 Working on AI Basics (The whole course, thanks to Naver Boost Course as well)
+
+---------------------------------------------------------------------------------------
+
+Record from 25th Mar 2023.
+I took no further effort on learning Github so far.
+
+I will be joining Year-Dream School, an AI education bootcamp organized by Korean Government.
+It will be starting from coming Monday (27th Mar 2023).
+
+Will continuously update this practice repository from time to time.
+
+
